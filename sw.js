@@ -1,4 +1,4 @@
-const CACHE_NAME = "vc247-ops-shell-v2";
+const CACHE_NAME = "vc247-ops-shell-v3";
 const SHELL_ASSETS = [
   "./",
   "./index.html",

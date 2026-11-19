@@ -583,6 +583,69 @@
       font-size: 0.72rem;
       color: var(--text-muted);
     }
+
+    /* Readiness & Upload Schedule Cards */
+    .rdy-item {
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 11px 12px;
+      margin-bottom: 9px;
+    }
+    .rdy-item:last-child { margin-bottom: 0; }
+    .rdy-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 5px;
+    }
+    .rdy-meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 0.74rem;
+      color: var(--text-dim);
+      margin-bottom: 6px;
+    }
+    .cycle-dots {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--text-dim);
+    }
+    .cycle-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(148, 163, 184, 0.2);
+      border: 1px solid var(--border-strong);
+      display: inline-block;
+    }
+    .cycle-dot.done {
+      background: var(--emerald);
+      border-color: var(--emerald);
+      box-shadow: 0 0 8px rgba(16, 185, 129, 0.45);
+    }
+    .rdy-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
+    .slot-day-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 7px 10px;
+      border-radius: 9px;
+      background: var(--bg-elev);
+      border: 1px solid rgba(148, 163, 184, 0.1);
+      font-size: 0.75rem;
+      margin-bottom: 6px;
+    }
+    .slot-day-row:last-child { margin-bottom: 0; }
+    .slot-day-name { font-weight: 700; text-transform: capitalize; min-width: 78px; }
+    .slot-day-times { font-family: var(--mono); color: var(--text); text-align: right; font-size: 0.71rem; }
   </style>
 </head>
 <body>
@@ -670,6 +733,18 @@
         </button>
       </section>
 
+      <!-- 3-System Readiness & Stage Tracker -->
+      <section id="readiness-card" class="card" aria-label="3-System Readiness and Stage Tracker">
+        <div class="card-hdr">
+          <div class="card-title">3-System Readiness &amp; Stage Tracker</div>
+          <span id="readiness-overall-pill" class="pill pill-info">--% Ready</span>
+        </div>
+        <div id="readiness-eta-banner" class="sys-summary" style="margin-bottom:10px">
+          Calculating 3-cycle unattended cloud ETA...
+        </div>
+        <div id="readiness-list"></div>
+      </section>
+
       <!-- Closed-Loop Analytics & YouTube YPP Monetization Accelerator -->
       <section class="card" aria-label="Analytics and YouTube Monetization">
         <div class="card-hdr">
@@ -722,6 +797,27 @@
           <div class="meter-track"><div id="ypp-subs-fill" class="meter-fill"></div></div>
           <div id="monetization-badges" class="badge-row"></div>
           <div id="tiktok-au-cta" class="sys-meta" style="margin-top:8px"></div>
+        </div>
+      </section>
+
+      <!-- Live Optimal Upload Schedule (80% Peak / 20% Explore) -->
+      <section id="upload-schedule-card" class="card" aria-label="Live Optimal Upload Schedule">
+        <div class="card-hdr">
+          <div class="card-title">Live Optimal Upload Schedule</div>
+          <span id="sched-policy-pill" class="pill pill-ok">80% Peak · 20% Explore</span>
+        </div>
+        <div id="sched-next-grid" class="channel-grid"></div>
+        <div class="seg-tabs">
+          <button type="button" id="sched-tab-yt" class="seg-btn active">YouTube Shorts</button>
+          <button type="button" id="sched-tab-tt" class="seg-btn">TikTok</button>
+        </div>
+        <div class="strategy-block">
+          <div class="strategy-heading">Weekly Researched + Adapted Peak Slots (AEDT / UTC)</div>
+          <div id="sched-weekly-rows"></div>
+        </div>
+        <div class="strategy-block" style="margin-bottom:0">
+          <div class="strategy-heading">Top Performing Time Slots (1h/6h Velocity + Eng)</div>
+          <div id="sched-top-slots"></div>
         </div>
       </section>
 
@@ -857,6 +953,7 @@
 
       let statusData = null;
       let activeBufferTab = "queue";
+      let activeScheduleTab = "youtube";
       let enteredPin = "";
       let firstSetupPin = "";
       let pinMode = "verify"; // verify | create | confirm
@@ -1195,6 +1292,140 @@
         }
       });
 
+      function renderReadiness(readiness) {
+        const r = readiness || {};
+        const overallPct = Number(r.overall_readiness_pct ?? 0);
+        const pill = $("readiness-overall-pill");
+        pill.textContent = `${overallPct}% Ready · ${r.systems_at_target_cycles || 0}/${r.total_systems || 3} @ 3 Cycles`;
+        pill.className = `pill ${overallPct >= 85 ? "pill-ok" : (overallPct >= 60 ? "pill-info" : "pill-warn")}`;
+        $("readiness-eta-banner").textContent = r.overall_eta_summary || "Telemetry pending";
+
+        const list = $("readiness-list");
+        list.replaceChildren();
+        (r.systems || []).forEach((s) => {
+          const item = el("div", "rdy-item");
+          const top = el("div", "rdy-top");
+          top.appendChild(el("span", "sys-handle", `${s.handle} · ${s.name}`));
+          const pct = Number(s.readiness_pct || 0);
+          top.appendChild(el("span", `pill ${pct >= 85 ? "pill-ok" : (pct >= 65 ? "pill-info" : "pill-warn")}`, `${pct}%`));
+          item.appendChild(top);
+
+          const meta = el("div", "rdy-meta-row");
+          meta.appendChild(el("span", "", `${s.stage_label || s.stage || "Stage"} · ETA: ${s.eta_summary || "--"}`));
+          const dotsWrap = el("span", "cycle-dots");
+          const consec = Number(s.consecutive_cloud_cycles || 0);
+          const target = Number(s.target_cloud_cycles || 3);
+          for (let i = 0; i < target; i++) {
+            dotsWrap.appendChild(el("span", `cycle-dot${i < consec ? " done" : ""}`));
+          }
+          dotsWrap.appendChild(el("span", "", `${consec}/${target}`));
+          meta.appendChild(dotsWrap);
+          item.appendChild(meta);
+
+          const track = el("div", "meter-track");
+          const fill = el("div", "meter-fill");
+          fill.style.width = `${Math.min(100, Math.max(2, pct))}%`;
+          track.appendChild(fill);
+          item.appendChild(track);
+
+          const tags = el("div", "rdy-tags");
+          (s.live_components || []).slice(0, 3).forEach((msg) => {
+            tags.appendChild(el("span", "pill pill-ok", `LIVE: ${msg}`));
+          });
+          (s.warming_up_components || []).slice(0, 2).forEach((msg) => {
+            tags.appendChild(el("span", "pill pill-warn", `WARM: ${msg}`));
+          });
+          (s.blockers || []).forEach((msg) => {
+            tags.appendChild(el("span", "pill pill-bad", `NOTE: ${msg}`));
+          });
+          item.appendChild(tags);
+          list.appendChild(item);
+        });
+      }
+
+      function renderUploadSchedule(analytics) {
+        const strat = (analytics && analytics.learned_strategy) || {};
+        const sched = strat.upload_schedule || {};
+        const plats = sched.platforms || {};
+        const policy = sched.policy || {};
+        const nextSlots = strat.next_scheduled_slots || {};
+
+        const expPct = Math.round(Number(policy.exploit_ratio ?? 0.8) * 100);
+        const explorePct = Math.round(Number(policy.explore_ratio ?? 0.2) * 100);
+        $("sched-policy-pill").textContent = `${expPct}% Peak · ${explorePct}% Explore`;
+
+        const nextGrid = $("sched-next-grid");
+        nextGrid.replaceChildren();
+        [
+          ["youtube", "@Viralclips247_yt"],
+          ["tiktok", "@viralclips2476"],
+        ].forEach(([platKey, defaultHandle]) => {
+          const pCfg = plats[platKey] || {};
+          const slot = nextSlots[platKey] || {};
+          const box = el("div", "ch-card");
+          const hdr = el("div", "rdy-top");
+          hdr.appendChild(el("span", "ch-handle", pCfg.channel_handle || defaultHandle));
+          const stype = String(slot.slot_type || "exploit").toUpperCase();
+          hdr.appendChild(el("span", `pill ${stype === "EXPLORE" ? "pill-warn" : "pill-ok"}`, stype));
+          box.appendChild(hdr);
+          box.appendChild(el("div", "sys-summary", `Next dueAt: ${slot.due_at_aedt || "--"}`));
+          box.appendChild(el("div", "sys-meta", `${slot.due_at_utc || "--"} · Max ${pCfg.daily_cap || 3}/day · >=${pCfg.min_spacing_hours || 4}h`));
+          box.appendChild(el("div", "sys-meta", `Peaks: ${(pCfg.peak_hours_aedt || []).join(", ") || "--"}`));
+          nextGrid.appendChild(box);
+        });
+
+        const activeCfg = plats[activeScheduleTab] || {};
+        const weekly = activeCfg.weekly_schedule || {};
+        const weeklyEl = $("sched-weekly-rows");
+        weeklyEl.replaceChildren();
+        const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+        let hasDays = false;
+        days.forEach((day) => {
+          const dCfg = weekly[day];
+          if (!dCfg) return;
+          hasDays = true;
+          const row = el("div", "slot-day-row");
+          row.appendChild(el("span", "slot-day-name", day));
+          const peaks = (dCfg.exploit_hours_aedt || []).join(", ");
+          const explores = (dCfg.explore_hours_aedt || []).slice(0, 2).join(", ");
+          row.appendChild(el("span", "slot-day-times", `${peaks}${explores ? ` · exp: ${explores}` : ""}`));
+          weeklyEl.appendChild(row);
+        });
+        if (!hasDays) {
+          weeklyEl.appendChild(el("div", "sys-summary", "No weekly schedule populated yet."));
+        }
+
+        const topEl = $("sched-top-slots");
+        topEl.replaceChildren();
+        const topObserved = activeCfg.top_observed_slots || [];
+        if (!topObserved.length) {
+          topEl.appendChild(el("div", "sys-summary", `Mode: ${activeCfg.adaptation_mode || "RESEARCH_SEEDED"} · awaiting post snapshots.`));
+        } else {
+          topObserved.slice(0, 5).forEach((s) => {
+            const row = el("div", "slot-day-row");
+            row.appendChild(el("span", "slot-day-name", `${s.weekday} ${s.hour_aedt || ""}`));
+            const v1 = s.avg_velocity_1h !== null && s.avg_velocity_1h !== undefined ? `1h:${s.avg_velocity_1h}v/h ` : "";
+            const v6 = s.avg_velocity_6h !== null && s.avg_velocity_6h !== undefined ? `6h:${s.avg_velocity_6h}v/h ` : "";
+            const eng = s.avg_engagement_rate_pct !== null && s.avg_engagement_rate_pct !== undefined ? `${s.avg_engagement_rate_pct}% eng` : "";
+            row.appendChild(el("span", "slot-day-times", `${s.sample_count}p · ${v1}${v6}${eng} · sc:${s.blended_score}`));
+            topEl.appendChild(row);
+          });
+        }
+      }
+
+      $("sched-tab-yt").addEventListener("click", () => {
+        activeScheduleTab = "youtube";
+        $("sched-tab-yt").classList.add("active");
+        $("sched-tab-tt").classList.remove("active");
+        if (statusData && statusData.analytics) renderUploadSchedule(statusData.analytics);
+      });
+      $("sched-tab-tt").addEventListener("click", () => {
+        activeScheduleTab = "tiktok";
+        $("sched-tab-tt").classList.add("active");
+        $("sched-tab-yt").classList.remove("active");
+        if (statusData && statusData.analytics) renderUploadSchedule(statusData.analytics);
+      });
+
       function renderOracle(vm) {
         const pill = $("oracle-pill");
         const active = vm.active_unit_count || 0;
@@ -1497,7 +1728,9 @@
             }
           }
           renderOracle(statusData.oracle_vm || {});
+          renderReadiness(statusData.readiness || {});
           renderAnalyticsAndStrategy(statusData.analytics || {});
+          renderUploadSchedule(statusData.analytics || {});
           renderSystems(statusData.systems || [], statusData.recent_workflow_runs || []);
           renderQualityGate(statusData.viral_quality_gate_log || []);
           renderBuffer(statusData.buffer || {});

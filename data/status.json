@@ -1,24 +1,238 @@
 {
   "schema": "viralclips247-mission-control-status-v1",
-  "generated_at_utc": "2026-11-19T13:27:03Z",
+  "generated_at_utc": "2026-11-19T13:58:40Z",
   "repo": "BATMAN6167/youtube-auto-publisher",
   "controls": {
     "cloud_schedule_enabled": true,
     "supervisor_enabled": true,
+    "streamer_radar_enabled": true,
+    "cloud_storage_configured": false,
     "media_host_provider": "github_releases",
     "media_host_repo": "BATMAN6167/viralclips247-media-staging"
+  },
+  "readiness": {
+    "schema": "viralclips247-readiness-scorecard-v1",
+    "generated_at_utc": "2026-11-19T13:58:40Z",
+    "target_unattended_cycles": 3,
+    "overall_readiness_pct": 72,
+    "systems_at_target_cycles": 0,
+    "total_systems": 3,
+    "max_eta_to_3_cycles_hours": 62.4,
+    "overall_eta_summary": "~62.4h to 3 consecutive unattended cloud cycles across all 3 systems",
+    "systems": [
+      {
+        "id": "oracle-clipper",
+        "handle": "@oracle-clipper",
+        "name": "System A1 · Oracle Clipper",
+        "readiness_pct": 80,
+        "stage": "STAGE_3_CLOUD_SOAK",
+        "stage_label": "Stage 3/4 · Cloud Cycle Soak",
+        "consecutive_cloud_cycles": 0,
+        "target_cloud_cycles": 3,
+        "cadence_hours": 6,
+        "live_components": [
+          "Oracle VM reachable & <=952 MiB / 0 swap",
+          "5/5 systemd units active & CI runner disabled",
+          "EventSub monitor completed cleanly (streak 0)",
+          "Streamer Radar >=3 consecutive cloud runs",
+          "Supervisor cron armed (VIRALCLIPS_SUPERVISOR_ENABLED)",
+          "Streamer Radar 20 consecutive cloud passes"
+        ],
+        "warming_up_components": [
+          "Supervisor cycles: 0/3 (cron every 6h)"
+        ],
+        "blockers": [
+          "0 documented Twitch creator reuse grants (metadata/review inbox only until creator permission added)",
+          "Supervisor workflow cron/trigger fix awaiting first post-push cloud cycle"
+        ],
+        "eta_to_3_cycles_hours": 16.3,
+        "eta_to_3_cycles_utc": "2026-11-20T06:17:00Z",
+        "eta_summary": "~16.3h (3x 6h cycles)",
+        "checks": [
+          {
+            "name": "Oracle VM reachable & <=952 MiB / 0 swap",
+            "weight": 20,
+            "passed": true,
+            "earned": 20
+          },
+          {
+            "name": "5/5 systemd units active & CI runner disabled",
+            "weight": 20,
+            "passed": true,
+            "earned": 20
+          },
+          {
+            "name": "EventSub monitor completed cleanly (streak 0)",
+            "weight": 15,
+            "passed": true,
+            "earned": 15
+          },
+          {
+            "name": "Streamer Radar >=3 consecutive cloud runs",
+            "weight": 15,
+            "passed": true,
+            "earned": 15
+          },
+          {
+            "name": "Supervisor cron armed (VIRALCLIPS_SUPERVISOR_ENABLED)",
+            "weight": 10,
+            "passed": true,
+            "earned": 10
+          },
+          {
+            "name": "Autonomous Supervisor 3 consecutive cloud runs",
+            "weight": 15,
+            "passed": false,
+            "earned": 0
+          },
+          {
+            "name": "Documented creator reuse grant (>=1)",
+            "weight": 5,
+            "passed": false,
+            "earned": 0
+          }
+        ]
+      },
+      {
+        "id": "shorts-editor",
+        "handle": "@shorts-editor",
+        "name": "System A2 · Shorts Editor & Remotion",
+        "readiness_pct": 65,
+        "stage": "STAGE_3_CLOUD_SOAK",
+        "stage_label": "Stage 3/4 · Cloud Cycle Soak",
+        "consecutive_cloud_cycles": 1,
+        "target_cloud_cycles": 3,
+        "cadence_hours": 24,
+        "live_components": [
+          "Cloud schedule armed (VIRALCLIPS_CLOUD_SCHEDULE_ENABLED)",
+          "24/7 GitHub Releases public staging active",
+          "Buffer YouTube & TikTok connected + uploader disabled",
+          "Self-adjusting 80/20 dueAt upload scheduler wired"
+        ],
+        "warming_up_components": [
+          "Cloud Shorts/Remotion cycles: 1/3 (daily 05:41 UTC)"
+        ],
+        "blockers": [
+          "No CLOUD_STORAGE_BUCKET configured yet (daily cron runs Remotion CI verification until cloud S3/R2 source bucket is set)"
+        ],
+        "eta_to_3_cycles_hours": 39.7,
+        "eta_to_3_cycles_utc": "2026-11-21T05:41:00Z",
+        "eta_summary": "~39.7h (2x 24h cycles)",
+        "checks": [
+          {
+            "name": "Cloud schedule armed (VIRALCLIPS_CLOUD_SCHEDULE_ENABLED)",
+            "weight": 15,
+            "passed": true,
+            "earned": 15
+          },
+          {
+            "name": "24/7 GitHub Releases public staging active",
+            "weight": 15,
+            "passed": true,
+            "earned": 15
+          },
+          {
+            "name": "Buffer YouTube & TikTok connected + uploader disabled",
+            "weight": 15,
+            "passed": true,
+            "earned": 15
+          },
+          {
+            "name": "Self-adjusting 80/20 dueAt upload scheduler wired",
+            "weight": 10,
+            "passed": true,
+            "earned": 10
+          },
+          {
+            "name": "Headless Shorts/Remotion 3 consecutive cloud runs",
+            "weight": 30,
+            "passed": false,
+            "earned": 10
+          },
+          {
+            "name": "Cloud S3/R2 source ingestion configured",
+            "weight": 15,
+            "passed": false,
+            "earned": 0
+          }
+        ]
+      },
+      {
+        "id": "cinematic-studio",
+        "handle": "@cinematic-studio",
+        "name": "System B · Original Cinematic Studio",
+        "readiness_pct": 70,
+        "stage": "STAGE_2_CLOUD_WIRED",
+        "stage_label": "Stage 2/4 · Cloud Wired & Warming",
+        "consecutive_cloud_cycles": 0,
+        "target_cloud_cycles": 3,
+        "cadence_hours": 24,
+        "live_components": [
+          "Cloud schedule armed (VIRALCLIPS_CLOUD_SCHEDULE_ENABLED)",
+          "24/7 GitHub Releases public staging active",
+          "Studio 3D drafts staged in Buffer / queue ledger",
+          "Self-adjusting 80/20 dueAt upload scheduler wired",
+          "Headless Blender 5.2.4 + Kokoro C/D pipeline wired"
+        ],
+        "warming_up_components": [
+          "Cloud Studio render cycles: 0/3 (daily 04:23 UTC)"
+        ],
+        "blockers": [],
+        "eta_to_3_cycles_hours": 62.4,
+        "eta_to_3_cycles_utc": "2026-11-22T04:23:00Z",
+        "eta_summary": "~62.4h (3x 24h cycles)",
+        "checks": [
+          {
+            "name": "Cloud schedule armed (VIRALCLIPS_CLOUD_SCHEDULE_ENABLED)",
+            "weight": 15,
+            "passed": true,
+            "earned": 15
+          },
+          {
+            "name": "24/7 GitHub Releases public staging active",
+            "weight": 15,
+            "passed": true,
+            "earned": 15
+          },
+          {
+            "name": "Studio 3D drafts staged in Buffer / queue ledger",
+            "weight": 15,
+            "passed": true,
+            "earned": 15
+          },
+          {
+            "name": "Self-adjusting 80/20 dueAt upload scheduler wired",
+            "weight": 10,
+            "passed": true,
+            "earned": 10
+          },
+          {
+            "name": "Headless Blender 5.2.4 + Kokoro C/D pipeline wired",
+            "weight": 15,
+            "passed": true,
+            "earned": 15
+          },
+          {
+            "name": "Headless Studio Render 3 consecutive cloud runs",
+            "weight": 30,
+            "passed": false,
+            "earned": 0
+          }
+        ]
+      }
+    ]
   },
   "oracle_vm": {
     "reachable": true,
     "source": "oracle_ssh_live",
-    "captured_at_utc": "2026-11-19T13:27:02Z",
+    "captured_at_utc": "2026-11-19T13:58:39Z",
     "hostname": "viralclips247-server",
     "shape": "VM.Standard.E2.1.Micro (x86_64)",
-    "ram_used_mib": 340,
+    "ram_used_mib": 346,
     "ram_total_mib": 952,
-    "ram_available_mib": 612,
+    "ram_available_mib": 605,
     "ram_ceiling_mib": 952,
-    "ram_percent": 35.7,
+    "ram_percent": 36.3,
     "ram_within_ceiling": true,
     "swap_total_mib": 0,
     "disk": {
@@ -64,35 +278,35 @@
     },
     "monitor_heartbeat": {
       "status": "monitor_session_complete",
-      "updated_utc": "2026-11-19T13:21:13.783628+00:00",
+      "updated_utc": "2026-11-19T13:41:23.062665+00:00",
       "last_session_ok": true,
       "failure_streak": 0
     },
     "native_sidecar": {
       "status": "monitoring_private_candidates",
-      "updated_utc": "2026-11-19T13:26:59.882581+00:00",
+      "updated_utc": "2026-11-19T13:58:38.568106+00:00",
       "processed": 0,
       "reauthorization_required": false
     },
     "latest_completed_diagnostic": {
-      "file": "20261119T130108Z-6efb47656704.jsonl.diagnostics.json",
+      "file": "20261119T132117Z-31fc5235b4f2.jsonl.diagnostics.json",
       "status": "completed_on_demand_session",
       "outcome": "valid_zero_candidates",
-      "elapsed_seconds": 1205.02,
+      "elapsed_seconds": 1205.01,
       "subscriptions_enabled": null,
       "live_snapshots": null,
       "scorer_evaluations": null
     },
     "gta_scout": {
       "scout_release": "v1.2",
-      "as_of_utc": "2026-11-19T13:23:10.474650+00:00",
+      "as_of_utc": "2026-11-19T13:54:24.874597+00:00",
       "direct_incumbent_count": 5,
       "direct_incumbent_live_count": 1,
-      "live_streams_observed": 755
+      "live_streams_observed": 758
     },
     "review_inbox": {
       "count": 20,
-      "generated_at_utc": "2026-11-19T13:26:55.115361+00:00",
+      "generated_at_utc": "2026-11-19T13:58:17.411299+00:00",
       "youtube_tiktok_publishing_authorized": false
     },
     "release_health": {
@@ -109,8 +323,8 @@
       "title": "System A1 · Oracle Live Clipper",
       "host": "Oracle E2.1.Micro (Coordinator Only)",
       "status": "healthy",
-      "summary": "5/5 systemd units active · 340/952 MiB RAM · streak 0",
-      "last_activity_utc": "2026-11-19T13:21:13.783628+00:00",
+      "summary": "5/5 systemd units active · 346/952 MiB RAM · streak 0",
+      "last_activity_utc": "2026-11-19T13:41:23.062665+00:00",
       "workflow_file": "autonomous-supervisor-agy.yml",
       "media_host": "n/a (metadata + native Twitch clips)"
     },
@@ -130,16 +344,16 @@
       "handle": "@cinematic-studio",
       "title": "System B · Original Cinematic Studio",
       "host": "GitHub Actions (Blender 5.2.4 EEVEE / VTK + Kokoro C/D)",
-      "status": "attention",
-      "summary": "Latest run failure · Voices C=am_adam / D=af_heart",
-      "last_activity_utc": "2026-11-19T10:04:06Z",
+      "status": "running",
+      "summary": "Latest run in_progress · Voices C=am_adam / D=af_heart",
+      "last_activity_utc": "2026-11-19T13:58:35Z",
       "workflow_file": "headless-studio-render.yml",
       "media_host": "github_releases -> BATMAN6167/viralclips247-media-staging"
     }
   ],
   "analytics": {
     "schema": "viralclips247-dashboard-analytics-v1",
-    "generated_at_utc": "2026-11-19T13:26:57Z",
+    "generated_at_utc": "2026-11-19T13:58:34Z",
     "sample_size": {
       "total_posts_analyzed": 90,
       "top_20_count": 18,
@@ -268,25 +482,1824 @@
       },
       "optimal_posting_hours": {
         "youtube_utc_hours": [
-          0,
-          1,
-          13
+          17,
+          21,
+          0
         ],
         "tiktok_utc_hours": [
-          14,
-          2,
-          11
+          16,
+          22,
+          1
         ],
         "youtube_aedt_hours": [
-          "11:00 AEDT",
-          "12:00 AEDT",
-          "00:00 AEDT"
+          "04:00 AEDT",
+          "08:00 AEDT",
+          "11:00 AEDT"
         ],
         "tiktok_aedt_hours": [
-          "01:00 AEDT",
-          "13:00 AEDT",
-          "22:00 AEDT"
+          "03:00 AEDT",
+          "09:00 AEDT",
+          "12:00 AEDT"
         ]
+      },
+      "upload_schedule": {
+        "schema": "viralclips247-adaptive-upload-schedule-v1",
+        "research_schema": "viralclips247-upload-schedule-research-v1",
+        "research_date": "2026-11-20",
+        "policy": {
+          "exploit_ratio": 0.8,
+          "explore_ratio": 0.2,
+          "adjacent_hour_offsets": [
+            -1,
+            1,
+            -2,
+            2
+          ],
+          "velocity_weights": {
+            "velocity_1h": 0.4,
+            "velocity_6h": 0.35,
+            "engagement_rate": 0.25
+          },
+          "prior_strength": 2.0
+        },
+        "platforms": {
+          "youtube": {
+            "channel_handle": "@Viralclips247_yt",
+            "daily_cap": 3,
+            "min_spacing_hours": 4,
+            "minute_offset": 17,
+            "adaptation_mode": "RESEARCH_SEEDED_WITH_HISTORICAL_BLEND",
+            "observed_posts": 50,
+            "posts_with_1h_6h_velocity": 0,
+            "peak_hours_utc": [
+              17,
+              21,
+              0
+            ],
+            "peak_hours_aedt": [
+              "04:00 AEDT",
+              "08:00 AEDT",
+              "11:00 AEDT"
+            ],
+            "explore_hours_utc": [
+              22,
+              18,
+              16
+            ],
+            "explore_hours_aedt": [
+              "09:00 AEDT",
+              "05:00 AEDT",
+              "03:00 AEDT"
+            ],
+            "top_observed_slots": [
+              {
+                "weekday": "monday",
+                "hour_utc": 21,
+                "hour_aedt": "08:00 AEDT",
+                "hour_est": "16:00 EST",
+                "window_label": "US After-Work / UK Prime",
+                "baseline_score": 0.9,
+                "blended_score": 0.7429,
+                "sample_count": 1,
+                "avg_velocity_1h": null,
+                "avg_velocity_6h": null,
+                "avg_velocity_overall": 0.143,
+                "avg_engagement_rate_pct": 0.0
+              },
+              {
+                "weekday": "friday",
+                "hour_utc": 0,
+                "hour_aedt": "11:00 AEDT",
+                "hour_est": "19:00 EST",
+                "window_label": "Friday Night Gaming Surge",
+                "baseline_score": 0.91,
+                "blended_score": 0.7342,
+                "sample_count": 1,
+                "avg_velocity_1h": null,
+                "avg_velocity_6h": null,
+                "avg_velocity_overall": 0.372,
+                "avg_engagement_rate_pct": 0.0
+              },
+              {
+                "weekday": "monday",
+                "hour_utc": 1,
+                "hour_aedt": "12:00 AEDT",
+                "hour_est": "20:00 EST",
+                "window_label": "US Evening Binge",
+                "baseline_score": 0.82,
+                "blended_score": 0.6431,
+                "sample_count": 1,
+                "avg_velocity_1h": null,
+                "avg_velocity_6h": null,
+                "avg_velocity_overall": 0.002,
+                "avg_engagement_rate_pct": 0.0
+              },
+              {
+                "weekday": "monday",
+                "hour_utc": 0,
+                "hour_aedt": "11:00 AEDT",
+                "hour_est": "19:00 EST",
+                "window_label": "Adjacent Exploration Window",
+                "baseline_score": 0.3,
+                "blended_score": 0.3494,
+                "sample_count": 2,
+                "avg_velocity_1h": null,
+                "avg_velocity_6h": null,
+                "avg_velocity_overall": 0.798,
+                "avg_engagement_rate_pct": 0.91
+              },
+              {
+                "weekday": "monday",
+                "hour_utc": 3,
+                "hour_aedt": "14:00 AEDT",
+                "hour_est": "22:00 EST",
+                "window_label": "Adjacent Exploration Window",
+                "baseline_score": 0.3,
+                "blended_score": 0.2998,
+                "sample_count": 1,
+                "avg_velocity_1h": null,
+                "avg_velocity_6h": null,
+                "avg_velocity_overall": 1.368,
+                "avg_engagement_rate_pct": 0.58
+              },
+              {
+                "weekday": "thursday",
+                "hour_utc": 1,
+                "hour_aedt": "12:00 AEDT",
+                "hour_est": "20:00 EST",
+                "window_label": "Adjacent Exploration Window",
+                "baseline_score": 0.3,
+                "blended_score": 0.2703,
+                "sample_count": 1,
+                "avg_velocity_1h": null,
+                "avg_velocity_6h": null,
+                "avg_velocity_overall": 0.743,
+                "avg_engagement_rate_pct": 0.0
+              }
+            ],
+            "weekly_schedule": {
+              "monday": {
+                "exploit_hours_utc": [
+                  17,
+                  21,
+                  1
+                ],
+                "exploit_hours_aedt": [
+                  "04:00 AEDT",
+                  "08:00 AEDT",
+                  "12:00 AEDT"
+                ],
+                "explore_hours_utc": [
+                  16,
+                  18,
+                  15
+                ],
+                "explore_hours_aedt": [
+                  "03:00 AEDT",
+                  "05:00 AEDT",
+                  "02:00 AEDT"
+                ],
+                "slots": [
+                  {
+                    "hour_utc": 17,
+                    "hour_aedt": "04:00 AEDT",
+                    "hour_est": "12:00 EST",
+                    "window_label": "US Lunch / UK Evening",
+                    "baseline_score": 0.86,
+                    "blended_score": 0.86,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 21,
+                    "hour_aedt": "08:00 AEDT",
+                    "hour_est": "16:00 EST",
+                    "window_label": "US After-Work / UK Prime",
+                    "baseline_score": 0.9,
+                    "blended_score": 0.7429,
+                    "sample_count": 1,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": 0.143,
+                    "avg_engagement_rate_pct": 0.0,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 1,
+                    "hour_aedt": "12:00 AEDT",
+                    "hour_est": "20:00 EST",
+                    "window_label": "US Evening Binge",
+                    "baseline_score": 0.82,
+                    "blended_score": 0.6431,
+                    "sample_count": 1,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": 0.002,
+                    "avg_engagement_rate_pct": 0.0,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 16,
+                    "hour_aedt": "03:00 AEDT",
+                    "hour_est": "11:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 18,
+                    "hour_aedt": "05:00 AEDT",
+                    "hour_est": "13:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 15,
+                    "hour_aedt": "02:00 AEDT",
+                    "hour_est": "10:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  }
+                ]
+              },
+              "tuesday": {
+                "exploit_hours_utc": [
+                  18,
+                  21,
+                  0
+                ],
+                "exploit_hours_aedt": [
+                  "05:00 AEDT",
+                  "08:00 AEDT",
+                  "11:00 AEDT"
+                ],
+                "explore_hours_utc": [
+                  17,
+                  16,
+                  22
+                ],
+                "explore_hours_aedt": [
+                  "04:00 AEDT",
+                  "03:00 AEDT",
+                  "09:00 AEDT"
+                ],
+                "slots": [
+                  {
+                    "hour_utc": 18,
+                    "hour_aedt": "05:00 AEDT",
+                    "hour_est": "13:00 EST",
+                    "window_label": "US Early Afternoon / UK Evening",
+                    "baseline_score": 0.88,
+                    "blended_score": 0.88,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 21,
+                    "hour_aedt": "08:00 AEDT",
+                    "hour_est": "16:00 EST",
+                    "window_label": "Mid-Week Peak Bridge",
+                    "baseline_score": 0.92,
+                    "blended_score": 0.8561,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 0,
+                    "hour_aedt": "11:00 AEDT",
+                    "hour_est": "19:00 EST",
+                    "window_label": "US Prime Evening",
+                    "baseline_score": 0.85,
+                    "blended_score": 0.7587,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 17,
+                    "hour_aedt": "04:00 AEDT",
+                    "hour_est": "12:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 16,
+                    "hour_aedt": "03:00 AEDT",
+                    "hour_est": "11:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 22,
+                    "hour_aedt": "09:00 AEDT",
+                    "hour_est": "17:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  }
+                ]
+              },
+              "wednesday": {
+                "exploit_hours_utc": [
+                  22,
+                  19,
+                  1
+                ],
+                "exploit_hours_aedt": [
+                  "09:00 AEDT",
+                  "06:00 AEDT",
+                  "12:00 AEDT"
+                ],
+                "explore_hours_utc": [
+                  0,
+                  18,
+                  17
+                ],
+                "explore_hours_aedt": [
+                  "11:00 AEDT",
+                  "05:00 AEDT",
+                  "04:00 AEDT"
+                ],
+                "slots": [
+                  {
+                    "hour_utc": 22,
+                    "hour_aedt": "09:00 AEDT",
+                    "hour_est": "17:00 EST",
+                    "window_label": "Buffer Mid-Week Peak",
+                    "baseline_score": 0.94,
+                    "blended_score": 0.94,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 19,
+                    "hour_aedt": "06:00 AEDT",
+                    "hour_est": "14:00 EST",
+                    "window_label": "Mid-Week Tech Surge",
+                    "baseline_score": 0.91,
+                    "blended_score": 0.7929,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 1,
+                    "hour_aedt": "12:00 AEDT",
+                    "hour_est": "20:00 EST",
+                    "window_label": "US Gaming Evening",
+                    "baseline_score": 0.84,
+                    "blended_score": 0.7416,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 0,
+                    "hour_aedt": "11:00 AEDT",
+                    "hour_est": "19:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3138,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 18,
+                    "hour_aedt": "05:00 AEDT",
+                    "hour_est": "13:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 17,
+                    "hour_aedt": "04:00 AEDT",
+                    "hour_est": "12:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  }
+                ]
+              },
+              "thursday": {
+                "exploit_hours_utc": [
+                  17,
+                  20,
+                  23
+                ],
+                "exploit_hours_aedt": [
+                  "04:00 AEDT",
+                  "07:00 AEDT",
+                  "10:00 AEDT"
+                ],
+                "explore_hours_utc": [
+                  0,
+                  16,
+                  18
+                ],
+                "explore_hours_aedt": [
+                  "11:00 AEDT",
+                  "03:00 AEDT",
+                  "05:00 AEDT"
+                ],
+                "slots": [
+                  {
+                    "hour_utc": 17,
+                    "hour_aedt": "04:00 AEDT",
+                    "hour_est": "12:00 EST",
+                    "window_label": "Midday Tech Break",
+                    "baseline_score": 0.89,
+                    "blended_score": 0.89,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 20,
+                    "hour_aedt": "07:00 AEDT",
+                    "hour_est": "15:00 EST",
+                    "window_label": "Pre-Weekend Commute",
+                    "baseline_score": 0.93,
+                    "blended_score": 0.8621,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 23,
+                    "hour_aedt": "10:00 AEDT",
+                    "hour_est": "18:00 EST",
+                    "window_label": "US Dinner / Evening Scroll",
+                    "baseline_score": 0.86,
+                    "blended_score": 0.7508,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 0,
+                    "hour_aedt": "11:00 AEDT",
+                    "hour_est": "19:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3138,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 16,
+                    "hour_aedt": "03:00 AEDT",
+                    "hour_est": "11:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 18,
+                    "hour_aedt": "05:00 AEDT",
+                    "hour_est": "13:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  }
+                ]
+              },
+              "friday": {
+                "exploit_hours_utc": [
+                  21,
+                  17,
+                  0
+                ],
+                "exploit_hours_aedt": [
+                  "08:00 AEDT",
+                  "04:00 AEDT",
+                  "11:00 AEDT"
+                ],
+                "explore_hours_utc": [
+                  22,
+                  16,
+                  18
+                ],
+                "explore_hours_aedt": [
+                  "09:00 AEDT",
+                  "03:00 AEDT",
+                  "05:00 AEDT"
+                ],
+                "slots": [
+                  {
+                    "hour_utc": 21,
+                    "hour_aedt": "08:00 AEDT",
+                    "hour_est": "16:00 EST",
+                    "window_label": "#1 Weekly Shorts Peak (4 PM EST)",
+                    "baseline_score": 0.98,
+                    "blended_score": 0.9117,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 17,
+                    "hour_aedt": "04:00 AEDT",
+                    "hour_est": "12:00 EST",
+                    "window_label": "Friday Midday Kickoff",
+                    "baseline_score": 0.9,
+                    "blended_score": 0.9,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 0,
+                    "hour_aedt": "11:00 AEDT",
+                    "hour_est": "19:00 EST",
+                    "window_label": "Friday Night Gaming Surge",
+                    "baseline_score": 0.91,
+                    "blended_score": 0.7342,
+                    "sample_count": 1,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": 0.372,
+                    "avg_engagement_rate_pct": 0.0,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 22,
+                    "hour_aedt": "09:00 AEDT",
+                    "hour_est": "17:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 16,
+                    "hour_aedt": "03:00 AEDT",
+                    "hour_est": "11:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 18,
+                    "hour_aedt": "05:00 AEDT",
+                    "hour_est": "13:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  }
+                ]
+              },
+              "saturday": {
+                "exploit_hours_utc": [
+                  14,
+                  22,
+                  18
+                ],
+                "exploit_hours_aedt": [
+                  "01:00 AEDT",
+                  "09:00 AEDT",
+                  "05:00 AEDT"
+                ],
+                "explore_hours_utc": [
+                  0,
+                  15,
+                  12
+                ],
+                "explore_hours_aedt": [
+                  "11:00 AEDT",
+                  "02:00 AEDT",
+                  "23:00 AEDT"
+                ],
+                "slots": [
+                  {
+                    "hour_utc": 14,
+                    "hour_aedt": "01:00 AEDT",
+                    "hour_est": "09:00 EST",
+                    "window_label": "Weekend Morning Relaxed Feed",
+                    "baseline_score": 0.92,
+                    "blended_score": 0.92,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 22,
+                    "hour_aedt": "09:00 AEDT",
+                    "hour_est": "17:00 EST",
+                    "window_label": "Saturday Prime Gaming",
+                    "baseline_score": 0.9,
+                    "blended_score": 0.9,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 18,
+                    "hour_aedt": "05:00 AEDT",
+                    "hour_est": "13:00 EST",
+                    "window_label": "Saturday Afternoon Bridge",
+                    "baseline_score": 0.89,
+                    "blended_score": 0.89,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 0,
+                    "hour_aedt": "11:00 AEDT",
+                    "hour_est": "19:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3138,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 15,
+                    "hour_aedt": "02:00 AEDT",
+                    "hour_est": "10:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 12,
+                    "hour_aedt": "23:00 AEDT",
+                    "hour_est": "07:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  }
+                ]
+              },
+              "sunday": {
+                "exploit_hours_utc": [
+                  14,
+                  0,
+                  19
+                ],
+                "exploit_hours_aedt": [
+                  "01:00 AEDT",
+                  "11:00 AEDT",
+                  "06:00 AEDT"
+                ],
+                "explore_hours_utc": [
+                  15,
+                  12,
+                  16
+                ],
+                "explore_hours_aedt": [
+                  "02:00 AEDT",
+                  "23:00 AEDT",
+                  "03:00 AEDT"
+                ],
+                "slots": [
+                  {
+                    "hour_utc": 14,
+                    "hour_aedt": "01:00 AEDT",
+                    "hour_est": "09:00 EST",
+                    "window_label": "Sunday Morning Catch-Up",
+                    "baseline_score": 0.91,
+                    "blended_score": 0.91,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 0,
+                    "hour_aedt": "11:00 AEDT",
+                    "hour_est": "19:00 EST",
+                    "window_label": "Sunday Evening Wind-Down",
+                    "baseline_score": 0.93,
+                    "blended_score": 0.8234,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 19,
+                    "hour_aedt": "06:00 AEDT",
+                    "hour_est": "14:00 EST",
+                    "window_label": "Sunday Afternoon Binge",
+                    "baseline_score": 0.88,
+                    "blended_score": 0.7669,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 15,
+                    "hour_aedt": "02:00 AEDT",
+                    "hour_est": "10:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 12,
+                    "hour_aedt": "23:00 AEDT",
+                    "hour_est": "07:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 16,
+                    "hour_aedt": "03:00 AEDT",
+                    "hour_est": "11:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  }
+                ]
+              }
+            }
+          },
+          "tiktok": {
+            "channel_handle": "@viralclips2476",
+            "daily_cap": 3,
+            "min_spacing_hours": 4,
+            "minute_offset": 33,
+            "adaptation_mode": "RESEARCH_SEEDED_WITH_HISTORICAL_BLEND",
+            "observed_posts": 40,
+            "posts_with_1h_6h_velocity": 0,
+            "peak_hours_utc": [
+              16,
+              22,
+              1
+            ],
+            "peak_hours_aedt": [
+              "03:00 AEDT",
+              "09:00 AEDT",
+              "12:00 AEDT"
+            ],
+            "explore_hours_utc": [
+              15,
+              17,
+              20
+            ],
+            "explore_hours_aedt": [
+              "02:00 AEDT",
+              "04:00 AEDT",
+              "07:00 AEDT"
+            ],
+            "top_observed_slots": [
+              {
+                "weekday": "sunday",
+                "hour_utc": 14,
+                "hour_aedt": "01:00 AEDT",
+                "hour_est": "09:00 EST",
+                "window_label": "Buffer #1 Best Hour (9 AM EST)",
+                "baseline_score": 0.98,
+                "blended_score": 0.9126,
+                "sample_count": 1,
+                "avg_velocity_1h": null,
+                "avg_velocity_6h": null,
+                "avg_velocity_overall": 2.526,
+                "avg_engagement_rate_pct": 1.72
+              },
+              {
+                "weekday": "wednesday",
+                "hour_utc": 21,
+                "hour_aedt": "08:00 AEDT",
+                "hour_est": "16:00 EST",
+                "window_label": "Broad Mid-Week Peak",
+                "baseline_score": 0.93,
+                "blended_score": 0.8045,
+                "sample_count": 1,
+                "avg_velocity_1h": null,
+                "avg_velocity_6h": null,
+                "avg_velocity_overall": 0.654,
+                "avg_engagement_rate_pct": 1.78
+              },
+              {
+                "weekday": "thursday",
+                "hour_utc": 1,
+                "hour_aedt": "12:00 AEDT",
+                "hour_est": "20:00 EST",
+                "window_label": "US Late Evening Clips",
+                "baseline_score": 0.87,
+                "blended_score": 0.7559,
+                "sample_count": 1,
+                "avg_velocity_1h": null,
+                "avg_velocity_6h": null,
+                "avg_velocity_overall": 0.967,
+                "avg_engagement_rate_pct": 4.0
+              },
+              {
+                "weekday": "tuesday",
+                "hour_utc": 18,
+                "hour_aedt": "05:00 AEDT",
+                "hour_est": "13:00 EST",
+                "window_label": "Sprout Midday Surge",
+                "baseline_score": 0.91,
+                "blended_score": 0.6701,
+                "sample_count": 1,
+                "avg_velocity_1h": null,
+                "avg_velocity_6h": null,
+                "avg_velocity_overall": 0.618,
+                "avg_engagement_rate_pct": 1.58
+              },
+              {
+                "weekday": "monday",
+                "hour_utc": 0,
+                "hour_aedt": "11:00 AEDT",
+                "hour_est": "19:00 EST",
+                "window_label": "US Evening Gaming",
+                "baseline_score": 0.84,
+                "blended_score": 0.6541,
+                "sample_count": 1,
+                "avg_velocity_1h": null,
+                "avg_velocity_6h": null,
+                "avg_velocity_overall": 0.552,
+                "avg_engagement_rate_pct": 2.63
+              },
+              {
+                "weekday": "tuesday",
+                "hour_utc": 1,
+                "hour_aedt": "12:00 AEDT",
+                "hour_est": "20:00 EST",
+                "window_label": "Adjacent Exploration Window",
+                "baseline_score": 0.3,
+                "blended_score": 0.3469,
+                "sample_count": 1,
+                "avg_velocity_1h": null,
+                "avg_velocity_6h": null,
+                "avg_velocity_overall": 0.834,
+                "avg_engagement_rate_pct": 4.88
+              }
+            ],
+            "weekly_schedule": {
+              "monday": {
+                "exploit_hours_utc": [
+                  16,
+                  20,
+                  0
+                ],
+                "exploit_hours_aedt": [
+                  "03:00 AEDT",
+                  "07:00 AEDT",
+                  "11:00 AEDT"
+                ],
+                "explore_hours_utc": [
+                  14,
+                  19,
+                  2
+                ],
+                "explore_hours_aedt": [
+                  "01:00 AEDT",
+                  "06:00 AEDT",
+                  "13:00 AEDT"
+                ],
+                "slots": [
+                  {
+                    "hour_utc": 16,
+                    "hour_aedt": "03:00 AEDT",
+                    "hour_est": "11:00 EST",
+                    "window_label": "US/UK Midday Bridge",
+                    "baseline_score": 0.87,
+                    "blended_score": 0.87,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 20,
+                    "hour_aedt": "07:00 AEDT",
+                    "hour_est": "15:00 EST",
+                    "window_label": "After-Work Recovery",
+                    "baseline_score": 0.89,
+                    "blended_score": 0.8467,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 0,
+                    "hour_aedt": "11:00 AEDT",
+                    "hour_est": "19:00 EST",
+                    "window_label": "US Evening Gaming",
+                    "baseline_score": 0.84,
+                    "blended_score": 0.6541,
+                    "sample_count": 1,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": 0.552,
+                    "avg_engagement_rate_pct": 2.63,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 14,
+                    "hour_aedt": "01:00 AEDT",
+                    "hour_est": "09:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3229,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 19,
+                    "hour_aedt": "06:00 AEDT",
+                    "hour_est": "14:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3114,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 2,
+                    "hour_aedt": "13:00 AEDT",
+                    "hour_est": "21:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.311,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  }
+                ]
+              },
+              "tuesday": {
+                "exploit_hours_utc": [
+                  22,
+                  11,
+                  18
+                ],
+                "exploit_hours_aedt": [
+                  "09:00 AEDT",
+                  "22:00 AEDT",
+                  "05:00 AEDT"
+                ],
+                "explore_hours_utc": [
+                  19,
+                  12,
+                  13
+                ],
+                "explore_hours_aedt": [
+                  "06:00 AEDT",
+                  "23:00 AEDT",
+                  "00:00 AEDT"
+                ],
+                "slots": [
+                  {
+                    "hour_utc": 22,
+                    "hour_aedt": "09:00 AEDT",
+                    "hour_est": "17:00 EST",
+                    "window_label": "US/UK Gaming Prime",
+                    "baseline_score": 0.92,
+                    "blended_score": 0.92,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 11,
+                    "hour_aedt": "22:00 AEDT",
+                    "hour_est": "06:00 EST",
+                    "window_label": "Buffer 6 AM US / AU Night Peak",
+                    "baseline_score": 0.86,
+                    "blended_score": 0.8266,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 18,
+                    "hour_aedt": "05:00 AEDT",
+                    "hour_est": "13:00 EST",
+                    "window_label": "Sprout Midday Surge",
+                    "baseline_score": 0.91,
+                    "blended_score": 0.6701,
+                    "sample_count": 1,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": 0.618,
+                    "avg_engagement_rate_pct": 1.58,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 19,
+                    "hour_aedt": "06:00 AEDT",
+                    "hour_est": "14:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3114,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 12,
+                    "hour_aedt": "23:00 AEDT",
+                    "hour_est": "07:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 13,
+                    "hour_aedt": "00:00 AEDT",
+                    "hour_est": "08:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  }
+                ]
+              },
+              "wednesday": {
+                "exploit_hours_utc": [
+                  16,
+                  2,
+                  21
+                ],
+                "exploit_hours_aedt": [
+                  "03:00 AEDT",
+                  "13:00 AEDT",
+                  "08:00 AEDT"
+                ],
+                "explore_hours_utc": [
+                  1,
+                  14,
+                  3
+                ],
+                "explore_hours_aedt": [
+                  "12:00 AEDT",
+                  "01:00 AEDT",
+                  "14:00 AEDT"
+                ],
+                "slots": [
+                  {
+                    "hour_utc": 16,
+                    "hour_aedt": "03:00 AEDT",
+                    "hour_est": "11:00 EST",
+                    "window_label": "US/UK Lunch Bridge",
+                    "baseline_score": 0.88,
+                    "blended_score": 0.88,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 2,
+                    "hour_aedt": "13:00 AEDT",
+                    "hour_est": "21:00 EST",
+                    "window_label": "Buffer 9-10 PM Creator Spike",
+                    "baseline_score": 0.9,
+                    "blended_score": 0.8672,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 21,
+                    "hour_aedt": "08:00 AEDT",
+                    "hour_est": "16:00 EST",
+                    "window_label": "Broad Mid-Week Peak",
+                    "baseline_score": 0.93,
+                    "blended_score": 0.8045,
+                    "sample_count": 1,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": 0.654,
+                    "avg_engagement_rate_pct": 1.78,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 1,
+                    "hour_aedt": "12:00 AEDT",
+                    "hour_est": "20:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3304,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 14,
+                    "hour_aedt": "01:00 AEDT",
+                    "hour_est": "09:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3229,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 3,
+                    "hour_aedt": "14:00 AEDT",
+                    "hour_est": "22:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3176,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  }
+                ]
+              },
+              "thursday": {
+                "exploit_hours_utc": [
+                  17,
+                  21,
+                  1
+                ],
+                "exploit_hours_aedt": [
+                  "04:00 AEDT",
+                  "08:00 AEDT",
+                  "12:00 AEDT"
+                ],
+                "explore_hours_utc": [
+                  3,
+                  19,
+                  2
+                ],
+                "explore_hours_aedt": [
+                  "14:00 AEDT",
+                  "06:00 AEDT",
+                  "13:00 AEDT"
+                ],
+                "slots": [
+                  {
+                    "hour_utc": 17,
+                    "hour_aedt": "04:00 AEDT",
+                    "hour_est": "12:00 EST",
+                    "window_label": "Buffer 1 PM / UK Commute",
+                    "baseline_score": 0.91,
+                    "blended_score": 0.91,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 21,
+                    "hour_aedt": "08:00 AEDT",
+                    "hour_est": "16:00 EST",
+                    "window_label": "Prime Gaming Overlap",
+                    "baseline_score": 0.94,
+                    "blended_score": 0.8894,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 1,
+                    "hour_aedt": "12:00 AEDT",
+                    "hour_est": "20:00 EST",
+                    "window_label": "US Late Evening Clips",
+                    "baseline_score": 0.87,
+                    "blended_score": 0.7559,
+                    "sample_count": 1,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": 0.967,
+                    "avg_engagement_rate_pct": 4.0,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 3,
+                    "hour_aedt": "14:00 AEDT",
+                    "hour_est": "22:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3176,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 19,
+                    "hour_aedt": "06:00 AEDT",
+                    "hour_est": "14:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3114,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 2,
+                    "hour_aedt": "13:00 AEDT",
+                    "hour_est": "21:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.311,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  }
+                ]
+              },
+              "friday": {
+                "exploit_hours_utc": [
+                  16,
+                  20,
+                  0
+                ],
+                "exploit_hours_aedt": [
+                  "03:00 AEDT",
+                  "07:00 AEDT",
+                  "11:00 AEDT"
+                ],
+                "explore_hours_utc": [
+                  1,
+                  14,
+                  2
+                ],
+                "explore_hours_aedt": [
+                  "12:00 AEDT",
+                  "01:00 AEDT",
+                  "13:00 AEDT"
+                ],
+                "slots": [
+                  {
+                    "hour_utc": 16,
+                    "hour_aedt": "03:00 AEDT",
+                    "hour_est": "11:00 EST",
+                    "window_label": "Pre-Weekend Bridge",
+                    "baseline_score": 0.88,
+                    "blended_score": 0.88,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 20,
+                    "hour_aedt": "07:00 AEDT",
+                    "hour_est": "15:00 EST",
+                    "window_label": "Friday Logout Surge",
+                    "baseline_score": 0.92,
+                    "blended_score": 0.8746,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 0,
+                    "hour_aedt": "11:00 AEDT",
+                    "hour_est": "19:00 EST",
+                    "window_label": "Friday Night Gaming Binge",
+                    "baseline_score": 0.93,
+                    "blended_score": 0.7638,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 1,
+                    "hour_aedt": "12:00 AEDT",
+                    "hour_est": "20:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3304,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 14,
+                    "hour_aedt": "01:00 AEDT",
+                    "hour_est": "09:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3229,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 2,
+                    "hour_aedt": "13:00 AEDT",
+                    "hour_est": "21:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.311,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  }
+                ]
+              },
+              "saturday": {
+                "exploit_hours_utc": [
+                  22,
+                  15,
+                  19
+                ],
+                "exploit_hours_aedt": [
+                  "09:00 AEDT",
+                  "02:00 AEDT",
+                  "06:00 AEDT"
+                ],
+                "explore_hours_utc": [
+                  14,
+                  16,
+                  13
+                ],
+                "explore_hours_aedt": [
+                  "01:00 AEDT",
+                  "03:00 AEDT",
+                  "00:00 AEDT"
+                ],
+                "slots": [
+                  {
+                    "hour_utc": 22,
+                    "hour_aedt": "09:00 AEDT",
+                    "hour_est": "17:00 EST",
+                    "window_label": "Buffer #1 Best Day (5 PM EST)",
+                    "baseline_score": 0.97,
+                    "blended_score": 0.97,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 15,
+                    "hour_aedt": "02:00 AEDT",
+                    "hour_est": "10:00 EST",
+                    "window_label": "Saturday Morning Clips",
+                    "baseline_score": 0.91,
+                    "blended_score": 0.91,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 19,
+                    "hour_aedt": "06:00 AEDT",
+                    "hour_est": "14:00 EST",
+                    "window_label": "Weekend Gaming Marathon",
+                    "baseline_score": 0.93,
+                    "blended_score": 0.821,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 14,
+                    "hour_aedt": "01:00 AEDT",
+                    "hour_est": "09:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3229,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 16,
+                    "hour_aedt": "03:00 AEDT",
+                    "hour_est": "11:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 13,
+                    "hour_aedt": "00:00 AEDT",
+                    "hour_est": "08:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  }
+                ]
+              },
+              "sunday": {
+                "exploit_hours_utc": [
+                  14,
+                  23,
+                  18
+                ],
+                "exploit_hours_aedt": [
+                  "01:00 AEDT",
+                  "10:00 AEDT",
+                  "05:00 AEDT"
+                ],
+                "explore_hours_utc": [
+                  1,
+                  13,
+                  15
+                ],
+                "explore_hours_aedt": [
+                  "12:00 AEDT",
+                  "00:00 AEDT",
+                  "02:00 AEDT"
+                ],
+                "slots": [
+                  {
+                    "hour_utc": 14,
+                    "hour_aedt": "01:00 AEDT",
+                    "hour_est": "09:00 EST",
+                    "window_label": "Buffer #1 Best Hour (9 AM EST)",
+                    "baseline_score": 0.98,
+                    "blended_score": 0.9126,
+                    "sample_count": 1,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": 2.526,
+                    "avg_engagement_rate_pct": 1.72,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 23,
+                    "hour_aedt": "10:00 AEDT",
+                    "hour_est": "18:00 EST",
+                    "window_label": "Sunday Evening Pre-Week Scroll",
+                    "baseline_score": 0.9,
+                    "blended_score": 0.8537,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 18,
+                    "hour_aedt": "05:00 AEDT",
+                    "hour_est": "13:00 EST",
+                    "window_label": "Sunday Midday Gaming",
+                    "baseline_score": 0.92,
+                    "blended_score": 0.7238,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "exploit"
+                  },
+                  {
+                    "hour_utc": 1,
+                    "hour_aedt": "12:00 AEDT",
+                    "hour_est": "20:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3304,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 13,
+                    "hour_aedt": "00:00 AEDT",
+                    "hour_est": "08:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  },
+                  {
+                    "hour_utc": 15,
+                    "hour_aedt": "02:00 AEDT",
+                    "hour_est": "10:00 EST",
+                    "window_label": "Adjacent Exploration Window",
+                    "baseline_score": 0.3,
+                    "blended_score": 0.3,
+                    "sample_count": 0,
+                    "avg_velocity_1h": null,
+                    "avg_velocity_6h": null,
+                    "avg_velocity_overall": null,
+                    "avg_engagement_rate_pct": null,
+                    "slot_type": "explore"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "next_scheduled_slots": {
+        "youtube": {
+          "platform": "youtube",
+          "due_at_utc": "2026-11-19T17:17:00Z",
+          "due_at_aedt": "2026-11-20 04:17 AEDT",
+          "weekday": "thursday",
+          "hour_utc": 17,
+          "slot_type": "exploit",
+          "slot_sequence_index": 1,
+          "exploit_ratio": 0.8,
+          "explore_ratio": 0.2,
+          "min_spacing_hours": 4.0,
+          "daily_cap": 3,
+          "reason": "80% peak-window exploitation (thursday 17:17 UTC)"
+        },
+        "tiktok": {
+          "platform": "tiktok",
+          "due_at_utc": "2026-11-19T17:33:00Z",
+          "due_at_aedt": "2026-11-20 04:33 AEDT",
+          "weekday": "thursday",
+          "hour_utc": 17,
+          "slot_type": "exploit",
+          "slot_sequence_index": 1,
+          "exploit_ratio": 0.8,
+          "explore_ratio": 0.2,
+          "min_spacing_hours": 4.0,
+          "daily_cap": 3,
+          "reason": "80% peak-window exploitation (thursday 17:33 UTC)"
+        }
       },
       "top_topics": [
         {
@@ -329,7 +2342,7 @@
           "comments": 0,
           "shares": 3,
           "engagement_rate_pct": 1.72,
-          "view_velocity_per_hour": 2.528,
+          "view_velocity_per_hour": 2.526,
           "composite_score": 0.803,
           "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700608084498025734?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         },
@@ -347,7 +2360,7 @@
           "comments": 1,
           "shares": 0,
           "engagement_rate_pct": 4.37,
-          "view_velocity_per_hour": 1.178,
+          "view_velocity_per_hour": 1.177,
           "composite_score": 0.6577,
           "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700211863795059986?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         },
@@ -365,8 +2378,8 @@
           "comments": 0,
           "shares": 0,
           "engagement_rate_pct": 2.89,
-          "view_velocity_per_hour": 1.707,
-          "composite_score": 0.6497,
+          "view_velocity_per_hour": 1.706,
+          "composite_score": 0.6498,
           "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699455050246032641?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         },
         {
@@ -383,8 +2396,8 @@
           "comments": 0,
           "shares": 0,
           "engagement_rate_pct": 4.78,
-          "view_velocity_per_hour": 0.905,
-          "composite_score": 0.5858,
+          "view_velocity_per_hour": 0.904,
+          "composite_score": 0.5857,
           "playback_url": "https://www.tiktok.com/@viralclips2476/video/7701723269698735378?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         },
         {
@@ -402,7 +2415,7 @@
           "shares": 0,
           "engagement_rate_pct": 4.88,
           "view_velocity_per_hour": 0.834,
-          "composite_score": 0.5789,
+          "composite_score": 0.579,
           "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700624164016704776?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         }
       ],
@@ -419,7 +2432,7 @@
             "animated-chart",
             "reel-export"
           ],
-          "prompt_summary": "Prioritize 100% original Blender 5.2.4 / VTK 3D worlds with Kokoro C/D narration (am_adam/af_heart) for YouTube @Viralclips247_yt YPP acceleration (2,311 / 3,000,000 90d views). Lead with 'question_curiosity' hooks inside 1.5s, target 18-58s (median top-20%: 43s), apply 1.5-2.5s pattern interrupts via hyperframes/animejs/lottie-animation/motion-effects, and schedule near 11:00 AEDT, 12:00 AEDT, 00:00 AEDT."
+          "prompt_summary": "Prioritize 100% original Blender 5.2.4 / VTK 3D worlds with Kokoro C/D narration (am_adam/af_heart) for YouTube @Viralclips247_yt YPP acceleration (2,311 / 3,000,000 90d views). Lead with 'question_curiosity' hooks inside 1.5s, target 18-58s (median top-20%: 43s), apply 1.5-2.5s pattern interrupts via hyperframes/animejs/lottie-animation/motion-effects, and schedule near 04:00 AEDT, 08:00 AEDT, 11:00 AEDT."
         },
         "shorts_editor": {
           "skills": [
@@ -429,7 +2442,7 @@
             "motion-effects",
             "reel-export"
           ],
-          "prompt_summary": "Route un-narrated Twitch/source clips exclusively to TikTok @viralclips2476 with AU bio-link CTA at 01:00 AEDT, 13:00 AEDT, 22:00 AEDT. Block Twitch clips from YouTube @Viralclips247_yt unless Kokoro commentary + transformative hyperframes/lottie/motion-effects overlays + seamless video-use loop pacing (18-58s) are verified."
+          "prompt_summary": "Route un-narrated Twitch/source clips exclusively to TikTok @viralclips2476 with AU bio-link CTA at 03:00 AEDT, 09:00 AEDT, 12:00 AEDT. Block Twitch clips from YouTube @Viralclips247_yt unless Kokoro commentary + transformative hyperframes/lottie/motion-effects overlays + seamless video-use loop pacing (18-58s) are verified."
         }
       },
       "confidence_note": "Advisory guidance derived from measured post analytics; pre-handoff AI quality scores never replace real audience retention or guaranteed views."
@@ -959,7 +2972,9 @@
           "final_mp4_sha256": "bb8b094983668e0ab9cf935bbf0b77111ff124519f4847b99cfa4f3f30daf27b",
           "receipt_state": "LOCAL_EXPORT_ONLY",
           "public_publish_allowed": false,
-          "provider_post_id": null
+          "provider_post_id": null,
+          "scheduled_due_at_utc": null,
+          "schedule_slot_type": null
         },
         {
           "packet_id": "38e41b9f057a59ebbf6e86dd2a28c3c6",
@@ -970,21 +2985,45 @@
           "final_mp4_sha256": "bb8b094983668e0ab9cf935bbf0b77111ff124519f4847b99cfa4f3f30daf27b",
           "receipt_state": "LOCAL_EXPORT_ONLY",
           "public_publish_allowed": false,
-          "provider_post_id": null
+          "provider_post_id": null,
+          "scheduled_due_at_utc": null,
+          "schedule_slot_type": null
         }
       ]
     }
   },
   "recent_workflow_runs": [
     {
-      "id": 44533513986,
+      "id": 44538805230,
+      "name": "Headless Cinematic Studio Render (Zero-PC Cloud Pipeline)",
+      "path": ".github/workflows/headless-studio-render.yml",
+      "status": "in_progress",
+      "conclusion": null,
+      "event": "workflow_dispatch",
+      "created_at": "2026-11-19T13:58:32Z",
+      "updated_at": "2026-11-19T13:58:35Z",
+      "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44538805230"
+    },
+    {
+      "id": 44538754773,
       "name": "Deploy Mobile Mission Control Dashboard",
       "path": ".github/workflows/deploy-dashboard.yml",
       "status": "in_progress",
       "conclusion": null,
       "event": "push",
+      "created_at": "2026-11-19T13:58:13Z",
+      "updated_at": "2026-11-19T13:58:16Z",
+      "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44538754773"
+    },
+    {
+      "id": 44533513986,
+      "name": "Deploy Mobile Mission Control Dashboard",
+      "path": ".github/workflows/deploy-dashboard.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push",
       "created_at": "2026-11-19T13:26:45Z",
-      "updated_at": "2026-11-19T13:26:48Z",
+      "updated_at": "2026-11-19T13:27:18Z",
       "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44533513986"
     },
     {
