@@ -733,6 +733,21 @@
         </button>
       </section>
 
+      <section class="card" aria-label="Clip YouTube Link and Schedule">
+        <div class="card-hdr"><div class="card-title">Clip YouTube Link &amp; Schedule</div></div>
+        <div style="display:grid;gap:8px">
+          <input id="clip-yt-url" type="url" inputmode="url" placeholder="YouTube URL" style="padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-card);color:inherit">
+          <input id="clip-rights-uri" type="text" placeholder="Rights evidence URI (required)" style="padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-card);color:inherit">
+          <select id="clip-target" style="padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-card);color:inherit">
+            <option value="tiktok">TikTok Only</option>
+            <option value="both">YouTube + TikTok</option>
+            <option value="youtube">YouTube Only</option>
+          </select>
+          <input id="clip-max" type="number" min="1" max="10" value="3" placeholder="Max Clips" style="padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-card);color:inherit">
+          <button type="button" id="btn-clip-yt" class="action-btn"><span class="action-label">Clip &amp; Schedule</span><span class="action-sub">headless-shorts-editor.yml</span></button>
+        </div>
+      </section>
+
       <!-- 3-System Readiness & Stage Tracker -->
       <section id="readiness-card" class="card" aria-label="3-System Readiness and Stage Tracker">
         <div class="card-hdr">
@@ -1263,6 +1278,31 @@
             btn.disabled = false;
           }
         });
+      });
+
+      $("btn-clip-yt").addEventListener("click", async () => {
+        const url = $("clip-yt-url").value.trim();
+        const rights = $("clip-rights-uri").value.trim();
+        if (!/^https:\/\/(www\.|m\.)?(youtube\.com|youtu\.be)\//.test(url)) { showToast("Enter a valid YouTube URL"); return; }
+        if (!rights) { showToast("Rights evidence URI required"); return; }
+        const btn = $("btn-clip-yt");
+        btn.disabled = true;
+        try {
+          await ghApi("/actions/workflows/headless-shorts-editor.yml/dispatches", "POST", {
+            ref: "main",
+            inputs: {
+              youtube_url: url,
+              rights_evidence_s3_uri: rights,
+              target_pages: $("clip-target").value,
+              max_clips: String(Math.max(1, Math.min(10, parseInt($("clip-max").value, 10) || 3))),
+            },
+          });
+          showToast("Dispatched clip job");
+        } catch (err) {
+          if (err.message !== "NO_PAT") showToast(err.message);
+        } finally {
+          btn.disabled = false;
+        }
       });
 
       $("btn-toggle-schedule").addEventListener("click", async () => {
