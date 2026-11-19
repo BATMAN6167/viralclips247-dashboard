@@ -365,6 +365,99 @@
     .reason-list { margin: 4px 0 0; padding-left: 16px; color: var(--text-dim); font-size: 0.76rem; }
     .reason-list li { margin-bottom: 3px; }
 
+    /* Analytics & YPP Monetization Accelerator */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .kpi-box {
+      background: linear-gradient(155deg, rgba(16, 23, 38, 0.96), rgba(14, 24, 42, 0.85));
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 11px;
+    }
+    .kpi-lbl { font-size: 0.69rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .kpi-val { font-size: 1.24rem; font-weight: 800; margin-top: 2px; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+    .kpi-sub { font-size: 0.71rem; color: var(--text-dim); margin-top: 2px; }
+    .ypp-card {
+      background: var(--bg-elev);
+      border: 1px solid rgba(34, 211, 238, 0.22);
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 10px;
+    }
+    .ypp-track {
+      position: relative;
+      height: 12px;
+      border-radius: 999px;
+      background: #0a101d;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin: 6px 0;
+    }
+    .ypp-fill {
+      height: 100%;
+      width: 0%;
+      min-width: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--cyan), var(--emerald));
+      transition: width 0.35s ease;
+    }
+    .ypp-tier-marker {
+      position: absolute;
+      left: 30%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: rgba(245, 158, 11, 0.85);
+    }
+    .ypp-legend {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      font-size: 0.71rem;
+      color: var(--text-dim);
+      font-variant-numeric: tabular-nums;
+      flex-wrap: wrap;
+    }
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .strategy-block {
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 10px 11px;
+      margin-bottom: 9px;
+    }
+    .strategy-heading {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--cyan);
+      margin-bottom: 6px;
+    }
+    .chip-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
+    .metric-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 7px;
+      border-radius: 7px;
+      background: rgba(34, 211, 238, 0.1);
+      border: 1px solid rgba(34, 211, 238, 0.22);
+      color: var(--cyan);
+      font-size: 0.7rem;
+      font-family: var(--mono);
+      font-weight: 600;
+    }
+
     /* Buffer Queue & Published Posts */
     .channel-grid {
       display: grid;
@@ -575,6 +668,97 @@
           </div>
           <span id="schedule-pill" class="pill pill-muted">Loading...</span>
         </button>
+      </section>
+
+      <!-- Closed-Loop Analytics & YouTube YPP Monetization Accelerator -->
+      <section class="card" aria-label="Analytics and YouTube Monetization">
+        <div class="card-hdr">
+          <div class="card-title">Analytics &amp; YPP Monetization</div>
+          <span id="analytics-pill" class="pill pill-info">Closed-Loop</span>
+        </div>
+        <div class="kpi-grid">
+          <div class="kpi-box">
+            <div class="kpi-lbl">Total Views</div>
+            <div id="kpi-total-views" class="kpi-val">--</div>
+            <div id="kpi-total-sub" class="kpi-sub">-- posts tracked</div>
+          </div>
+          <div class="kpi-box">
+            <div class="kpi-lbl">Avg Engagement</div>
+            <div id="kpi-eng-rate" class="kpi-val">--%</div>
+            <div id="kpi-eng-sub" class="kpi-sub">-- likes · -- shares</div>
+          </div>
+          <div class="kpi-box">
+            <div class="kpi-lbl">YouTube (@Viralclips247_yt)</div>
+            <div id="kpi-yt-views" class="kpi-val">--</div>
+            <div id="kpi-yt-sub" class="kpi-sub">100% Original 3D Priority</div>
+          </div>
+          <div class="kpi-box">
+            <div class="kpi-lbl">TikTok (@viralclips2476)</div>
+            <div id="kpi-tt-views" class="kpi-val">--</div>
+            <div id="kpi-tt-sub" class="kpi-sub">AU Discovery Funnel</div>
+          </div>
+        </div>
+
+        <div class="ypp-card">
+          <div class="meter-row" style="margin-bottom:4px">
+            <span style="font-weight:700">YouTube YPP Monetization Progress (90d Shorts Views)</span>
+            <span id="ypp-status-pill" class="pill pill-warn">Tier 1 Target</span>
+          </div>
+          <div id="ypp-views-headline" class="sys-summary" style="font-variant-numeric:tabular-nums">
+            -- / 3,000,000 (Tier 1) · 10,000,000 (Tier 2)
+          </div>
+          <div class="ypp-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div id="ypp-views-fill" class="ypp-fill"></div>
+            <div class="ypp-tier-marker" title="3M Tier 1 Fan Funding Milestone (30% of 10M)"></div>
+          </div>
+          <div class="ypp-legend">
+            <span id="ypp-t1-pct">Tier 1 (3M Fan Funding): --%</span>
+            <span id="ypp-t2-pct">Tier 2 (10M Ad Rev): --%</span>
+          </div>
+          <div class="meter-row" style="margin-top:10px;margin-bottom:4px">
+            <span style="font-size:0.78rem;color:var(--text-dim)">Subscribers (500 Tier 1 / 1,000 Tier 2)</span>
+            <span id="ypp-subs-label" style="font-size:0.78rem;font-weight:700;font-variant-numeric:tabular-nums">--</span>
+          </div>
+          <div class="meter-track"><div id="ypp-subs-fill" class="meter-fill"></div></div>
+          <div id="monetization-badges" class="badge-row"></div>
+          <div id="tiktok-au-cta" class="sys-meta" style="margin-top:8px"></div>
+        </div>
+      </section>
+
+      <!-- AI-Learned Strategy Insights -->
+      <section class="card" aria-label="AI-Learned Strategy Insights">
+        <div class="card-hdr">
+          <div class="card-title">AI-Learned Strategy (Top 20%)</div>
+          <span id="strategy-pill" class="pill pill-ok">Self-Adapting</span>
+        </div>
+        <div class="kv-grid">
+          <div class="kv-box">
+            <div class="kv-k">Sweet Spot</div>
+            <div id="strat-duration" class="kv-v">--s</div>
+          </div>
+          <div class="kv-box">
+            <div class="kv-k">Best YT (AEDT)</div>
+            <div id="strat-yt-hours" class="kv-v">--</div>
+          </div>
+          <div class="kv-box">
+            <div class="kv-k">Best TT (AEDT)</div>
+            <div id="strat-tt-hours" class="kv-v">--</div>
+          </div>
+        </div>
+        <div class="strategy-block">
+          <div class="strategy-heading">Winning Hook Archetypes &amp; Templates</div>
+          <div id="strat-archetypes" class="chip-wrap" style="margin-bottom:8px"></div>
+          <ul id="strat-templates" class="reason-list"></ul>
+        </div>
+        <div class="strategy-block">
+          <div class="strategy-heading">Top Performing Posts (Velocity + Engagement)</div>
+          <div id="strat-top-posts" class="post-list" style="max-height:240px"></div>
+        </div>
+        <div class="strategy-block" style="margin-bottom:0">
+          <div class="strategy-heading" style="color:var(--amber)">Patterns to Avoid</div>
+          <ul id="strat-avoid" class="reason-list"></ul>
+          <div id="strat-note" class="sys-meta" style="margin-top:7px"></div>
+        </div>
       </section>
 
       <!-- Oracle VM Health -->
@@ -1129,6 +1313,118 @@
         });
       }
 
+      function fmtNum(n) {
+        if (n === null || n === undefined || Number.isNaN(Number(n))) return "--";
+        return Number(n).toLocaleString();
+      }
+
+      function renderAnalyticsAndStrategy(analytics) {
+        const a = analytics || {};
+        const totals = a.totals || {};
+        const byPlat = a.by_platform || {};
+        const ytPlat = byPlat.youtube || {};
+        const ttPlat = byPlat.tiktok || {};
+        const mon = a.monetization || {};
+        const ypp = mon.youtube_ypp || {};
+        const ttAu = mon.tiktok_au || {};
+        const strat = a.learned_strategy || {};
+        const sample = a.sample_size || {};
+
+        $("analytics-pill").textContent = `${fmtNum(totals.posts_tracked || 0)} Posts · ${fmtTime(a.generated_at_utc)}`;
+        $("kpi-total-views").textContent = fmtNum(totals.total_views || 0);
+        $("kpi-total-sub").textContent = `${fmtNum(totals.posts_tracked || 0)} posts tracked`;
+        $("kpi-eng-rate").textContent = `${Number(totals.avg_engagement_rate_pct || 0).toFixed(2)}%`;
+        $("kpi-eng-sub").textContent = `${fmtNum(totals.total_likes || 0)} likes · ${fmtNum(totals.total_comments || 0)} cmt · ${fmtNum(totals.total_shares || 0)} sh`;
+        $("kpi-yt-views").textContent = fmtNum(totals.youtube_views ?? ytPlat.views ?? 0);
+        $("kpi-yt-sub").textContent = `${fmtNum(ytPlat.posts || 0)} shorts · ${Number(ytPlat.engagement_rate_pct || 0).toFixed(2)}% eng`;
+        $("kpi-tt-views").textContent = fmtNum(totals.tiktok_views ?? ttPlat.views ?? 0);
+        $("kpi-tt-sub").textContent = `${fmtNum(ttPlat.posts || 0)} posts · ${Number(ttPlat.engagement_rate_pct || 0).toFixed(2)}% eng`;
+
+        const rolling90 = Number(ypp.rolling_90d_shorts_views || 0);
+        const lifetimeYt = Number(ypp.lifetime_youtube_views || 0);
+        const t1Target = Number(ypp.tier1_views_target || 3000000);
+        const t2Target = Number(ypp.tier2_views_target || 10000000);
+        const t1Pct = Number(ypp.tier1_views_pct ?? ((rolling90 / t1Target) * 100));
+        const t2Pct = Number(ypp.tier2_views_pct ?? ((rolling90 / t2Target) * 100));
+        $("ypp-status-pill").textContent = String(ypp.ypp_status || "BUILDING_TOWARD_TIER_1").replace(/_/g, " ");
+        $("ypp-status-pill").className = `pill ${t1Pct >= 100 ? "pill-ok" : "pill-info"}`;
+        $("ypp-views-headline").textContent =
+          `${fmtNum(rolling90)} / ${fmtNum(t1Target)} (Tier 1) · ${fmtNum(t2Target)} (Tier 2) · Lifetime YT: ${fmtNum(lifetimeYt)}`;
+        $("ypp-views-fill").style.width = `${Math.min(100, Math.max(rolling90 > 0 ? 1.5 : 0, t2Pct))}%`;
+        $("ypp-t1-pct").textContent = `Tier 1 (3M Fan Funding): ${t1Pct.toFixed(3)}% (${fmtNum(ypp.rolling_90d_shorts_count || 0)} 90d shorts)`;
+        $("ypp-t2-pct").textContent = `Tier 2 (10M Ad Rev): ${t2Pct.toFixed(4)}%`;
+
+        const subs = ypp.subscribers;
+        if (subs === null || subs === undefined) {
+          $("ypp-subs-label").textContent = "Connect YT Data API (unmeasured)";
+          $("ypp-subs-fill").style.width = "0%";
+        } else {
+          const sPct = Math.min(100, Math.round((Number(subs) / Number(ypp.tier2_subs_target || 1000)) * 100));
+          $("ypp-subs-label").textContent = `${fmtNum(subs)} / ${fmtNum(ypp.tier1_subs_target || 500)} T1 · ${fmtNum(ypp.tier2_subs_target || 1000)} T2`;
+          $("ypp-subs-fill").style.width = `${sPct}%`;
+        }
+
+        const badgesEl = $("monetization-badges");
+        badgesEl.replaceChildren();
+        badgesEl.appendChild(el("span", `pill ${ypp.original_3d_priority_enforced !== false ? "pill-ok" : "pill-warn"}`, "100% Original 3D Priority"));
+        badgesEl.appendChild(el("span", `pill ${ypp.raw_twitch_youtube_blocked !== false ? "pill-ok" : "pill-warn"}`, "Raw Twitch -> YT Blocked"));
+        badgesEl.appendChild(el("span", `pill ${ttAu.bio_link_cta_enabled !== false ? "pill-info" : "pill-muted"}`, `TikTok AU CTA: ${ttAu.bio_link_cta_enabled !== false ? "ON" : "OFF"}`));
+        $("tiktok-au-cta").textContent = `TikTok AU Cross-Promo CTA: ${ttAu.active_cta || "--"}`;
+
+        $("strategy-pill").textContent = `Top ${sample.top_20_count || 0} / ${sample.total_posts_analyzed || 0} Posts`;
+        const pacing = strat.pacing_targets || {};
+        const sweet = pacing.duration_sweet_spot_seconds || {};
+        $("strat-duration").textContent = `${sweet.min ?? 16}-${sweet.max ?? 38}s (med ${sweet.median_top20 ?? 24}s)`;
+        const hrs = strat.optimal_posting_hours || {};
+        $("strat-yt-hours").textContent = (hrs.youtube_aedt_hours || ["--"]).slice(0, 2).join(", ");
+        $("strat-tt-hours").textContent = (hrs.tiktok_aedt_hours || ["--"]).slice(0, 2).join(", ");
+
+        const archEl = $("strat-archetypes");
+        archEl.replaceChildren();
+        (strat.winning_archetypes || []).forEach((item) => {
+          const name = String(item.archetype || "").replace(/_/g, " ");
+          archEl.appendChild(el("span", "metric-pill", `${name}: ${fmtNum(item.avg_views || 0)}v · ${Number(item.avg_engagement_rate_pct || 0).toFixed(1)}%`));
+        });
+
+        const tmplEl = $("strat-templates");
+        tmplEl.replaceChildren();
+        (strat.recommended_templates || []).forEach((t) => tmplEl.appendChild(el("li", "", t)));
+
+        const topPostsEl = $("strat-top-posts");
+        topPostsEl.replaceChildren();
+        const topList = strat.top_performers || [];
+        if (!topList.length) {
+          topPostsEl.appendChild(el("div", "sys-summary", "Collecting initial post metrics..."));
+        } else {
+          topList.forEach((p) => {
+            const card = el("div", "post-item");
+            const top = el("div", "post-top");
+            top.appendChild(el("span", "sys-handle", `${p.channel_handle || p.platform} · ${p.topic || "explainer"}`));
+            top.appendChild(el("span", "pill pill-ok", `${fmtNum(p.views || 0)} views · ${Number(p.engagement_rate_pct || 0).toFixed(2)}%`));
+            card.appendChild(top);
+            card.appendChild(el("div", "post-text", p.hook_text || "Untitled"));
+            const foot = el("div", "post-foot");
+            const durTxt = p.duration_seconds ? `${p.duration_seconds}s · ` : "";
+            foot.appendChild(el("span", "", `${durTxt}${Number(p.view_velocity_per_hour || 0).toFixed(2)} views/hr · ${p.likes || 0} likes`));
+            const safeUrl = safeHttpsUrl(p.playback_url);
+            if (safeUrl) {
+              const a = el("a", "post-link", "Open");
+              a.href = safeUrl;
+              a.target = "_blank";
+              a.rel = "noopener noreferrer";
+              foot.appendChild(a);
+            }
+            card.appendChild(foot);
+            topPostsEl.appendChild(card);
+          });
+        }
+
+        const avoidEl = $("strat-avoid");
+        avoidEl.replaceChildren();
+        (strat.avoid_patterns || []).forEach((x) => avoidEl.appendChild(el("li", "", x)));
+        $("strat-note").textContent = strat.confidence_note || "";
+      }
+
       function renderBuffer(buffer) {
         const chGrid = $("buffer-channels");
         chGrid.replaceChildren();
@@ -1158,7 +1454,10 @@
 
           const foot = el("div", "post-foot");
           const dur = p.duration_seconds ? `${p.duration_seconds}s · ` : "";
-          foot.appendChild(el("span", "", `${dur}${fmtTime(p.sent_at || p.due_at || p.created_at)}`));
+          const metricStr = p.views !== null && p.views !== undefined
+            ? `${fmtNum(p.views)} views${p.engagement_rate_pct !== null && p.engagement_rate_pct !== undefined ? ` (${Number(p.engagement_rate_pct).toFixed(1)}% eng)` : ""} · `
+            : "";
+          foot.appendChild(el("span", "", `${metricStr}${dur}${fmtTime(p.sent_at || p.due_at || p.created_at)}`));
           const safeUrl = safeHttpsUrl(p.playback_url);
           if (safeUrl) {
             const a = el("a", "post-link", "Open Post");
@@ -1198,6 +1497,7 @@
             }
           }
           renderOracle(statusData.oracle_vm || {});
+          renderAnalyticsAndStrategy(statusData.analytics || {});
           renderSystems(statusData.systems || [], statusData.recent_workflow_runs || []);
           renderQualityGate(statusData.viral_quality_gate_log || []);
           renderBuffer(statusData.buffer || {});

@@ -1,6 +1,6 @@
 {
   "schema": "viralclips247-buffer-snapshot-v1",
-  "captured_at_utc": "2026-11-19T12:30:35Z",
+  "captured_at_utc": "2026-11-19T13:13:04Z",
   "source": "buffer_mcp_verified",
   "channels": [
     {
@@ -20,6 +20,14 @@
       "locked": false
     }
   ],
+  "aggregated_31d_metrics": {
+    "postCount": 38,
+    "reactions": 419,
+    "comments": 1,
+    "engagementRate": 2.37,
+    "views": 17853,
+    "metricsUpdatedAt": "2026-11-19T12:49:02.821Z"
+  },
   "posts": [
     {
       "id": "6afebb11bad67efd5ad882a0",
@@ -34,7 +42,9 @@
       "duration_seconds": 18.0,
       "media_title": "ORIGINAL_STORY_18S_C_1080x1920_LOCAL_EXPORT_ONLY.mp4",
       "playback_url": null,
-      "thumbnail_url": "https://buffer-media-uploads.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6afecb51ed71ddb6cfc7d080/thumbnail"
+      "thumbnail_url": "https://buffer-media-uploads.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6afecb51ed71ddb6cfc7d080/thumbnail",
+      "metrics_updated_at": null,
+      "metrics": []
     },
     {
       "id": "6afebb0f4fb82a830a0c268e",
@@ -49,52 +59,1701 @@
       "duration_seconds": 18.0,
       "media_title": "ORIGINAL_STORY_18S_C_1080x1920_LOCAL_EXPORT_ONLY.mp4",
       "playback_url": null,
-      "thumbnail_url": "https://buffer-media-uploads.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6afecb05ed71ddb6cfc7cd67/thumbnail"
+      "thumbnail_url": "https://buffer-media-uploads.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6afecb05ed71ddb6cfc7cd67/thumbnail",
+      "metrics_updated_at": null,
+      "metrics": []
     },
     {
-      "id": "6afa5160fae7941fc64670cc",
+      "id": "6af5c6c71ef960a38cfcb8e6",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "You have never experienced the present moment in real time. Here is the mind-bending neuroscience behind the 80-millisecond delay of human perception. #science #brainfacts #mindblowing #shorts\n\n#Shorts #science facts #neuroscience #brain hacks #psychology facts #mind blowing facts",
+      "created_at": "2026-11-11T08:59:53.000Z",
+      "due_at": "2026-11-11T08:59:53.000Z",
+      "sent_at": "2026-11-11T08:59:53.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/vVcIRWJ9wrM",
+      "thumbnail_url": "https://i.ytimg.com/vi/vVcIRWJ9wrM/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-19T11:40:11.665Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 70,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e069",
       "status": "sent",
       "service": "tiktok",
       "channel_id": "6af5c4f462b70b94b00824c4",
       "channel_handle": "@viralclips2476",
-      "text": "Veyron’s Last Journey: We Won Big at The Casino!                                                   #fyp #viral #viralvideo #trending #fyppppppppppppppppppppppp",
-      "created_at": "2026-07-28T10:49:21.000Z",
-      "due_at": "2026-07-28T10:49:21.000Z",
-      "sent_at": "2026-07-28T10:49:21.000Z",
-      "duration_seconds": 161.4,
+      "text": "I drove a 950hp rebuilt Porsche.               #porsche #GT3RS #carrebuild #Supercar #Tuning",
+      "created_at": "2026-10-29T09:01:00.000Z",
+      "due_at": "2026-10-29T09:01:00.000Z",
+      "sent_at": "2026-10-29T09:01:00.000Z",
+      "duration_seconds": 50.1,
       "media_title": null,
-      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7667529171358289160?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc64670cc_thumbnail.webp"
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7701723269698735378?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e069_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.683Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 22,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 4.78,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 460,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 441,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 51.98,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 6.31,
+          "unit": "count"
+        }
+      ]
     },
     {
-      "id": "6afa5160fae7941fc6466bc2",
+      "id": "6af5c4f6977c5aeb3d28e065",
       "status": "sent",
       "service": "tiktok",
       "channel_id": "6af5c4f462b70b94b00824c4",
       "channel_handle": "@viralclips2476",
-      "text": "Startup Food Perks: Could They Cost $6 Million a Year?                                          #fyp #viral #viralvideo #trending #fyppppppppppppppppppppppp",
-      "created_at": "2026-10-19T00:08:58.000Z",
-      "due_at": "2026-10-19T00:08:58.000Z",
-      "sent_at": "2026-10-19T00:08:58.000Z",
-      "duration_seconds": 20.7,
+      "text": "Why supercars are designed to break.      #CarSafety #engineering #lamborghini #SVJ #tomi",
+      "created_at": "2026-10-29T07:00:00.000Z",
+      "due_at": "2026-10-29T07:00:00.000Z",
+      "sent_at": "2026-10-29T07:00:00.000Z",
+      "duration_seconds": 38.9,
       "media_title": null,
-      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698164198916001040?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466bc2_thumbnail.webp"
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7701723428889365767?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e065_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.690Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 11,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 2.57,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 428,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 409,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 61.7,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 8.41,
+          "unit": "count"
+        }
+      ]
     },
     {
-      "id": "6afa5160fae7941fc6466bbf",
+      "id": "6af5c4f6977c5aeb3d28e057",
       "status": "sent",
       "service": "tiktok",
       "channel_id": "6af5c4f462b70b94b00824c4",
       "channel_handle": "@viralclips2476",
-      "text": "Sleeping at the Office: What’s Going on Here?                                                        #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-      "created_at": "2026-10-19T03:45:00.000Z",
-      "due_at": "2026-10-19T03:45:00.000Z",
-      "sent_at": "2026-10-19T03:45:00.000Z",
-      "duration_seconds": 23.5,
+      "text": "The force that moved a V12 engine.         #lamborghini #SVJ #Crash #engineering #tomi",
+      "created_at": "2026-10-29T01:00:00.000Z",
+      "due_at": "2026-10-29T01:00:00.000Z",
+      "sent_at": "2026-10-29T01:00:00.000Z",
+      "duration_seconds": 48.8,
       "media_title": null,
-      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698166467904277776?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466bbf_thumbnail.webp"
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7701722393324096786?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e057_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.637Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 20,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 4,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 500,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 427,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 65.53,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 7.63,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e059",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "The 600,000 Pound Repair Bill.                 #lamborghini #SVJ #Carrepair #expensive #tomi",
+      "created_at": "2026-10-28T19:00:00.000Z",
+      "due_at": "2026-10-28T19:00:00.000Z",
+      "sent_at": "2026-10-28T19:00:00.000Z",
+      "duration_seconds": 55.1,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7701721990528371976?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e059_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.816Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 8,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.76,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 455,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 411,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 70.92,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 8.77,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e06b",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "How much does a Lamborghini part cost?                                                                #tomi #svj #viral #viralvideo #fyp",
+      "created_at": "2026-10-27T09:20:00.000Z",
+      "due_at": "2026-10-27T09:20:00.000Z",
+      "sent_at": "2026-10-27T09:20:00.000Z",
+      "duration_seconds": 60.0,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700951426222034183?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e06b_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.775Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 18,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 4.6,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 391,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 372,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 68.82,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 10.12,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e061",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Lamborghini SVJ in two pieces.                   #tomi #svj #viral #fyp #viralvideo",
+      "created_at": "2026-10-27T07:05:00.000Z",
+      "due_at": "2026-10-27T07:05:00.000Z",
+      "sent_at": "2026-10-27T07:05:00.000Z",
+      "duration_seconds": 32.7,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700945153502072082?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e061_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.787Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 11,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 2.45,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 449,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 397,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 61.73,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 8,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e216",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Rate this Wild Custom RX3 Build!                #fyppppppppppppppppppppppp #tiktok #fyp #viral #rx3",
+      "created_at": "2026-10-27T01:00:00.000Z",
+      "due_at": "2026-10-27T01:00:00.000Z",
+      "sent_at": "2026-10-27T01:00:00.000Z",
+      "duration_seconds": 50.3,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700624164016704776?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e216_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.656Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 23,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 4.88,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 471,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 435,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 69.55,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 8.52,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e05f",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Why this Build Just Failed.                           #fyppppppppppppppppppppppp #viralvideo #tiktok #fyp #viral",
+      "created_at": "2026-10-26T18:55:00.000Z",
+      "due_at": "2026-10-26T18:55:00.000Z",
+      "sent_at": "2026-10-26T18:55:00.000Z",
+      "duration_seconds": 58.9,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700623942674910471?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e05f_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.675Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 3,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0.69,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 434,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 395,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 98.18,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 13.09,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e053",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Fuchsia Interior in a Rolls-Royce Cullinan?                                                      #fyppppppppppppppppppppppp #viralvideo #tiktok #fyp #viral",
+      "created_at": "2026-10-26T09:05:00.000Z",
+      "due_at": "2026-10-26T09:05:00.000Z",
+      "sent_at": "2026-10-26T09:05:00.000Z",
+      "duration_seconds": 53.0,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700623304024919314?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e053_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.745Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 10,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 2.26,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 442,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 421,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 96.15,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 12.6,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e067",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Tesla’s Secret Hidden Feature Revealed.                                                      #fyppppppppppppppppppppppp #viralvideo #tiktok #fyp #viral",
+      "created_at": "2026-10-26T07:05:00.000Z",
+      "due_at": "2026-10-26T07:05:00.000Z",
+      "sent_at": "2026-10-26T07:05:00.000Z",
+      "duration_seconds": 49.2,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700622755393260818?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e067_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.742Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 4,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0.94,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 425,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 424,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 100.83,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 13.21,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e055",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Is the New Tesla Roadster Worth the Investment?                                                  #fyppppppppppppppppppppppp #viralvideo #tiktok #fyp #viral",
+      "created_at": "2026-10-26T01:00:00.000Z",
+      "due_at": "2026-10-26T01:00:00.000Z",
+      "sent_at": "2026-10-26T01:00:00.000Z",
+      "duration_seconds": 55.4,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700622339934784786?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e055_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.710Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 3,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 6.38,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 47,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 36,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 13.32,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 16.31,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e1f8",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Tesla’s New Roadster looks like a literal spaceship.                                                     #fyppppppppppppppppppppppp #viralvideo #tiktok #fyp #viral",
+      "created_at": "2026-10-25T19:00:00.000Z",
+      "due_at": "2026-10-25T19:00:00.000Z",
+      "sent_at": "2026-10-25T19:00:00.000Z",
+      "duration_seconds": 47.6,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700621932017749255?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e1f8_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.773Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 4,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 4.21,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 95,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 45,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 22.95,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 14.2,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e0f1",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Wait for the end! 🤯#fyp #viral #gaming",
+      "created_at": "2026-10-25T14:13:17.000Z",
+      "due_at": "2026-10-25T14:13:17.000Z",
+      "sent_at": "2026-10-25T14:13:17.000Z",
+      "duration_seconds": 57.0,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700608084498025734?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e0f1_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.791Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 23,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.72,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1515,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 3,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 1440,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 553.88,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 20.65,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e05b",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Bugatti Chiron Fill-Up: $118 for a Tank of Fuel                                                          #fyppppppppppppppppppppppp #matarmstrong #viralvideo #tiktok #fyp",
+      "created_at": "2026-10-25T10:30:00.000Z",
+      "due_at": "2026-10-25T10:30:00.000Z",
+      "sent_at": "2026-10-25T10:30:00.000Z",
+      "duration_seconds": 29.3,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700211863795059986?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e05b_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.661Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 30,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 4.37,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 710,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 589,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 128.75,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 10.7,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e212",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Bugatti 4WD Limp Mode: Tracking Down a Mysterious Transmission Fault.     #fyppppppppppppppppppppppp #matarmstrong #alexg #tiktok #viralvideo",
+      "created_at": "2026-10-25T08:05:00.000Z",
+      "due_at": "2026-10-25T08:05:00.000Z",
+      "sent_at": "2026-10-25T08:05:00.000Z",
+      "duration_seconds": 63.2,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700211346041736456?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e212_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.687Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 10,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 2.6,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 384,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 291,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 69.35,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 10.59,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e1fa",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Transmission Electrical Problem? Checking Under the Driver’s Seat.              #fyp #fyppppppppppppppppppppppp #viral #bugatti #videoviral",
+      "created_at": "2026-10-25T04:00:00.000Z",
+      "due_at": "2026-10-25T04:00:00.000Z",
+      "sent_at": "2026-10-25T04:00:00.000Z",
+      "duration_seconds": 19.4,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700210893287640338?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e1fa_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.821Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 7,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.29,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 544,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 429,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 71.58,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 7.82,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e0c7",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Bugatti Signal Wire Repair: Fixing a Pulled Connector Pin                                    #fyp #matarmstrong #viral #fyppppppppppppppppppppppp #tiktok",
+      "created_at": "2026-10-25T02:15:00.000Z",
+      "due_at": "2026-10-25T02:15:00.000Z",
+      "sent_at": "2026-10-25T02:15:00.000Z",
+      "duration_seconds": 69.5,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700210616786537746?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e0c7_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.797Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 18,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.73,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1041,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 520,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 359.85,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 20.03,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e214",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Bugatti at 200 MPH: Can It Run Faultlessly?                                                  #fyp #bugatti #matarmstrong #alexg #viral",
+      "created_at": "2026-10-24T20:22:00.000Z",
+      "due_at": "2026-10-24T20:22:00.000Z",
+      "sent_at": "2026-10-24T20:22:00.000Z",
+      "duration_seconds": 44.1,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700182785943801106?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e214_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.813Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 10,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.79,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 560,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 496,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 93.32,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 9.72,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e1fe",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "How a Custom Bugatti Chiron Windshield Is Made and Why It Costs So Much.                                                       #fyp #bugatti #matarmstrong #alexg #viral",
+      "created_at": "2026-10-24T10:03:00.000Z",
+      "due_at": "2026-10-24T10:03:00.000Z",
+      "sent_at": "2026-10-24T10:03:00.000Z",
+      "duration_seconds": 52.7,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699455050246032641?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e1fe_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.697Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 31,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 2.89,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1071,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 1027,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 335.95,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 18.18,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e063",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Installing the Tinted Roof Glass on Bugatti Build                                                #fyp #fyppppppppppppppppppppppp #bugatti #alexg #tiktok",
+      "created_at": "2026-10-24T00:15:00.000Z",
+      "due_at": "2026-10-24T00:15:00.000Z",
+      "sent_at": "2026-10-24T00:15:00.000Z",
+      "duration_seconds": 46.5,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699454100596968711?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e063_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.693Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 9,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.75,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 513,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 482,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 78.93,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 9.09,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e0ef",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Car Cooling Fan Fix: Did We Solve the Problem?                                                      #fyp #fyppppppppppppppppppppppp #matarmstrong #bugatti #viral",
+      "created_at": "2026-10-23T19:05:00.000Z",
+      "due_at": "2026-10-23T19:05:00.000Z",
+      "sent_at": "2026-10-23T19:05:00.000Z",
+      "duration_seconds": 39.9,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699453753056922932?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e0ef_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.799Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 24,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 5.1,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 471,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 434,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 80.4,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 10.05,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e0ed",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Huracan & Audi R8 Earth Strap Fault: Hidden Electrical Problem.                          #fyp #fyppppppppppppppppppppppp #tiktok #trending #videoviral",
+      "created_at": "2026-10-23T18:33:00.000Z",
+      "due_at": "2026-10-23T18:33:00.000Z",
+      "sent_at": "2026-10-23T18:33:00.000Z",
+      "duration_seconds": 25.5,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699454562289175816?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e0ed_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.647Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 6,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.28,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 470,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 424,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 64.63,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 8.03,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e1f6",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Engine Misfire After Acceleration: What Went Wrong?                                               #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
+      "created_at": "2026-10-23T11:00:00.000Z",
+      "due_at": "2026-10-23T11:00:00.000Z",
+      "sent_at": "2026-10-23T11:00:00.000Z",
+      "duration_seconds": 46.6,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699453265620454664?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e1f6_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.640Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 20,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 3.38,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 592,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 544,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 133.9,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 13.28,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e05d",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Bugatti Control Unit: Hidden Above the Front Differential.                                        #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
+      "created_at": "2026-10-23T07:25:00.000Z",
+      "due_at": "2026-10-23T07:25:00.000Z",
+      "sent_at": "2026-10-23T07:25:00.000Z",
+      "duration_seconds": 28.3,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699452865915636998?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e05d_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.726Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 10,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 2.16,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 462,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 401,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 78.08,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 9.78,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c4f6977c5aeb3d28e1fc",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "VagCom AWD Diagnosis: Is the All-Wheel Drive Unit Faulty?                            #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
+      "created_at": "2026-10-22T23:37:00.000Z",
+      "due_at": "2026-10-22T23:37:00.000Z",
+      "sent_at": "2026-10-22T23:37:00.000Z",
+      "duration_seconds": 19.1,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699452486356077832?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6af5c4f6977c5aeb3d28e1fc_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.753Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 9,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 2.06,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 437,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 392,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 45.03,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 5.98,
+          "unit": "count"
+        }
+      ]
     },
     {
       "id": "6afa5160fae7941fc6466bbc",
@@ -109,97 +1768,58 @@
       "duration_seconds": 81.6,
       "media_title": null,
       "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699451595548937479?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466bbc_thumbnail.webp"
-    },
-    {
-      "id": "6afa5160fae7941fc6466bb9",
-      "status": "sent",
-      "service": "tiktok",
-      "channel_id": "6af5c4f462b70b94b00824c4",
-      "channel_handle": "@viralclips2476",
-      "text": "How Sergey Predicts Which Videos Will Go Viral.                                                  #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-      "created_at": "2026-10-21T06:30:51.000Z",
-      "due_at": "2026-10-21T06:30:51.000Z",
-      "sent_at": "2026-10-21T06:30:51.000Z",
-      "duration_seconds": 49.4,
-      "media_title": null,
-      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699004802516225287?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466bb9_thumbnail.webp"
-    },
-    {
-      "id": "6afa5160fae7941fc6466bb3",
-      "status": "sent",
-      "service": "tiktok",
-      "channel_id": "6af5c4f462b70b94b00824c4",
-      "channel_handle": "@viralclips2476",
-      "text": "AI Video Tools: Create Cinematic Content Without a Million-Dollar Budget.                                                         #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-      "created_at": "2026-10-21T00:45:00.000Z",
-      "due_at": "2026-10-21T00:45:00.000Z",
-      "sent_at": "2026-10-21T00:45:00.000Z",
-      "duration_seconds": 93.9,
-      "media_title": null,
-      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698620511328406792?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466bb3_thumbnail.webp"
-    },
-    {
-      "id": "6afa5160fae7941fc6466baf",
-      "status": "sent",
-      "service": "tiktok",
-      "channel_id": "6af5c4f462b70b94b00824c4",
-      "channel_handle": "@viralclips2476",
-      "text": "Inside a Startup Offering $80,000 for the Best Idea.                                                #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-      "created_at": "2026-10-21T21:40:00.000Z",
-      "due_at": "2026-10-21T21:40:00.000Z",
-      "sent_at": "2026-10-21T21:40:00.000Z",
-      "duration_seconds": 97.0,
-      "media_title": null,
-      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699006086321409287?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466baf_thumbnail.webp"
-    },
-    {
-      "id": "6afa5160fae7941fc6466bac",
-      "status": "sent",
-      "service": "tiktok",
-      "channel_id": "6af5c4f462b70b94b00824c4",
-      "channel_handle": "@viralclips2476",
-      "text": "Product Development in Hours, Not Weeks.                                                          #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-      "created_at": "2026-10-21T10:00:00.000Z",
-      "due_at": "2026-10-21T10:00:00.000Z",
-      "sent_at": "2026-10-21T10:00:00.000Z",
-      "duration_seconds": 20.4,
-      "media_title": null,
-      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699005107211439378?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466bac_thumbnail.webp"
-    },
-    {
-      "id": "6afa5160fae7941fc6466ba8",
-      "status": "sent",
-      "service": "tiktok",
-      "channel_id": "6af5c4f462b70b94b00824c4",
-      "channel_handle": "@viralclips2476",
-      "text": "YouTube Growth strategy: Why One Channel Can’t Reach Everyone.                  #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-      "created_at": "2026-10-21T18:30:00.000Z",
-      "due_at": "2026-10-21T18:30:00.000Z",
-      "sent_at": "2026-10-21T18:30:00.000Z",
-      "duration_seconds": 37.9,
-      "media_title": null,
-      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699005681503866119?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466ba8_thumbnail.webp"
-    },
-    {
-      "id": "6afa5160fae7941fc6466ba1",
-      "status": "sent",
-      "service": "tiktok",
-      "channel_id": "6af5c4f462b70b94b00824c4",
-      "channel_handle": "@viralclips2476",
-      "text": "Why This AI Startip Hides its Team.             #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-      "created_at": "2026-10-20T18:45:00.000Z",
-      "due_at": "2026-10-20T18:45:00.000Z",
-      "sent_at": "2026-10-20T18:45:00.000Z",
-      "duration_seconds": 17.9,
-      "media_title": null,
-      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698620027452411143?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466ba1_thumbnail.webp"
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466bbc_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.748Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 13,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 3.27,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 397,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 375,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 62.62,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 9.16,
+          "unit": "count"
+        }
+      ]
     },
     {
       "id": "6afa5160fae7941fc6466b9f",
@@ -214,52 +1834,58 @@
       "duration_seconds": 32.6,
       "media_title": null,
       "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699012956394163464?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466b9f_thumbnail.webp"
-    },
-    {
-      "id": "6afa5160fae7941fc6466b9b",
-      "status": "sent",
-      "service": "tiktok",
-      "channel_id": "6af5c4f462b70b94b00824c4",
-      "channel_handle": "@viralclips2476",
-      "text": "Inside a Startup Office Built for All-Nighters.                                                         #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-      "created_at": "2026-10-20T10:00:00.000Z",
-      "due_at": "2026-10-20T10:00:00.000Z",
-      "sent_at": "2026-10-20T10:00:00.000Z",
-      "duration_seconds": 71.1,
-      "media_title": null,
-      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698619408805039368?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466b9b_thumbnail.webp"
-    },
-    {
-      "id": "6afa5160fae7941fc6466b98",
-      "status": "sent",
-      "service": "tiktok",
-      "channel_id": "6af5c4f462b70b94b00824c4",
-      "channel_handle": "@viralclips2476",
-      "text": "Online Business for Beginners: Built Around Your Needs.                                   #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-      "created_at": "2026-10-22T00:30:00.000Z",
-      "due_at": "2026-10-22T00:30:00.000Z",
-      "sent_at": "2026-10-22T00:30:00.000Z",
-      "duration_seconds": 96.7,
-      "media_title": null,
-      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699011422717791495?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466b98_thumbnail.webp"
-    },
-    {
-      "id": "6afa5160fae7941fc6466b93",
-      "status": "sent",
-      "service": "tiktok",
-      "channel_id": "6af5c4f462b70b94b00824c4",
-      "channel_handle": "@viralclips2476",
-      "text": "How AI Films Go From Script to Screen in Weeks                                                        #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-      "created_at": "2026-10-20T05:34:14.000Z",
-      "due_at": "2026-10-20T05:34:14.000Z",
-      "sent_at": "2026-10-20T05:34:14.000Z",
-      "duration_seconds": 25.8,
-      "media_title": null,
-      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698619117028396296?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466b93_thumbnail.webp"
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466b9f_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.818Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 7,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.74,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 402,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 378,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 33.6,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 4.86,
+          "unit": "count"
+        }
+      ]
     },
     {
       "id": "6afa5160fae7941fc6466b91",
@@ -274,22 +1900,2698 @@
       "duration_seconds": 39.6,
       "media_title": null,
       "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699011926482898194?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466b91_thumbnail.webp"
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466b91_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.731Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 3,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.35,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 222,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 208,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 13.82,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 3.54,
+          "unit": "count"
+        }
+      ]
     },
     {
-      "id": "6af5c6c71ef960a38cfcb957",
+      "id": "6afa5160fae7941fc6466b98",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Online Business for Beginners: Built Around Your Needs.                                   #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
+      "created_at": "2026-10-22T00:30:00.000Z",
+      "due_at": "2026-10-22T00:30:00.000Z",
+      "sent_at": "2026-10-22T00:30:00.000Z",
+      "duration_seconds": 96.7,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699011422717791495?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466b98_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.678Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 5,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.84,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 272,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 251,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 34.83,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 7.52,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6afa5160fae7941fc6466baf",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Inside a Startup Offering $80,000 for the Best Idea.                                                #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
+      "created_at": "2026-10-21T21:40:00.000Z",
+      "due_at": "2026-10-21T21:40:00.000Z",
+      "sent_at": "2026-10-21T21:40:00.000Z",
+      "duration_seconds": 97.0,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699006086321409287?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466baf_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.737Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 8,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.78,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 450,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 419,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 44.4,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 5.79,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6afa5160fae7941fc6466ba8",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "YouTube Growth strategy: Why One Channel Can’t Reach Everyone.                  #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
+      "created_at": "2026-10-21T18:30:00.000Z",
+      "due_at": "2026-10-21T18:30:00.000Z",
+      "sent_at": "2026-10-21T18:30:00.000Z",
+      "duration_seconds": 37.9,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699005681503866119?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466ba8_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.649Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.65,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 121,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 109,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 7.93,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 3.81,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6afa5160fae7941fc6466bac",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Product Development in Hours, Not Weeks.                                                          #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
+      "created_at": "2026-10-21T10:00:00.000Z",
+      "due_at": "2026-10-21T10:00:00.000Z",
+      "sent_at": "2026-10-21T10:00:00.000Z",
+      "duration_seconds": 20.4,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699005107211439378?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466bac_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.642Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 5,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.77,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 283,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 278,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 23.63,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 4.76,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6afa5160fae7941fc6466bb9",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "How Sergey Predicts Which Videos Will Go Viral.                                                  #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
+      "created_at": "2026-10-21T06:30:51.000Z",
+      "due_at": "2026-10-21T06:30:51.000Z",
+      "sent_at": "2026-10-21T06:30:51.000Z",
+      "duration_seconds": 49.4,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699004802516225287?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466bb9_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.795Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.16,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 173,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 157,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 12.38,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 4.06,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6afa5160fae7941fc6466bb3",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "AI Video Tools: Create Cinematic Content Without a Million-Dollar Budget.                                                         #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
+      "created_at": "2026-10-21T00:45:00.000Z",
+      "due_at": "2026-10-21T00:45:00.000Z",
+      "sent_at": "2026-10-21T00:45:00.000Z",
+      "duration_seconds": 93.9,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698620511328406792?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466bb3_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.652Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 3,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 2.31,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 130,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 112,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 8.4,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 3.79,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6afa5160fae7941fc6466ba1",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Why This AI Startip Hides its Team.             #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
+      "created_at": "2026-10-20T18:45:00.000Z",
+      "due_at": "2026-10-20T18:45:00.000Z",
+      "sent_at": "2026-10-20T18:45:00.000Z",
+      "duration_seconds": 17.9,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698620027452411143?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466ba1_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.702Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 7,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.58,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 442,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 419,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 55.02,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 7.15,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6afa5160fae7941fc6466b9b",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Inside a Startup Office Built for All-Nighters.                                                         #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
+      "created_at": "2026-10-20T10:00:00.000Z",
+      "due_at": "2026-10-20T10:00:00.000Z",
+      "sent_at": "2026-10-20T10:00:00.000Z",
+      "duration_seconds": 71.1,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698619408805039368?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466b9b_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.658Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 8,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.45,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 553,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 500,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 69.58,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 7.24,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6afa5160fae7941fc6466b93",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "How AI Films Go From Script to Screen in Weeks                                                        #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
+      "created_at": "2026-10-20T05:34:14.000Z",
+      "due_at": "2026-10-20T05:34:14.000Z",
+      "sent_at": "2026-10-20T05:34:14.000Z",
+      "duration_seconds": 25.8,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698619117028396296?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466b93_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.644Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 12,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.24,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 971,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 911,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 144.4,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 8.61,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8e2",
       "status": "sent",
       "service": "youtube",
       "channel_id": "6af5c6c162b70b94b00843ec",
       "channel_handle": "@Viralclips247_yt",
       "text": "",
-      "created_at": "2026-06-03T07:30:48.000Z",
-      "due_at": "2026-06-03T07:30:48.000Z",
-      "sent_at": "2026-06-03T07:30:48.000Z",
-      "duration_seconds": 0.0,
+      "created_at": "2026-10-19T03:45:12.000Z",
+      "due_at": "2026-10-19T03:45:12.000Z",
+      "sent_at": "2026-10-19T03:45:12.000Z",
+      "duration_seconds": null,
       "media_title": null,
-      "playback_url": "https://www.youtube.com/shorts/iTuPai5CMXU",
-      "thumbnail_url": "https://i.ytimg.com/vi/iTuPai5CMXU/hqdefault.jpg"
+      "playback_url": "https://www.youtube.com/shorts/JPEtxlnnNdo",
+      "thumbnail_url": "https://i.ytimg.com/vi/JPEtxlnnNdo/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-17T13:02:51.788Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 6,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0.58,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1032,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6afa5160fae7941fc6466bbf",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Sleeping at the Office: What’s Going on Here?                                                        #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
+      "created_at": "2026-10-19T03:45:00.000Z",
+      "due_at": "2026-10-19T03:45:00.000Z",
+      "sent_at": "2026-10-19T03:45:00.000Z",
+      "duration_seconds": 23.5,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698166467904277776?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466bbf_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.768Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 12,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 7.59,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 158,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 144,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 19.78,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 7.47,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8d4",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-10-19T00:16:57.000Z",
+      "due_at": "2026-10-19T00:16:57.000Z",
+      "sent_at": "2026-10-19T00:16:57.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/RkrML9Ynz8U",
+      "thumbnail_url": "https://i.ytimg.com/vi/RkrML9Ynz8U/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-17T13:02:51.788Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 22,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 1.82,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1209,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8fa",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-10-19T00:16:47.000Z",
+      "due_at": "2026-10-19T00:16:47.000Z",
+      "sent_at": "2026-10-19T00:16:47.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/dSivhqZaGrg",
+      "thumbnail_url": "https://i.ytimg.com/vi/dSivhqZaGrg/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-17T13:02:51.788Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 0,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6afa5160fae7941fc6466bc2",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Startup Food Perks: Could They Cost $6 Million a Year?                                          #fyp #viral #viralvideo #trending #fyppppppppppppppppppppppp",
+      "created_at": "2026-10-19T00:08:58.000Z",
+      "due_at": "2026-10-19T00:08:58.000Z",
+      "sent_at": "2026-10-19T00:08:58.000Z",
+      "duration_seconds": 20.7,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698164198916001040?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc6466bc2_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.862Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 10,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 2.63,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 418,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 387,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 71.58,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 9.99,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6afa5160fae7941fc64670cc",
+      "status": "sent",
+      "service": "tiktok",
+      "channel_id": "6af5c4f462b70b94b00824c4",
+      "channel_handle": "@viralclips2476",
+      "text": "Veyron’s Last Journey: We Won Big at The Casino!                                                   #fyp #viral #viralvideo #trending #fyppppppppppppppppppppppp",
+      "created_at": "2026-07-28T10:49:21.000Z",
+      "due_at": "2026-07-28T10:49:21.000Z",
+      "sent_at": "2026-07-28T10:49:21.000Z",
+      "duration_seconds": 161.4,
+      "media_title": null,
+      "playback_url": "https://www.tiktok.com/@viralclips2476/video/7667529171358289160?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "thumbnail_url": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6af5c47c6efcbe1144a700d3/6af5c4f462b70b94b00824c4/6afa5160fae7941fc64670cc_thumbnail.webp",
+      "metrics_updated_at": "2026-11-19T12:49:02.777Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 5.71,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 35,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 20,
+          "unit": "count"
+        },
+        {
+          "type": "totalTimeWatched",
+          "name": "Watch Time (min)",
+          "value": 9.63,
+          "unit": "count"
+        },
+        {
+          "type": "averageTimeWatched",
+          "name": "Avg. Watch Time (sec)",
+          "value": 16.06,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8e0",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-07-27T19:51:25.000Z",
+      "due_at": "2026-07-27T19:51:25.000Z",
+      "sent_at": "2026-07-27T19:51:25.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/fu2CDrmqiDM",
+      "thumbnail_url": "https://i.ytimg.com/vi/fu2CDrmqiDM/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.334Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 24,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 835,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb906",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-07-27T13:42:50.000Z",
+      "due_at": "2026-07-27T13:42:50.000Z",
+      "sent_at": "2026-07-27T13:42:50.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/s3N5VJqVJs8",
+      "thumbnail_url": "https://i.ytimg.com/vi/s3N5VJqVJs8/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.277Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 6,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 15,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8dc",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-07-17T05:51:08.000Z",
+      "due_at": "2026-07-17T05:51:08.000Z",
+      "sent_at": "2026-07-17T05:51:08.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/cMMH6uevcWA",
+      "thumbnail_url": "https://i.ytimg.com/vi/cMMH6uevcWA/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.312Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 18,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8de",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-07-16T10:23:19.000Z",
+      "due_at": "2026-07-16T10:23:19.000Z",
+      "sent_at": "2026-07-16T10:23:19.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/GxWaCb_nhrk",
+      "thumbnail_url": "https://i.ytimg.com/vi/GxWaCb_nhrk/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.317Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 2,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8e8",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-07-11T23:31:40.000Z",
+      "due_at": "2026-07-11T23:31:40.000Z",
+      "sent_at": "2026-07-11T23:31:40.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/HXOuQsX3N3M",
+      "thumbnail_url": "https://i.ytimg.com/vi/HXOuQsX3N3M/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.231Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 192,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb902",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-07-10T19:05:41.000Z",
+      "due_at": "2026-07-10T19:05:41.000Z",
+      "sent_at": "2026-07-10T19:05:41.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/stfJkO-cgwM",
+      "thumbnail_url": "https://i.ytimg.com/vi/stfJkO-cgwM/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.271Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 35,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb920",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-07-06T21:12:09.000Z",
+      "due_at": "2026-07-06T21:12:09.000Z",
+      "sent_at": "2026-07-06T21:12:09.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/eblHZ00EM-c",
+      "thumbnail_url": "https://i.ytimg.com/vi/eblHZ00EM-c/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.428Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 465,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8c9",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-07-06T07:33:28.000Z",
+      "due_at": "2026-07-06T07:33:28.000Z",
+      "sent_at": "2026-07-06T07:33:28.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/Qvcz1unkO3U",
+      "thumbnail_url": "https://i.ytimg.com/vi/Qvcz1unkO3U/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.293Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 218,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb938",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-07-06T01:06:20.000Z",
+      "due_at": "2026-07-06T01:06:20.000Z",
+      "sent_at": "2026-07-06T01:06:20.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/GXpfjoSfAPo",
+      "thumbnail_url": "https://i.ytimg.com/vi/GXpfjoSfAPo/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.394Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 8,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8f4",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-07-04T06:08:52.000Z",
+      "due_at": "2026-07-04T06:08:52.000Z",
+      "sent_at": "2026-07-04T06:08:52.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/LmLJhAyqQTM",
+      "thumbnail_url": "https://i.ytimg.com/vi/LmLJhAyqQTM/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.499Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 57,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8d1",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-07-03T20:17:30.000Z",
+      "due_at": "2026-07-03T20:17:30.000Z",
+      "sent_at": "2026-07-03T20:17:30.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/c6pjpKoo7Eo",
+      "thumbnail_url": "https://i.ytimg.com/vi/c6pjpKoo7Eo/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.287Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 4,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb90a",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-07-03T06:17:45.000Z",
+      "due_at": "2026-07-03T06:17:45.000Z",
+      "sent_at": "2026-07-03T06:17:45.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/jM0edxJa8pI",
+      "thumbnail_url": "https://i.ytimg.com/vi/jM0edxJa8pI/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.280Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 234,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8fe",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-07-03T00:34:28.000Z",
+      "due_at": "2026-07-03T00:34:28.000Z",
+      "sent_at": "2026-07-03T00:34:28.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/5T0_NfjJ_MM",
+      "thumbnail_url": "https://i.ytimg.com/vi/5T0_NfjJ_MM/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.274Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 13,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1247,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb916",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-07-02T07:09:54.000Z",
+      "due_at": "2026-07-02T07:09:54.000Z",
+      "sent_at": "2026-07-02T07:09:54.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/3jm8JgEus78",
+      "thumbnail_url": "https://i.ytimg.com/vi/3jm8JgEus78/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.436Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 38,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8ee",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-07-02T03:51:38.000Z",
+      "due_at": "2026-07-02T03:51:38.000Z",
+      "sent_at": "2026-07-02T03:51:38.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/SXsolS863yo",
+      "thumbnail_url": "https://i.ytimg.com/vi/SXsolS863yo/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.347Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 39,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8cf",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-28T06:21:10.000Z",
+      "due_at": "2026-06-28T06:21:10.000Z",
+      "sent_at": "2026-06-28T06:21:10.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/6c5YKI-vKtk",
+      "thumbnail_url": "https://i.ytimg.com/vi/6c5YKI-vKtk/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.304Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1625,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb912",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-27T03:57:56.000Z",
+      "due_at": "2026-06-27T03:57:56.000Z",
+      "sent_at": "2026-06-27T03:57:56.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/4X1kIuxJRX0",
+      "thumbnail_url": "https://i.ytimg.com/vi/4X1kIuxJRX0/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.221Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 153,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb91c",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-26T07:19:01.000Z",
+      "due_at": "2026-06-26T07:19:01.000Z",
+      "sent_at": "2026-06-26T07:19:01.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/RZud50LU1CU",
+      "thumbnail_url": "https://i.ytimg.com/vi/RZud50LU1CU/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.283Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 225,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8c7",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-25T09:15:26.000Z",
+      "due_at": "2026-06-25T09:15:26.000Z",
+      "sent_at": "2026-06-25T09:15:26.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/mJso7Mk-O10",
+      "thumbnail_url": "https://i.ytimg.com/vi/mJso7Mk-O10/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.291Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 42,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb922",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-24T09:24:20.000Z",
+      "due_at": "2026-06-24T09:24:20.000Z",
+      "sent_at": "2026-06-24T09:24:20.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/nSK5TpL_BGw",
+      "thumbnail_url": "https://i.ytimg.com/vi/nSK5TpL_BGw/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.431Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb91e",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-24T06:52:31.000Z",
+      "due_at": "2026-06-24T06:52:31.000Z",
+      "sent_at": "2026-06-24T06:52:31.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/99_edJ_TnU0",
+      "thumbnail_url": "https://i.ytimg.com/vi/99_edJ_TnU0/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.425Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 80,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8f8",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-23T06:07:58.000Z",
+      "due_at": "2026-06-23T06:07:58.000Z",
+      "sent_at": "2026-06-23T06:07:58.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/lTvgRbuWhdM",
+      "thumbnail_url": "https://i.ytimg.com/vi/lTvgRbuWhdM/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.256Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 64,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb914",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-22T07:08:07.000Z",
+      "due_at": "2026-06-22T07:08:07.000Z",
+      "sent_at": "2026-06-22T07:08:07.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/OeaH91kiCFs",
+      "thumbnail_url": "https://i.ytimg.com/vi/OeaH91kiCFs/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.416Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 307,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8da",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-21T09:24:58.000Z",
+      "due_at": "2026-06-21T09:24:58.000Z",
+      "sent_at": "2026-06-21T09:24:58.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/K-rBgUARd2U",
+      "thumbnail_url": "https://i.ytimg.com/vi/K-rBgUARd2U/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.324Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 5,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1196,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb90c",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-21T04:22:14.000Z",
+      "due_at": "2026-06-21T04:22:14.000Z",
+      "sent_at": "2026-06-21T04:22:14.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/g-6cYCj9Hco",
+      "thumbnail_url": "https://i.ytimg.com/vi/g-6cYCj9Hco/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.412Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 8,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1099,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8d8",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-20T04:08:53.000Z",
+      "due_at": "2026-06-20T04:08:53.000Z",
+      "sent_at": "2026-06-20T04:08:53.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/7cYfVId70k0",
+      "thumbnail_url": "https://i.ytimg.com/vi/7cYfVId70k0/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.321Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 816,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8f2",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-19T06:38:30.000Z",
+      "due_at": "2026-06-19T06:38:30.000Z",
+      "sent_at": "2026-06-19T06:38:30.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/ogLe_9yshzA",
+      "thumbnail_url": "https://i.ytimg.com/vi/ogLe_9yshzA/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.252Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 11,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 752,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8cd",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-18T08:04:48.000Z",
+      "due_at": "2026-06-18T08:04:48.000Z",
+      "sent_at": "2026-06-18T08:04:48.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/rcycyrZZXTE",
+      "thumbnail_url": "https://i.ytimg.com/vi/rcycyrZZXTE/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.300Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 74,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb910",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-18T01:40:40.000Z",
+      "due_at": "2026-06-18T01:40:40.000Z",
+      "sent_at": "2026-06-18T01:40:40.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/jHVWD8JsK08",
+      "thumbnail_url": "https://i.ytimg.com/vi/jHVWD8JsK08/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.265Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 51,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 2756,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb908",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-17T13:16:26.000Z",
+      "due_at": "2026-06-17T13:16:26.000Z",
+      "sent_at": "2026-06-17T13:16:26.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/nf7cOftwz9g",
+      "thumbnail_url": "https://i.ytimg.com/vi/nf7cOftwz9g/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.228Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 0,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8d6",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-17T06:00:11.000Z",
+      "due_at": "2026-06-17T06:00:11.000Z",
+      "sent_at": "2026-06-17T06:00:11.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/SdprPHHQgI0",
+      "thumbnail_url": "https://i.ytimg.com/vi/SdprPHHQgI0/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.225Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 21,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 3050,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb904",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-16T07:10:29.000Z",
+      "due_at": "2026-06-16T07:10:29.000Z",
+      "sent_at": "2026-06-16T07:10:29.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/NazfXnmWDIQ",
+      "thumbnail_url": "https://i.ytimg.com/vi/NazfXnmWDIQ/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.354Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8fc",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-16T02:41:11.000Z",
+      "due_at": "2026-06-16T02:41:11.000Z",
+      "sent_at": "2026-06-16T02:41:11.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/b5jydbC0Qz8",
+      "thumbnail_url": "https://i.ytimg.com/vi/b5jydbC0Qz8/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.268Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 0,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb918",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-10T06:16:04.000Z",
+      "due_at": "2026-06-10T06:16:04.000Z",
+      "sent_at": "2026-06-10T06:16:04.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/Y5UOUnwAcTc",
+      "thumbnail_url": "https://i.ytimg.com/vi/Y5UOUnwAcTc/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.419Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 8,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8ea",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-09T06:12:40.000Z",
+      "due_at": "2026-06-09T06:12:40.000Z",
+      "sent_at": "2026-06-09T06:12:40.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/z3hMzZyN3Dc",
+      "thumbnail_url": "https://i.ytimg.com/vi/z3hMzZyN3Dc/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.249Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 15,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb90e",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-08T06:27:37.000Z",
+      "due_at": "2026-06-08T06:27:37.000Z",
+      "sent_at": "2026-06-08T06:27:37.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/uUMC9WmyJa8",
+      "thumbnail_url": "https://i.ytimg.com/vi/uUMC9WmyJa8/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.351Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 13,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1444,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb91a",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-06T23:49:33.000Z",
+      "due_at": "2026-06-06T23:49:33.000Z",
+      "sent_at": "2026-06-06T23:49:33.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/2bnwBHlxcOQ",
+      "thumbnail_url": "https://i.ytimg.com/vi/2bnwBHlxcOQ/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.422Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 32,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1222,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8f6",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-06T09:12:24.000Z",
+      "due_at": "2026-06-06T09:12:24.000Z",
+      "sent_at": "2026-06-06T09:12:24.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/GoMUjU1fRcs",
+      "thumbnail_url": "https://i.ytimg.com/vi/GoMUjU1fRcs/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.262Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 27,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1123,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8cb",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-06T02:21:55.000Z",
+      "due_at": "2026-06-06T02:21:55.000Z",
+      "sent_at": "2026-06-06T02:21:55.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/izTTjrRlqZg",
+      "thumbnail_url": "https://i.ytimg.com/vi/izTTjrRlqZg/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.181Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 11,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1624,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8e4",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-05T10:42:23.000Z",
+      "due_at": "2026-06-05T10:42:23.000Z",
+      "sent_at": "2026-06-05T10:42:23.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/yuPHTZDWH2E",
+      "thumbnail_url": "https://i.ytimg.com/vi/yuPHTZDWH2E/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.244Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 6,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8f0",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-05T03:50:58.000Z",
+      "due_at": "2026-06-05T03:50:58.000Z",
+      "sent_at": "2026-06-05T03:50:58.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/4XjSDGYDpKc",
+      "thumbnail_url": "https://i.ytimg.com/vi/4XjSDGYDpKc/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.241Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 11,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 716,
+          "unit": "count"
+        }
+      ]
     },
     {
       "id": "6af5c6c71ef960a38cfcb955",
@@ -301,10 +4603,79 @@
       "created_at": "2026-06-04T10:01:17.000Z",
       "due_at": "2026-06-04T10:01:17.000Z",
       "sent_at": "2026-06-04T10:01:17.000Z",
-      "duration_seconds": 0.0,
+      "duration_seconds": null,
       "media_title": null,
       "playback_url": "https://www.youtube.com/shorts/eeEv60rS2Jc",
-      "thumbnail_url": "https://i.ytimg.com/vi/eeEv60rS2Jc/hqdefault.jpg"
+      "thumbnail_url": "https://i.ytimg.com/vi/eeEv60rS2Jc/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.472Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 18,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 933,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb8ec",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-04T07:22:07.000Z",
+      "due_at": "2026-06-04T07:22:07.000Z",
+      "sent_at": "2026-06-04T07:22:07.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/9EO-6C34QuQ",
+      "thumbnail_url": "https://i.ytimg.com/vi/9EO-6C34QuQ/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.247Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 10,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1393,
+          "unit": "count"
+        }
+      ]
     },
     {
       "id": "6af5c6c71ef960a38cfcb953",
@@ -316,10 +4687,121 @@
       "created_at": "2026-06-04T02:52:11.000Z",
       "due_at": "2026-06-04T02:52:11.000Z",
       "sent_at": "2026-06-04T02:52:11.000Z",
-      "duration_seconds": 0.0,
+      "duration_seconds": null,
       "media_title": null,
       "playback_url": "https://www.youtube.com/shorts/rcBdj59I9wY",
-      "thumbnail_url": "https://i.ytimg.com/vi/rcBdj59I9wY/hqdefault.jpg"
+      "thumbnail_url": "https://i.ytimg.com/vi/rcBdj59I9wY/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.468Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 8,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1255,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb900",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-03T09:59:31.000Z",
+      "due_at": "2026-06-03T09:59:31.000Z",
+      "sent_at": "2026-06-03T09:59:31.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/ZM3wuTwINUk",
+      "thumbnail_url": "https://i.ytimg.com/vi/ZM3wuTwINUk/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.235Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 10,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "6af5c6c71ef960a38cfcb957",
+      "status": "sent",
+      "service": "youtube",
+      "channel_id": "6af5c6c162b70b94b00843ec",
+      "channel_handle": "@Viralclips247_yt",
+      "text": "",
+      "created_at": "2026-06-03T07:30:48.000Z",
+      "due_at": "2026-06-03T07:30:48.000Z",
+      "sent_at": "2026-06-03T07:30:48.000Z",
+      "duration_seconds": null,
+      "media_title": null,
+      "playback_url": "https://www.youtube.com/shorts/iTuPai5CMXU",
+      "thumbnail_url": "https://i.ytimg.com/vi/iTuPai5CMXU/hqdefault.jpg",
+      "metrics_updated_at": "2026-11-12T14:01:43.479Z",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 13,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 0,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Video Views",
+          "value": 1231,
+          "unit": "count"
+        }
+      ]
     }
   ]
 }

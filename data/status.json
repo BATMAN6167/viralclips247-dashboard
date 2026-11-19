@@ -1,6 +1,6 @@
 {
   "schema": "viralclips247-mission-control-status-v1",
-  "generated_at_utc": "2026-11-19T12:47:24Z",
+  "generated_at_utc": "2026-11-19T13:27:03Z",
   "repo": "BATMAN6167/youtube-auto-publisher",
   "controls": {
     "cloud_schedule_enabled": true,
@@ -11,14 +11,14 @@
   "oracle_vm": {
     "reachable": true,
     "source": "oracle_ssh_live",
-    "captured_at_utc": "2026-11-19T12:47:23Z",
+    "captured_at_utc": "2026-11-19T13:27:02Z",
     "hostname": "viralclips247-server",
     "shape": "VM.Standard.E2.1.Micro (x86_64)",
-    "ram_used_mib": 319,
+    "ram_used_mib": 340,
     "ram_total_mib": 952,
-    "ram_available_mib": 632,
+    "ram_available_mib": 612,
     "ram_ceiling_mib": 952,
-    "ram_percent": 33.5,
+    "ram_percent": 35.7,
     "ram_within_ceiling": true,
     "swap_total_mib": 0,
     "disk": {
@@ -64,35 +64,35 @@
     },
     "monitor_heartbeat": {
       "status": "monitor_session_complete",
-      "updated_utc": "2026-11-19T12:40:56.528323+00:00",
+      "updated_utc": "2026-11-19T13:21:13.783628+00:00",
       "last_session_ok": true,
       "failure_streak": 0
     },
     "native_sidecar": {
       "status": "monitoring_private_candidates",
-      "updated_utc": "2026-11-19T12:47:20.105728+00:00",
+      "updated_utc": "2026-11-19T13:26:59.882581+00:00",
       "processed": 0,
       "reauthorization_required": false
     },
     "latest_completed_diagnostic": {
-      "file": "20261119T122051Z-e307f1360527.jsonl.diagnostics.json",
+      "file": "20261119T130108Z-6efb47656704.jsonl.diagnostics.json",
       "status": "completed_on_demand_session",
-      "outcome": "candidates_detected",
-      "elapsed_seconds": 1205.01,
+      "outcome": "valid_zero_candidates",
+      "elapsed_seconds": 1205.02,
       "subscriptions_enabled": null,
       "live_snapshots": null,
       "scorer_evaluations": null
     },
     "gta_scout": {
       "scout_release": "v1.2",
-      "as_of_utc": "2026-11-19T12:46:50.504787+00:00",
+      "as_of_utc": "2026-11-19T13:23:10.474650+00:00",
       "direct_incumbent_count": 5,
       "direct_incumbent_live_count": 1,
-      "live_streams_observed": 777
+      "live_streams_observed": 755
     },
     "review_inbox": {
       "count": 20,
-      "generated_at_utc": "2026-11-19T12:45:47.419675+00:00",
+      "generated_at_utc": "2026-11-19T13:26:55.115361+00:00",
       "youtube_tiktok_publishing_authorized": false
     },
     "release_health": {
@@ -109,8 +109,8 @@
       "title": "System A1 · Oracle Live Clipper",
       "host": "Oracle E2.1.Micro (Coordinator Only)",
       "status": "healthy",
-      "summary": "5/5 systemd units active · 319/952 MiB RAM · streak 0",
-      "last_activity_utc": "2026-11-19T12:40:56.528323+00:00",
+      "summary": "5/5 systemd units active · 340/952 MiB RAM · streak 0",
+      "last_activity_utc": "2026-11-19T13:21:13.783628+00:00",
       "workflow_file": "autonomous-supervisor-agy.yml",
       "media_host": "n/a (metadata + native Twitch clips)"
     },
@@ -137,6 +137,304 @@
       "media_host": "github_releases -> BATMAN6167/viralclips247-media-staging"
     }
   ],
+  "analytics": {
+    "schema": "viralclips247-dashboard-analytics-v1",
+    "generated_at_utc": "2026-11-19T13:26:57Z",
+    "sample_size": {
+      "total_posts_analyzed": 90,
+      "top_20_count": 18,
+      "selection_ratio": 0.2
+    },
+    "totals": {
+      "posts_tracked": 90,
+      "total_views": 47333,
+      "youtube_views": 28939,
+      "tiktok_views": 18394,
+      "total_likes": 766,
+      "total_comments": 2,
+      "total_shares": 4,
+      "avg_engagement_rate_pct": 1.63
+    },
+    "by_platform": {
+      "youtube": {
+        "posts": 50,
+        "views": 28939,
+        "likes": 323,
+        "comments": 1,
+        "shares": 0,
+        "engagement_rate_pct": 1.12
+      },
+      "tiktok": {
+        "posts": 40,
+        "views": 18394,
+        "likes": 443,
+        "comments": 1,
+        "shares": 4,
+        "engagement_rate_pct": 2.44
+      }
+    },
+    "monetization": {
+      "youtube_ypp": {
+        "channel_handle": "@Viralclips247_yt",
+        "window_days": 90,
+        "rolling_90d_shorts_views": 2311,
+        "rolling_90d_shorts_count": 4,
+        "lifetime_youtube_views": 28939,
+        "subscribers": null,
+        "tier1_views_target": 3000000,
+        "tier2_views_target": 10000000,
+        "tier1_subs_target": 500,
+        "tier2_subs_target": 1000,
+        "tier1_views_pct": 0.077,
+        "tier2_views_pct": 0.0231,
+        "tier1_subs_pct": null,
+        "tier2_subs_pct": null,
+        "tier1_views_remaining": 2997689,
+        "tier2_views_remaining": 9997689,
+        "ypp_status": "BUILDING_TOWARD_TIER_1",
+        "original_3d_priority_enforced": true,
+        "raw_twitch_youtube_blocked": true,
+        "cinematic_studio_youtube_count": 0
+      },
+      "tiktok_au": {
+        "channel_handle": "@viralclips2476",
+        "region": "AU",
+        "bio_link_cta_enabled": true,
+        "active_cta": "Watch full 3D breakdowns on YouTube @Viralclips247_yt — link in bio!",
+        "bio_link_target_handle": "@Viralclips247_yt"
+      }
+    },
+    "learned_strategy": {
+      "winning_archetypes": [
+        {
+          "archetype": "question_curiosity",
+          "count": 8,
+          "avg_views": 562.5,
+          "avg_engagement_rate_pct": 3.75
+        },
+        {
+          "archetype": "numeric_stakes",
+          "count": 4,
+          "avg_views": 535.2,
+          "avg_engagement_rate_pct": 4.51
+        },
+        {
+          "archetype": "bold_statement",
+          "count": 2,
+          "avg_views": 982.0,
+          "avg_engagement_rate_pct": 2.08
+        },
+        {
+          "archetype": "mechanism_reveal",
+          "count": 2,
+          "avg_views": 719.0,
+          "avg_engagement_rate_pct": 2.5
+        },
+        {
+          "archetype": "untitled_missing_hook",
+          "count": 2,
+          "avg_views": 612.0,
+          "avg_engagement_rate_pct": 0.91
+        }
+      ],
+      "recommended_templates": [
+        "Why do {subject} stall right before {payoff}?",
+        "The {number} breakdown behind {high_stakes_outcome}",
+        "{counterintuitive_claim}: here is what actually happens inside {system}",
+        "How {mechanism} eliminates {bottleneck} in 18 seconds"
+      ],
+      "avoid_patterns": [
+        "Never emit #fyp, #foryou, or #foryoupage spam tags",
+        "Avoid empty/untitled post copy on YouTube Shorts",
+        "Observed 23 lower-performing posts with #fyp/#foryou spam tags",
+        "Observed 5 posts >65s outside YouTube Shorts 60s sweet spot",
+        "Observed 18 untitled posts stalling below 50 views"
+      ],
+      "pacing_targets": {
+        "duration_sweet_spot_seconds": {
+          "min": 17.7,
+          "max": 58.0,
+          "median_top20": 43.2
+        },
+        "hook_window_seconds": 1.5,
+        "pattern_interrupt_interval_seconds": [
+          1.5,
+          2.5
+        ],
+        "seamless_loop_required": true,
+        "audio_edge_fade_ms": 30,
+        "min_quality_gate_overall": 7.5,
+        "min_quality_gate_hook": 7.0
+      },
+      "optimal_posting_hours": {
+        "youtube_utc_hours": [
+          0,
+          1,
+          13
+        ],
+        "tiktok_utc_hours": [
+          14,
+          2,
+          11
+        ],
+        "youtube_aedt_hours": [
+          "11:00 AEDT",
+          "12:00 AEDT",
+          "00:00 AEDT"
+        ],
+        "tiktok_aedt_hours": [
+          "01:00 AEDT",
+          "13:00 AEDT",
+          "22:00 AEDT"
+        ]
+      },
+      "top_topics": [
+        {
+          "topic": "computer_science_hardware",
+          "weight": 1.4
+        },
+        {
+          "topic": "gaming_gta6",
+          "weight": 1.29
+        },
+        {
+          "topic": "automotive",
+          "weight": 1.28
+        },
+        {
+          "topic": "horology_engineering",
+          "weight": 1.25
+        },
+        {
+          "topic": "startup_business",
+          "weight": 1.08
+        },
+        {
+          "topic": "ai_tech",
+          "weight": 1.08
+        }
+      ],
+      "top_performers": [
+        {
+          "post_key": "buffer:6af5c4f6977c5aeb3d28e0f1",
+          "platform": "tiktok",
+          "channel_handle": "@viralclips2476",
+          "source_system": "historical_buffer",
+          "topic": "gaming_gta6",
+          "hook_text": "Wait for the end!",
+          "hook_archetype": "bold_statement",
+          "duration_seconds": 57.0,
+          "views": 1515,
+          "likes": 23,
+          "comments": 0,
+          "shares": 3,
+          "engagement_rate_pct": 1.72,
+          "view_velocity_per_hour": 2.528,
+          "composite_score": 0.803,
+          "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700608084498025734?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
+        },
+        {
+          "post_key": "buffer:6af5c4f6977c5aeb3d28e05b",
+          "platform": "tiktok",
+          "channel_handle": "@viralclips2476",
+          "source_system": "historical_buffer",
+          "topic": "automotive",
+          "hook_text": "Bugatti Chiron Fill-Up: $118 for a Tank of Fuel",
+          "hook_archetype": "numeric_stakes",
+          "duration_seconds": 29.3,
+          "views": 710,
+          "likes": 30,
+          "comments": 1,
+          "shares": 0,
+          "engagement_rate_pct": 4.37,
+          "view_velocity_per_hour": 1.178,
+          "composite_score": 0.6577,
+          "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700211863795059986?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
+        },
+        {
+          "post_key": "buffer:6af5c4f6977c5aeb3d28e1fe",
+          "platform": "tiktok",
+          "channel_handle": "@viralclips2476",
+          "source_system": "historical_buffer",
+          "topic": "automotive",
+          "hook_text": "How a Custom Bugatti Chiron Windshield Is Made and Why It Costs So Much.",
+          "hook_archetype": "question_curiosity",
+          "duration_seconds": 52.7,
+          "views": 1071,
+          "likes": 31,
+          "comments": 0,
+          "shares": 0,
+          "engagement_rate_pct": 2.89,
+          "view_velocity_per_hour": 1.707,
+          "composite_score": 0.6497,
+          "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699455050246032641?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
+        },
+        {
+          "post_key": "buffer:6af5c4f6977c5aeb3d28e069",
+          "platform": "tiktok",
+          "channel_handle": "@viralclips2476",
+          "source_system": "historical_buffer",
+          "topic": "automotive",
+          "hook_text": "I drove a 950hp rebuilt Porsche.",
+          "hook_archetype": "numeric_stakes",
+          "duration_seconds": 50.1,
+          "views": 460,
+          "likes": 22,
+          "comments": 0,
+          "shares": 0,
+          "engagement_rate_pct": 4.78,
+          "view_velocity_per_hour": 0.905,
+          "composite_score": 0.5858,
+          "playback_url": "https://www.tiktok.com/@viralclips2476/video/7701723269698735378?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
+        },
+        {
+          "post_key": "buffer:6af5c4f6977c5aeb3d28e216",
+          "platform": "tiktok",
+          "channel_handle": "@viralclips2476",
+          "source_system": "historical_buffer",
+          "topic": "automotive",
+          "hook_text": "Rate this Wild Custom RX3 Build!",
+          "hook_archetype": "numeric_stakes",
+          "duration_seconds": 50.3,
+          "views": 471,
+          "likes": 23,
+          "comments": 0,
+          "shares": 0,
+          "engagement_rate_pct": 4.88,
+          "view_velocity_per_hour": 0.834,
+          "composite_score": 0.5789,
+          "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700624164016704776?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
+        }
+      ],
+      "skill_prompt_directives": {
+        "cinematic_studio": {
+          "skills": [
+            "blender-studio-render",
+            "hyperframes",
+            "animejs",
+            "lottie-animation",
+            "motion-effects",
+            "title-sequence-3d",
+            "vox-explainer",
+            "animated-chart",
+            "reel-export"
+          ],
+          "prompt_summary": "Prioritize 100% original Blender 5.2.4 / VTK 3D worlds with Kokoro C/D narration (am_adam/af_heart) for YouTube @Viralclips247_yt YPP acceleration (2,311 / 3,000,000 90d views). Lead with 'question_curiosity' hooks inside 1.5s, target 18-58s (median top-20%: 43s), apply 1.5-2.5s pattern interrupts via hyperframes/animejs/lottie-animation/motion-effects, and schedule near 11:00 AEDT, 12:00 AEDT, 00:00 AEDT."
+        },
+        "shorts_editor": {
+          "skills": [
+            "video-use",
+            "hyperframes",
+            "lottie-animation",
+            "motion-effects",
+            "reel-export"
+          ],
+          "prompt_summary": "Route un-narrated Twitch/source clips exclusively to TikTok @viralclips2476 with AU bio-link CTA at 01:00 AEDT, 13:00 AEDT, 22:00 AEDT. Block Twitch clips from YouTube @Viralclips247_yt unless Kokoro commentary + transformative hyperframes/lottie/motion-effects overlays + seamless video-use loop pacing (18-58s) are verified."
+        }
+      },
+      "confidence_note": "Advisory guidance derived from measured post analytics; pre-handoff AI quality scores never replace real audience retention or guaranteed views."
+    }
+  },
   "viral_quality_gate_log": [
     {
       "id": "oracle-cc0-20261118",
@@ -208,7 +506,7 @@
   ],
   "buffer": {
     "source": "buffer_mcp_verified",
-    "synced_at_utc": "2026-11-19T12:30:35Z",
+    "synced_at_utc": "2026-11-19T13:13:04Z",
     "legacy_youtube_uploader_disabled": true,
     "channels": [
       {
@@ -220,7 +518,7 @@
         "locked": false,
         "draft_count": 1,
         "scheduled_count": 0,
-        "sent_count": 3
+        "sent_count": 50
       },
       {
         "id": "6af5c4f462b70b94b00824c4",
@@ -231,7 +529,7 @@
         "locked": false,
         "draft_count": 1,
         "scheduled_count": 0,
-        "sent_count": 15
+        "sent_count": 40
       }
     ],
     "counts": {
@@ -239,7 +537,7 @@
       "needs_approval": 0,
       "scheduled": 0,
       "sending": 0,
-      "sent": 18,
+      "sent": 90,
       "error": 0
     },
     "queued_posts": [
@@ -254,7 +552,12 @@
         "sent_at": null,
         "duration_seconds": 18.0,
         "media_title": "ORIGINAL_STORY_18S_C_1080x1920_LOCAL_EXPORT_ONLY.mp4",
-        "playback_url": null
+        "playback_url": null,
+        "views": null,
+        "likes": null,
+        "comments": null,
+        "shares": null,
+        "engagement_rate_pct": null
       },
       {
         "id": "6afebb0f4fb82a830a0c268e",
@@ -267,243 +570,374 @@
         "sent_at": null,
         "duration_seconds": 18.0,
         "media_title": "ORIGINAL_STORY_18S_C_1080x1920_LOCAL_EXPORT_ONLY.mp4",
-        "playback_url": null
+        "playback_url": null,
+        "views": null,
+        "likes": null,
+        "comments": null,
+        "shares": null,
+        "engagement_rate_pct": null
       }
     ],
     "published_posts": [
       {
-        "id": "6afa5160fae7941fc6466bbc",
-        "status": "sent",
-        "service": "tiktok",
-        "channel_handle": "@viralclips2476",
-        "text_preview": "Haldex Module Fix: Broken Signal Wire Clears Transmission Light. #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-        "created_at": "2026-10-22T18:45:00.000Z",
-        "due_at": "2026-10-22T18:45:00.000Z",
-        "sent_at": "2026-10-22T18:45:00.000Z",
-        "duration_seconds": 81.6,
-        "media_title": null,
-        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699451595548937479?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-      },
-      {
-        "id": "6afa5160fae7941fc6466b9f",
-        "status": "sent",
-        "service": "tiktok",
-        "channel_handle": "@viralclips2476",
-        "text_preview": "AI Marketing: Why Broad Audiences Need Simpler Messaging. #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-        "created_at": "2026-10-22T10:10:00.000Z",
-        "due_at": "2026-10-22T10:10:00.000Z",
-        "sent_at": "2026-10-22T10:10:00.000Z",
-        "duration_seconds": 32.6,
-        "media_title": null,
-        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699012956394163464?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-      },
-      {
-        "id": "6afa5160fae7941fc6466b91",
-        "status": "sent",
-        "service": "tiktok",
-        "channel_handle": "@viralclips2476",
-        "text_preview": "Working Until 3 A.M: The Always-On Startup Culture. #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-        "created_at": "2026-10-22T06:45:00.000Z",
-        "due_at": "2026-10-22T06:45:00.000Z",
-        "sent_at": "2026-10-22T06:45:00.000Z",
-        "duration_seconds": 39.6,
-        "media_title": null,
-        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699011926482898194?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-      },
-      {
-        "id": "6afa5160fae7941fc6466b98",
-        "status": "sent",
-        "service": "tiktok",
-        "channel_handle": "@viralclips2476",
-        "text_preview": "Online Business for Beginners: Built Around Your Needs. #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-        "created_at": "2026-10-22T00:30:00.000Z",
-        "due_at": "2026-10-22T00:30:00.000Z",
-        "sent_at": "2026-10-22T00:30:00.000Z",
-        "duration_seconds": 96.7,
-        "media_title": null,
-        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699011422717791495?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-      },
-      {
-        "id": "6afa5160fae7941fc6466baf",
-        "status": "sent",
-        "service": "tiktok",
-        "channel_handle": "@viralclips2476",
-        "text_preview": "Inside a Startup Offering $80,000 for the Best Idea. #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-        "created_at": "2026-10-21T21:40:00.000Z",
-        "due_at": "2026-10-21T21:40:00.000Z",
-        "sent_at": "2026-10-21T21:40:00.000Z",
-        "duration_seconds": 97.0,
-        "media_title": null,
-        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699006086321409287?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-      },
-      {
-        "id": "6afa5160fae7941fc6466ba8",
-        "status": "sent",
-        "service": "tiktok",
-        "channel_handle": "@viralclips2476",
-        "text_preview": "YouTube Growth strategy: Why One Channel Can’t Reach Everyone. #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-        "created_at": "2026-10-21T18:30:00.000Z",
-        "due_at": "2026-10-21T18:30:00.000Z",
-        "sent_at": "2026-10-21T18:30:00.000Z",
-        "duration_seconds": 37.9,
-        "media_title": null,
-        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699005681503866119?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-      },
-      {
-        "id": "6afa5160fae7941fc6466bac",
-        "status": "sent",
-        "service": "tiktok",
-        "channel_handle": "@viralclips2476",
-        "text_preview": "Product Development in Hours, Not Weeks. #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-        "created_at": "2026-10-21T10:00:00.000Z",
-        "due_at": "2026-10-21T10:00:00.000Z",
-        "sent_at": "2026-10-21T10:00:00.000Z",
-        "duration_seconds": 20.4,
-        "media_title": null,
-        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699005107211439378?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-      },
-      {
-        "id": "6afa5160fae7941fc6466bb9",
-        "status": "sent",
-        "service": "tiktok",
-        "channel_handle": "@viralclips2476",
-        "text_preview": "How Sergey Predicts Which Videos Will Go Viral. #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-        "created_at": "2026-10-21T06:30:51.000Z",
-        "due_at": "2026-10-21T06:30:51.000Z",
-        "sent_at": "2026-10-21T06:30:51.000Z",
-        "duration_seconds": 49.4,
-        "media_title": null,
-        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699004802516225287?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-      },
-      {
-        "id": "6afa5160fae7941fc6466bb3",
-        "status": "sent",
-        "service": "tiktok",
-        "channel_handle": "@viralclips2476",
-        "text_preview": "AI Video Tools: Create Cinematic Content Without a Million-Dollar Budget. #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-        "created_at": "2026-10-21T00:45:00.000Z",
-        "due_at": "2026-10-21T00:45:00.000Z",
-        "sent_at": "2026-10-21T00:45:00.000Z",
-        "duration_seconds": 93.9,
-        "media_title": null,
-        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698620511328406792?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-      },
-      {
-        "id": "6afa5160fae7941fc6466ba1",
-        "status": "sent",
-        "service": "tiktok",
-        "channel_handle": "@viralclips2476",
-        "text_preview": "Why This AI Startip Hides its Team. #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-        "created_at": "2026-10-20T18:45:00.000Z",
-        "due_at": "2026-10-20T18:45:00.000Z",
-        "sent_at": "2026-10-20T18:45:00.000Z",
-        "duration_seconds": 17.9,
-        "media_title": null,
-        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698620027452411143?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-      },
-      {
-        "id": "6afa5160fae7941fc6466b9b",
-        "status": "sent",
-        "service": "tiktok",
-        "channel_handle": "@viralclips2476",
-        "text_preview": "Inside a Startup Office Built for All-Nighters. #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-        "created_at": "2026-10-20T10:00:00.000Z",
-        "due_at": "2026-10-20T10:00:00.000Z",
-        "sent_at": "2026-10-20T10:00:00.000Z",
-        "duration_seconds": 71.1,
-        "media_title": null,
-        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698619408805039368?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-      },
-      {
-        "id": "6afa5160fae7941fc6466b93",
-        "status": "sent",
-        "service": "tiktok",
-        "channel_handle": "@viralclips2476",
-        "text_preview": "How AI Films Go From Script to Screen in Weeks #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-        "created_at": "2026-10-20T05:34:14.000Z",
-        "due_at": "2026-10-20T05:34:14.000Z",
-        "sent_at": "2026-10-20T05:34:14.000Z",
-        "duration_seconds": 25.8,
-        "media_title": null,
-        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698619117028396296?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-      },
-      {
-        "id": "6afa5160fae7941fc6466bbf",
-        "status": "sent",
-        "service": "tiktok",
-        "channel_handle": "@viralclips2476",
-        "text_preview": "Sleeping at the Office: What’s Going on Here? #fyp #fyppppppppppppppppppppppp #viral #viralvideo #trending",
-        "created_at": "2026-10-19T03:45:00.000Z",
-        "due_at": "2026-10-19T03:45:00.000Z",
-        "sent_at": "2026-10-19T03:45:00.000Z",
-        "duration_seconds": 23.5,
-        "media_title": null,
-        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698166467904277776?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-      },
-      {
-        "id": "6afa5160fae7941fc6466bc2",
-        "status": "sent",
-        "service": "tiktok",
-        "channel_handle": "@viralclips2476",
-        "text_preview": "Startup Food Perks: Could They Cost $6 Million a Year? #fyp #viral #viralvideo #trending #fyppppppppppppppppppppppp",
-        "created_at": "2026-10-19T00:08:58.000Z",
-        "due_at": "2026-10-19T00:08:58.000Z",
-        "sent_at": "2026-10-19T00:08:58.000Z",
-        "duration_seconds": 20.7,
-        "media_title": null,
-        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7698164198916001040?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-      },
-      {
-        "id": "6afa5160fae7941fc64670cc",
-        "status": "sent",
-        "service": "tiktok",
-        "channel_handle": "@viralclips2476",
-        "text_preview": "Veyron’s Last Journey: We Won Big at The Casino! #fyp #viral #viralvideo #trending #fyppppppppppppppppppppppp",
-        "created_at": "2026-07-28T10:49:21.000Z",
-        "due_at": "2026-07-28T10:49:21.000Z",
-        "sent_at": "2026-07-28T10:49:21.000Z",
-        "duration_seconds": 161.4,
-        "media_title": null,
-        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7667529171358289160?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-      },
-      {
-        "id": "6af5c6c71ef960a38cfcb955",
+        "id": "6af5c6c71ef960a38cfcb8e6",
         "status": "sent",
         "service": "youtube",
         "channel_handle": "@Viralclips247_yt",
-        "text_preview": "Untitled video post",
-        "created_at": "2026-06-04T10:01:17.000Z",
-        "due_at": "2026-06-04T10:01:17.000Z",
-        "sent_at": "2026-06-04T10:01:17.000Z",
-        "duration_seconds": 0.0,
+        "text_preview": "You have never experienced the present moment in real time. Here is the mind-bending neuroscience behind the 80-millisecond delay of human p...",
+        "created_at": "2026-11-11T08:59:53.000Z",
+        "due_at": "2026-11-11T08:59:53.000Z",
+        "sent_at": "2026-11-11T08:59:53.000Z",
+        "duration_seconds": null,
         "media_title": null,
-        "playback_url": "https://www.youtube.com/shorts/eeEv60rS2Jc"
+        "playback_url": "https://www.youtube.com/shorts/vVcIRWJ9wrM",
+        "views": 70,
+        "likes": 0,
+        "comments": 0,
+        "shares": null,
+        "engagement_rate_pct": 0.0
       },
       {
-        "id": "6af5c6c71ef960a38cfcb953",
+        "id": "6af5c4f6977c5aeb3d28e069",
         "status": "sent",
-        "service": "youtube",
-        "channel_handle": "@Viralclips247_yt",
-        "text_preview": "Untitled video post",
-        "created_at": "2026-06-04T02:52:11.000Z",
-        "due_at": "2026-06-04T02:52:11.000Z",
-        "sent_at": "2026-06-04T02:52:11.000Z",
-        "duration_seconds": 0.0,
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "I drove a 950hp rebuilt Porsche. #porsche #GT3RS #carrebuild #Supercar #Tuning",
+        "created_at": "2026-10-29T09:01:00.000Z",
+        "due_at": "2026-10-29T09:01:00.000Z",
+        "sent_at": "2026-10-29T09:01:00.000Z",
+        "duration_seconds": 50.1,
         "media_title": null,
-        "playback_url": "https://www.youtube.com/shorts/rcBdj59I9wY"
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7701723269698735378?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 460,
+        "likes": 22,
+        "comments": 0,
+        "shares": 0,
+        "engagement_rate_pct": 4.78
       },
       {
-        "id": "6af5c6c71ef960a38cfcb957",
+        "id": "6af5c4f6977c5aeb3d28e065",
         "status": "sent",
-        "service": "youtube",
-        "channel_handle": "@Viralclips247_yt",
-        "text_preview": "Untitled video post",
-        "created_at": "2026-06-03T07:30:48.000Z",
-        "due_at": "2026-06-03T07:30:48.000Z",
-        "sent_at": "2026-06-03T07:30:48.000Z",
-        "duration_seconds": 0.0,
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "Why supercars are designed to break. #CarSafety #engineering #lamborghini #SVJ #tomi",
+        "created_at": "2026-10-29T07:00:00.000Z",
+        "due_at": "2026-10-29T07:00:00.000Z",
+        "sent_at": "2026-10-29T07:00:00.000Z",
+        "duration_seconds": 38.9,
         "media_title": null,
-        "playback_url": "https://www.youtube.com/shorts/iTuPai5CMXU"
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7701723428889365767?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 428,
+        "likes": 11,
+        "comments": 0,
+        "shares": 0,
+        "engagement_rate_pct": 2.57
+      },
+      {
+        "id": "6af5c4f6977c5aeb3d28e057",
+        "status": "sent",
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "The force that moved a V12 engine. #lamborghini #SVJ #Crash #engineering #tomi",
+        "created_at": "2026-10-29T01:00:00.000Z",
+        "due_at": "2026-10-29T01:00:00.000Z",
+        "sent_at": "2026-10-29T01:00:00.000Z",
+        "duration_seconds": 48.8,
+        "media_title": null,
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7701722393324096786?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 500,
+        "likes": 20,
+        "comments": 0,
+        "shares": 0,
+        "engagement_rate_pct": 4.0
+      },
+      {
+        "id": "6af5c4f6977c5aeb3d28e059",
+        "status": "sent",
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "The 600,000 Pound Repair Bill. #lamborghini #SVJ #Carrepair #expensive #tomi",
+        "created_at": "2026-10-28T19:00:00.000Z",
+        "due_at": "2026-10-28T19:00:00.000Z",
+        "sent_at": "2026-10-28T19:00:00.000Z",
+        "duration_seconds": 55.1,
+        "media_title": null,
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7701721990528371976?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 455,
+        "likes": 8,
+        "comments": 0,
+        "shares": 0,
+        "engagement_rate_pct": 1.76
+      },
+      {
+        "id": "6af5c4f6977c5aeb3d28e06b",
+        "status": "sent",
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "How much does a Lamborghini part cost? #tomi #svj #viral #viralvideo #fyp",
+        "created_at": "2026-10-27T09:20:00.000Z",
+        "due_at": "2026-10-27T09:20:00.000Z",
+        "sent_at": "2026-10-27T09:20:00.000Z",
+        "duration_seconds": 60.0,
+        "media_title": null,
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700951426222034183?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 391,
+        "likes": 18,
+        "comments": 0,
+        "shares": 0,
+        "engagement_rate_pct": 4.6
+      },
+      {
+        "id": "6af5c4f6977c5aeb3d28e061",
+        "status": "sent",
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "Lamborghini SVJ in two pieces. #tomi #svj #viral #fyp #viralvideo",
+        "created_at": "2026-10-27T07:05:00.000Z",
+        "due_at": "2026-10-27T07:05:00.000Z",
+        "sent_at": "2026-10-27T07:05:00.000Z",
+        "duration_seconds": 32.7,
+        "media_title": null,
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700945153502072082?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 449,
+        "likes": 11,
+        "comments": 0,
+        "shares": 0,
+        "engagement_rate_pct": 2.45
+      },
+      {
+        "id": "6af5c4f6977c5aeb3d28e216",
+        "status": "sent",
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "Rate this Wild Custom RX3 Build! #fyppppppppppppppppppppppp #tiktok #fyp #viral #rx3",
+        "created_at": "2026-10-27T01:00:00.000Z",
+        "due_at": "2026-10-27T01:00:00.000Z",
+        "sent_at": "2026-10-27T01:00:00.000Z",
+        "duration_seconds": 50.3,
+        "media_title": null,
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700624164016704776?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 471,
+        "likes": 23,
+        "comments": 0,
+        "shares": 0,
+        "engagement_rate_pct": 4.88
+      },
+      {
+        "id": "6af5c4f6977c5aeb3d28e05f",
+        "status": "sent",
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "Why this Build Just Failed. #fyppppppppppppppppppppppp #viralvideo #tiktok #fyp #viral",
+        "created_at": "2026-10-26T18:55:00.000Z",
+        "due_at": "2026-10-26T18:55:00.000Z",
+        "sent_at": "2026-10-26T18:55:00.000Z",
+        "duration_seconds": 58.9,
+        "media_title": null,
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700623942674910471?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 434,
+        "likes": 3,
+        "comments": 0,
+        "shares": 0,
+        "engagement_rate_pct": 0.69
+      },
+      {
+        "id": "6af5c4f6977c5aeb3d28e053",
+        "status": "sent",
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "Fuchsia Interior in a Rolls-Royce Cullinan? #fyppppppppppppppppppppppp #viralvideo #tiktok #fyp #viral",
+        "created_at": "2026-10-26T09:05:00.000Z",
+        "due_at": "2026-10-26T09:05:00.000Z",
+        "sent_at": "2026-10-26T09:05:00.000Z",
+        "duration_seconds": 53.0,
+        "media_title": null,
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700623304024919314?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 442,
+        "likes": 10,
+        "comments": 0,
+        "shares": 0,
+        "engagement_rate_pct": 2.26
+      },
+      {
+        "id": "6af5c4f6977c5aeb3d28e067",
+        "status": "sent",
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "Tesla’s Secret Hidden Feature Revealed. #fyppppppppppppppppppppppp #viralvideo #tiktok #fyp #viral",
+        "created_at": "2026-10-26T07:05:00.000Z",
+        "due_at": "2026-10-26T07:05:00.000Z",
+        "sent_at": "2026-10-26T07:05:00.000Z",
+        "duration_seconds": 49.2,
+        "media_title": null,
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700622755393260818?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 425,
+        "likes": 4,
+        "comments": 0,
+        "shares": 0,
+        "engagement_rate_pct": 0.94
+      },
+      {
+        "id": "6af5c4f6977c5aeb3d28e055",
+        "status": "sent",
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "Is the New Tesla Roadster Worth the Investment? #fyppppppppppppppppppppppp #viralvideo #tiktok #fyp #viral",
+        "created_at": "2026-10-26T01:00:00.000Z",
+        "due_at": "2026-10-26T01:00:00.000Z",
+        "sent_at": "2026-10-26T01:00:00.000Z",
+        "duration_seconds": 55.4,
+        "media_title": null,
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700622339934784786?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 47,
+        "likes": 3,
+        "comments": 0,
+        "shares": 0,
+        "engagement_rate_pct": 6.38
+      },
+      {
+        "id": "6af5c4f6977c5aeb3d28e1f8",
+        "status": "sent",
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "Tesla’s New Roadster looks like a literal spaceship. #fyppppppppppppppppppppppp #viralvideo #tiktok #fyp #viral",
+        "created_at": "2026-10-25T19:00:00.000Z",
+        "due_at": "2026-10-25T19:00:00.000Z",
+        "sent_at": "2026-10-25T19:00:00.000Z",
+        "duration_seconds": 47.6,
+        "media_title": null,
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700621932017749255?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 95,
+        "likes": 4,
+        "comments": 0,
+        "shares": 0,
+        "engagement_rate_pct": 4.21
+      },
+      {
+        "id": "6af5c4f6977c5aeb3d28e0f1",
+        "status": "sent",
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "Wait for the end! 🤯#fyp #viral #gaming",
+        "created_at": "2026-10-25T14:13:17.000Z",
+        "due_at": "2026-10-25T14:13:17.000Z",
+        "sent_at": "2026-10-25T14:13:17.000Z",
+        "duration_seconds": 57.0,
+        "media_title": null,
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700608084498025734?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 1515,
+        "likes": 23,
+        "comments": 0,
+        "shares": 3,
+        "engagement_rate_pct": 1.72
+      },
+      {
+        "id": "6af5c4f6977c5aeb3d28e05b",
+        "status": "sent",
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "Bugatti Chiron Fill-Up: $118 for a Tank of Fuel #fyppppppppppppppppppppppp #matarmstrong #viralvideo #tiktok #fyp",
+        "created_at": "2026-10-25T10:30:00.000Z",
+        "due_at": "2026-10-25T10:30:00.000Z",
+        "sent_at": "2026-10-25T10:30:00.000Z",
+        "duration_seconds": 29.3,
+        "media_title": null,
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700211863795059986?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 710,
+        "likes": 30,
+        "comments": 1,
+        "shares": 0,
+        "engagement_rate_pct": 4.37
+      },
+      {
+        "id": "6af5c4f6977c5aeb3d28e212",
+        "status": "sent",
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "Bugatti 4WD Limp Mode: Tracking Down a Mysterious Transmission Fault. #fyppppppppppppppppppppppp #matarmstrong #alexg #tiktok #viralvideo",
+        "created_at": "2026-10-25T08:05:00.000Z",
+        "due_at": "2026-10-25T08:05:00.000Z",
+        "sent_at": "2026-10-25T08:05:00.000Z",
+        "duration_seconds": 63.2,
+        "media_title": null,
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700211346041736456?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 384,
+        "likes": 10,
+        "comments": 0,
+        "shares": 0,
+        "engagement_rate_pct": 2.6
+      },
+      {
+        "id": "6af5c4f6977c5aeb3d28e1fa",
+        "status": "sent",
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "Transmission Electrical Problem? Checking Under the Driver’s Seat. #fyp #fyppppppppppppppppppppppp #viral #bugatti #videoviral",
+        "created_at": "2026-10-25T04:00:00.000Z",
+        "due_at": "2026-10-25T04:00:00.000Z",
+        "sent_at": "2026-10-25T04:00:00.000Z",
+        "duration_seconds": 19.4,
+        "media_title": null,
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700210893287640338?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 544,
+        "likes": 7,
+        "comments": 0,
+        "shares": 0,
+        "engagement_rate_pct": 1.29
+      },
+      {
+        "id": "6af5c4f6977c5aeb3d28e0c7",
+        "status": "sent",
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "Bugatti Signal Wire Repair: Fixing a Pulled Connector Pin #fyp #matarmstrong #viral #fyppppppppppppppppppppppp #tiktok",
+        "created_at": "2026-10-25T02:15:00.000Z",
+        "due_at": "2026-10-25T02:15:00.000Z",
+        "sent_at": "2026-10-25T02:15:00.000Z",
+        "duration_seconds": 69.5,
+        "media_title": null,
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700210616786537746?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 1041,
+        "likes": 18,
+        "comments": 0,
+        "shares": 0,
+        "engagement_rate_pct": 1.73
+      },
+      {
+        "id": "6af5c4f6977c5aeb3d28e214",
+        "status": "sent",
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "Bugatti at 200 MPH: Can It Run Faultlessly? #fyp #bugatti #matarmstrong #alexg #viral",
+        "created_at": "2026-10-24T20:22:00.000Z",
+        "due_at": "2026-10-24T20:22:00.000Z",
+        "sent_at": "2026-10-24T20:22:00.000Z",
+        "duration_seconds": 44.1,
+        "media_title": null,
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700182785943801106?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 560,
+        "likes": 10,
+        "comments": 0,
+        "shares": 0,
+        "engagement_rate_pct": 1.79
+      },
+      {
+        "id": "6af5c4f6977c5aeb3d28e1fe",
+        "status": "sent",
+        "service": "tiktok",
+        "channel_handle": "@viralclips2476",
+        "text_preview": "How a Custom Bugatti Chiron Windshield Is Made and Why It Costs So Much. #fyp #bugatti #matarmstrong #alexg #viral",
+        "created_at": "2026-10-24T10:03:00.000Z",
+        "due_at": "2026-10-24T10:03:00.000Z",
+        "sent_at": "2026-10-24T10:03:00.000Z",
+        "duration_seconds": 52.7,
+        "media_title": null,
+        "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699455050246032641?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+        "views": 1071,
+        "likes": 31,
+        "comments": 0,
+        "shares": 0,
+        "engagement_rate_pct": 2.89
       }
     ],
     "local_ledger": {
@@ -543,14 +977,36 @@
   },
   "recent_workflow_runs": [
     {
-      "id": 44527112381,
+      "id": 44533513986,
       "name": "Deploy Mobile Mission Control Dashboard",
       "path": ".github/workflows/deploy-dashboard.yml",
       "status": "in_progress",
       "conclusion": null,
       "event": "push",
+      "created_at": "2026-11-19T13:26:45Z",
+      "updated_at": "2026-11-19T13:26:48Z",
+      "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44533513986"
+    },
+    {
+      "id": 44532924723,
+      "name": "Deploy Mobile Mission Control Dashboard",
+      "path": ".github/workflows/deploy-dashboard.yml",
+      "status": "completed",
+      "conclusion": "failure",
+      "event": "push",
+      "created_at": "2026-11-19T13:23:13Z",
+      "updated_at": "2026-11-19T13:23:32Z",
+      "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44532924723"
+    },
+    {
+      "id": 44527112381,
+      "name": "Deploy Mobile Mission Control Dashboard",
+      "path": ".github/workflows/deploy-dashboard.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push",
       "created_at": "2026-11-19T12:47:07Z",
-      "updated_at": "2026-11-19T12:47:10Z",
+      "updated_at": "2026-11-19T12:47:35Z",
       "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44527112381"
     },
     {
@@ -607,28 +1063,6 @@
       "created_at": "2026-11-19T10:02:56Z",
       "updated_at": "2026-11-19T10:02:56Z",
       "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44501980987"
-    },
-    {
-      "id": 44501978345,
-      "name": ".github/workflows/autonomous-supervisor-agy.yml",
-      "path": ".github/workflows/autonomous-supervisor-agy.yml",
-      "status": "completed",
-      "conclusion": "failure",
-      "event": "push",
-      "created_at": "2026-11-19T10:02:55Z",
-      "updated_at": "2026-11-19T10:02:55Z",
-      "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44501978345"
-    },
-    {
-      "id": 44497894374,
-      "name": ".github/workflows/headless-studio-render.yml",
-      "path": ".github/workflows/headless-studio-render.yml",
-      "status": "completed",
-      "conclusion": "failure",
-      "event": "push",
-      "created_at": "2026-11-19T09:35:56Z",
-      "updated_at": "2026-11-19T09:35:56Z",
-      "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44497894374"
     }
   ]
 }
