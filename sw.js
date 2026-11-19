@@ -1,0 +1,47 @@
+const CACHE_NAME = "vc247-ops-shell-v1";
+const SHELL_ASSETS = [
+  "./",
+  "./index.html",
+  "./manifest.json",
+  "./icons/icon-192.png",
+  "./icons/icon-512.png",
+  "./icons/icon.svg"
+];
+
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(SHELL_ASSETS)).then(() => self.skipWaiting())
+  );
+});
+
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) =>
+      Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))
+    ).then(() => self.clients.claim())
+  );
+});
+
+self.addEventListener("fetch", (event) => {
+  const url = new URL(event.request.url);
+  if (event.request.method !== "GET" || url.origin !== self.location.origin) {
+    return;
+  }
+  if (url.pathname.endsWith("/data/status.json") || url.pathname.endsWith("status.json")) {
+    event.respondWith(
+      fetch(event.request, { cache: "no-store" }).catch(() => caches.match(event.request))
+    );
+    return;
+  }
+  event.respondWith(
+    fetch(event.request)
+      .then((resp) => {
+        if (resp && resp.status === 200) {
+          const clone = resp.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+        }
+        return resp;
+      })
+      .catch(() => caches.match(event.request))
+  );
+});

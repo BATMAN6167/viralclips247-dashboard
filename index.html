@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090d16">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="VC247 Ops">
+  <title>Viralclips247 Mission Control</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <style>
+    :root {
+      --bg: #090d16;
+      --bg-elev: #101726;
+      --bg-card: #131c2e;
+      --bg-chip: #1a263e;
+      --border: rgba(148, 163, 184, 0.16);
+      --border-strong: rgba(148, 163, 184, 0.28);
+      --text: #f1f5f9;
+      --text-dim: #94a3b8;
+      --text-muted: #64748b;
+      --emerald: #10b981;
+      --emerald-bg: rgba(16, 185, 129, 0.14);
+      --cyan: #22d3ee;
+      --cyan-bg: rgba(34, 211, 238, 0.13);
+      --amber: #f59e0b;
+      --amber-bg: rgba(245, 158, 11, 0.14);
+      --rose: #f43f5e;
+      --rose-bg: rgba(244, 63, 94, 0.14);
+      --indigo: #818cf8;
+      --radius: 16px;
+      --radius-sm: 11px;
+      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      min-height: 100%;
+      line-height: 1.45;
+      overscroll-behavior-y: contain;
+    }
+    .hidden { display: none !important; }
+    button {
+      font: inherit;
+      color: inherit;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--bg-chip);
+      border-radius: var(--radius-sm);
+      transition: transform 0.08s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+    button:active { transform: scale(0.97); }
+    button:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    /* PIN Lock Screen */
+    #pin-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: radial-gradient(circle at 50% 0%, #13213c 0%, var(--bg) 62%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: max(20px, env(safe-area-inset-top)) 20px max(24px, env(safe-area-inset-bottom));
+    }
+    .pin-card {
+      width: 100%;
+      max-width: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .pin-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      margin-bottom: 14px;
+      box-shadow: 0 10px 30px rgba(34, 211, 238, 0.2);
+    }
+    .pin-title { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 6px; }
+    .pin-sub { font-size: 0.86rem; color: var(--text-dim); margin: 0 0 22px; min-height: 1.3em; }
+    .pin-dots {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .pin-dots.shake { animation: shake 0.32s ease; }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-8px); }
+      75% { transform: translateX(8px); }
+    }
+    .pin-dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 2px solid var(--border-strong);
+      background: transparent;
+      transition: background 0.12s ease, border-color 0.12s ease, transform 0.12s ease;
+    }
+    .pin-dot.filled {
+      background: var(--cyan);
+      border-color: var(--cyan);
+      transform: scale(1.1);
+      box-shadow: 0 0 12px rgba(34, 211, 238, 0.45);
+    }
+    .keypad {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      width: 100%;
+      max-width: 280px;
+    }
+    .key-btn {
+      height: 62px;
+      border-radius: 18px;
+      font-size: 1.35rem;
+      font-weight: 600;
+      background: rgba(25, 36, 58, 0.85);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-variant-numeric: tabular-nums;
+    }
+    .key-btn.key-fn {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-dim);
+      background: rgba(16, 23, 38, 0.7);
+    }
+    .pin-reset-btn {
+      margin-top: 22px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      text-decoration: underline;
+      padding: 8px 12px;
+    }
+
+    /* Main App Shell */
+    .app-shell {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: max(12px, env(safe-area-inset-top)) 14px max(34px, env(safe-area-inset-bottom));
+    }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 4px 12px;
+      background: linear-gradient(180deg, var(--bg) 78%, rgba(9, 13, 22, 0.86) 100%);
+      backdrop-filter: blur(10px);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+    .brand img { width: 34px; height: 34px; border-radius: 9px; flex-shrink: 0; }
+    .brand-title { font-size: 1rem; font-weight: 700; letter-spacing: -0.02em; white-space: nowrap; }
+    .brand-meta { font-size: 0.72rem; color: var(--text-dim); font-family: var(--mono); }
+    .top-actions { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+    .icon-btn {
+      height: 36px;
+      padding: 0 11px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--bg-card);
+    }
+    .dot-ind {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--amber);
+      display: inline-block;
+    }
+    .dot-ind.ok { background: var(--emerald); }
+
+    /* Cards & Layout */
+    .stack { display: flex; flex-direction: column; gap: 14px; }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+    .card-hdr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .card-title {
+      font-size: 0.94rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    .pill-ok { background: var(--emerald-bg); color: var(--emerald); border-color: rgba(16, 185, 129, 0.28); }
+    .pill-info { background: var(--cyan-bg); color: var(--cyan); border-color: rgba(34, 211, 238, 0.28); }
+    .pill-warn { background: var(--amber-bg); color: var(--amber); border-color: rgba(245, 158, 11, 0.28); }
+    .pill-bad { background: var(--rose-bg); color: var(--rose); border-color: rgba(244, 63, 94, 0.28); }
+    .pill-muted { background: rgba(148, 163, 184, 0.1); color: var(--text-dim); border-color: var(--border); }
+
+    /* Remote Action Dock */
+    .actions-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 9px;
+    }
+    .action-btn {
+      min-height: 54px;
+      padding: 10px 12px;
+      text-align: left;
+      background: linear-gradient(145deg, #172339, #121a2b);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2px;
+    }
+    .action-btn:hover { border-color: var(--cyan); }
+    .action-label { font-size: 0.85rem; font-weight: 700; color: var(--text); }
+    .action-sub { font-size: 0.7rem; color: var(--text-dim); font-family: var(--mono); }
+    .schedule-bar {
+      margin-top: 10px;
+      width: 100%;
+      min-height: 48px;
+      padding: 10px 13px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: var(--bg-elev);
+    }
+
+    /* Oracle VM Section */
+    .meter-wrap { margin-bottom: 12px; }
+    .meter-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      margin-bottom: 6px;
+      font-variant-numeric: tabular-nums;
+    }
+    .meter-track {
+      height: 10px;
+      border-radius: 999px;
+      background: #0b111e;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .meter-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--emerald), var(--cyan));
+      transition: width 0.35s ease;
+    }
+    .meter-fill.warn { background: linear-gradient(90deg, var(--amber), var(--rose)); }
+    .kv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .kv-box {
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px 9px;
+    }
+    .kv-k { font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .kv-v { font-size: 0.86rem; font-weight: 700; margin-top: 2px; font-variant-numeric: tabular-nums; }
+    .unit-list { display: flex; flex-direction: column; gap: 6px; }
+    .unit-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 7px 10px;
+      border-radius: 9px;
+      background: var(--bg-elev);
+      border: 1px solid rgba(148, 163, 184, 0.1);
+      font-size: 0.76rem;
+    }
+    .unit-name { font-family: var(--mono); color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+    /* 3-System Status */
+    .sys-list { display: flex; flex-direction: column; gap: 9px; }
+    .sys-item {
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 11px 12px;
+    }
+    .sys-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
+    .sys-handle { font-family: var(--mono); font-size: 0.82rem; font-weight: 700; color: var(--cyan); }
+    .sys-title { font-size: 0.83rem; font-weight: 600; margin-bottom: 3px; }
+    .sys-summary { font-size: 0.76rem; color: var(--text-dim); }
+    .sys-meta { margin-top: 5px; font-size: 0.7rem; color: var(--text-muted); font-family: var(--mono); word-break: break-word; }
+
+    /* Quality Gate Log */
+    .qg-list { display: flex; flex-direction: column; gap: 10px; }
+    .qg-item {
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 11px 12px;
+    }
+    .qg-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 7px; }
+    .qg-title { font-size: 0.84rem; font-weight: 700; }
+    .scores-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .score-chip {
+      background: rgba(9, 13, 22, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 5px 6px;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+    .score-chip .lbl { display: block; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; }
+    .score-chip .val { font-size: 0.84rem; font-weight: 700; }
+    .reason-list { margin: 4px 0 0; padding-left: 16px; color: var(--text-dim); font-size: 0.76rem; }
+    .reason-list li { margin-bottom: 3px; }
+
+    /* Buffer Queue & Published Posts */
+    .channel-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 11px;
+    }
+    .ch-card {
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 10px;
+    }
+    .ch-handle { font-size: 0.82rem; font-weight: 700; margin-bottom: 2px; }
+    .ch-stats { font-size: 0.72rem; color: var(--text-dim); font-variant-numeric: tabular-nums; }
+    .seg-tabs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+      background: #0b111e;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 4px;
+      margin-bottom: 10px;
+    }
+    .seg-btn {
+      border: none;
+      background: transparent;
+      padding: 8px 10px;
+      border-radius: 8px;
+      font-size: 0.79rem;
+      font-weight: 600;
+      color: var(--text-dim);
+    }
+    .seg-btn.active {
+      background: var(--bg-chip);
+      color: var(--text);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    }
+    .post-list { display: flex; flex-direction: column; gap: 8px; max-height: 380px; overflow-y: auto; }
+    .post-item {
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 10px 11px;
+    }
+    .post-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 5px; }
+    .post-text { font-size: 0.79rem; color: var(--text); margin-bottom: 5px; word-break: break-word; }
+    .post-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 0.7rem; color: var(--text-muted); font-family: var(--mono); }
+    .post-link { color: var(--cyan); text-decoration: none; font-weight: 600; }
+
+    /* Modal Sheet for GitHub PAT */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      background: rgba(3, 6, 12, 0.76);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 12px;
+    }
+    .modal-sheet {
+      width: 100%;
+      max-width: 500px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 20px;
+      padding: 18px;
+      margin-bottom: env(safe-area-inset-bottom);
+    }
+    .modal-title { font-size: 1rem; font-weight: 700; margin: 0 0 6px; }
+    .modal-desc { font-size: 0.8rem; color: var(--text-dim); margin: 0 0 12px; }
+    .pat-input {
+      width: 100%;
+      padding: 11px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border-strong);
+      background: #0a0f1c;
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      margin-bottom: 12px;
+    }
+    .modal-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn-primary {
+      background: linear-gradient(135deg, #0ea5e9, #10b981);
+      border: none;
+      color: #031118;
+      font-weight: 700;
+      padding: 10px 14px;
+      flex: 1;
+    }
+    .btn-secondary { padding: 10px 14px; background: var(--bg-elev); }
+    .btn-danger { padding: 10px 14px; background: var(--rose-bg); color: var(--rose); border-color: rgba(244, 63, 94, 0.35); }
+
+    /* Toast */
+    #toast {
+      position: fixed;
+      left: 50%;
+      bottom: max(20px, env(safe-area-inset-bottom));
+      transform: translateX(-50%) translateY(20px);
+      background: #0f172a;
+      border: 1px solid var(--border-strong);
+      color: var(--text);
+      padding: 10px 15px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      z-index: 120;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      max-width: 92vw;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    }
+    #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .footer-note {
+      margin-top: 16px;
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 4-Digit PIN Lock Gate (localStorage only) -->
+  <section id="pin-screen" aria-label="Mission Control PIN Lock">
+    <div class="pin-card">
+      <img src="icons/icon-192.png" alt="Viralclips247" class="pin-logo">
+      <h1 id="pin-heading" class="pin-title">Viralclips247 Ops</h1>
+      <p id="pin-subtitle" class="pin-sub">Enter your 4-digit PIN</p>
+      <div id="pin-dots" class="pin-dots">
+        <span class="pin-dot"></span>
+        <span class="pin-dot"></span>
+        <span class="pin-dot"></span>
+        <span class="pin-dot"></span>
+      </div>
+      <div class="keypad" id="pin-keypad">
+        <button type="button" class="key-btn" data-key="1">1</button>
+        <button type="button" class="key-btn" data-key="2">2</button>
+        <button type="button" class="key-btn" data-key="3">3</button>
+        <button type="button" class="key-btn" data-key="4">4</button>
+        <button type="button" class="key-btn" data-key="5">5</button>
+        <button type="button" class="key-btn" data-key="6">6</button>
+        <button type="button" class="key-btn" data-key="7">7</button>
+        <button type="button" class="key-btn" data-key="8">8</button>
+        <button type="button" class="key-btn" data-key="9">9</button>
+        <button type="button" class="key-btn key-fn" data-fn="clear">Clear</button>
+        <button type="button" class="key-btn" data-key="0">0</button>
+        <button type="button" class="key-btn key-fn" data-fn="back">Del</button>
+      </div>
+      <button type="button" id="pin-reset-btn" class="pin-reset-btn">Reset PIN &amp; Wipe Local Token</button>
+    </div>
+  </section>
+
+  <!-- Main Dashboard -->
+  <main id="app-shell" class="app-shell hidden">
+    <header class="topbar">
+      <div class="brand">
+        <img src="icons/icon-192.png" alt="VC247">
+        <div>
+          <div class="brand-title">VC247 Mission Control</div>
+          <div id="sync-meta" class="brand-meta">Syncing telemetry...</div>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button type="button" id="btn-refresh" class="icon-btn" title="Reload telemetry">Refresh</button>
+        <button type="button" id="btn-token" class="icon-btn" title="Configure GitHub token">
+          <span id="token-dot" class="dot-ind"></span>Token
+        </button>
+        <button type="button" id="btn-lock" class="icon-btn" title="Lock app">Lock</button>
+      </div>
+    </header>
+
+    <div class="stack">
+      <!-- One-Tap Remote Controls -->
+      <section class="card" aria-label="Remote Cloud Controls">
+        <div class="card-hdr">
+          <div class="card-title">Remote Cloud Controls</div>
+          <span id="host-pill" class="pill pill-info">GitHub Releases Host</span>
+        </div>
+        <div class="actions-grid">
+          <button type="button" class="action-btn" data-workflow="headless-studio-render.yml">
+            <span class="action-label">Run Studio Render</span>
+            <span class="action-sub">Blender 5.2.4 · Kokoro C</span>
+          </button>
+          <button type="button" class="action-btn" data-workflow="headless-shorts-editor.yml">
+            <span class="action-label">Run Shorts Editor</span>
+            <span class="action-sub">Whisper + Remotion 4</span>
+          </button>
+          <button type="button" class="action-btn" data-workflow="autonomous-supervisor-agy.yml">
+            <span class="action-label">Run AI Supervisor</span>
+            <span class="action-sub">agy -p Oracle &amp; Queue</span>
+          </button>
+          <button type="button" class="action-btn" data-workflow="deploy-dashboard.yml">
+            <span class="action-label">Refresh Telemetry</span>
+            <span class="action-sub">Pull fresh Oracle state</span>
+          </button>
+        </div>
+        <button type="button" id="btn-toggle-schedule" class="schedule-bar">
+          <div style="text-align:left">
+            <div style="font-size:0.84rem;font-weight:700">Cloud Posting &amp; Render Schedule</div>
+            <div class="action-sub">VIRALCLIPS_CLOUD_SCHEDULE_ENABLED</div>
+          </div>
+          <span id="schedule-pill" class="pill pill-muted">Loading...</span>
+        </button>
+      </section>
+
+      <!-- Oracle VM Health -->
+      <section class="card" aria-label="Oracle VM Health">
+        <div class="card-hdr">
+          <div class="card-title">Oracle VM Health</div>
+          <span id="oracle-pill" class="pill pill-muted">Checking...</span>
+        </div>
+        <div class="meter-wrap">
+          <div class="meter-row">
+            <span id="ram-label">RAM: -- / 952 MiB</span>
+            <span id="ram-pct">--%</span>
+          </div>
+          <div class="meter-track"><div id="ram-fill" class="meter-fill"></div></div>
+        </div>
+        <div class="kv-grid">
+          <div class="kv-box">
+            <div class="kv-k">Swap</div>
+            <div id="kv-swap" class="kv-v">-- MiB</div>
+          </div>
+          <div class="kv-box">
+            <div class="kv-k">Root Disk</div>
+            <div id="kv-disk" class="kv-v">--</div>
+          </div>
+          <div class="kv-box">
+            <div class="kv-k">Fail Streak</div>
+            <div id="kv-streak" class="kv-v">--</div>
+          </div>
+        </div>
+        <div id="oracle-units" class="unit-list"></div>
+        <div id="oracle-extra" class="sys-meta" style="margin-top:9px"></div>
+      </section>
+
+      <!-- 3-System Status -->
+      <section class="card" aria-label="3-System Status">
+        <div class="card-hdr">
+          <div class="card-title">3-System Pipeline Status</div>
+          <span id="systems-pill" class="pill pill-info">3 Systems</span>
+        </div>
+        <div id="systems-list" class="sys-list"></div>
+      </section>
+
+      <!-- Viral Quality Gate Log -->
+      <section class="card" aria-label="Viral Quality Gate Log">
+        <div class="card-hdr">
+          <div class="card-title">Viral Quality Gate Log</div>
+          <span id="qg-summary-pill" class="pill pill-muted">Advisory Gate</span>
+        </div>
+        <div id="qg-list" class="qg-list"></div>
+      </section>
+
+      <!-- Buffer Queue & Published Posts -->
+      <section class="card" aria-label="Buffer Queue and Published Posts">
+        <div class="card-hdr">
+          <div class="card-title">Buffer Queue &amp; Published Posts</div>
+          <span id="uploader-guard-pill" class="pill pill-ok">Legacy Uploader Disabled</span>
+        </div>
+        <div id="buffer-channels" class="channel-grid"></div>
+        <div class="seg-tabs">
+          <button type="button" id="tab-queue" class="seg-btn active">Queue &amp; Drafts</button>
+          <button type="button" id="tab-published" class="seg-btn">Published Posts</button>
+        </div>
+        <div id="buffer-posts" class="post-list"></div>
+      </section>
+    </div>
+
+    <div class="footer-note">
+      PIN &amp; GitHub token stay strictly inside this phone's browser localStorage.
+    </div>
+  </main>
+
+  <!-- GitHub PAT Modal -->
+  <div id="token-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-sheet">
+      <h2 id="modal-title" class="modal-title">Phone GitHub Token</h2>
+      <p class="modal-desc">
+        Stored only in your phone's <code>localStorage</code> to dispatch Actions and toggle
+        <code>VIRALCLIPS_CLOUD_SCHEDULE_ENABLED</code> directly from this PWA. Needs Actions &amp; Variables write access on <code>BATMAN6167/youtube-auto-publisher</code>.
+      </p>
+      <input id="pat-input" class="pat-input" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_... or ghp_...">
+      <div class="modal-row">
+        <button type="button" id="btn-save-pat" class="btn-primary">Save Token</button>
+        <button type="button" id="btn-clear-pat" class="btn-danger">Clear</button>
+        <button type="button" id="btn-close-pat" class="btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (() => {
+      const REPO = "BATMAN6167/youtube-auto-publisher";
+      const PIN_KEY = "vc247_pin_record_v1";
+      const PAT_KEY = "vc247_gh_pat_v1";
+
+      let statusData = null;
+      let activeBufferTab = "queue";
+      let enteredPin = "";
+      let firstSetupPin = "";
+      let pinMode = "verify"; // verify | create | confirm
+      let scheduleEnabledLive = null;
+
+      const $ = (id) => document.getElementById(id);
+
+      function el(tag, className, text) {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text !== undefined && text !== null) node.textContent = String(text);
+        return node;
+      }
+
+      function showToast(msg) {
+        const t = $("toast");
+        t.textContent = msg;
+        t.classList.add("show");
+        clearTimeout(showToast._timer);
+        showToast._timer = setTimeout(() => t.classList.remove("show"), 3200);
+      }
+
+      function fmtTime(iso) {
+        if (!iso) return "--";
+        const d = new Date(iso);
+        if (Number.isNaN(d.getTime())) return String(iso);
+        return d.toLocaleString(undefined, { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
+      }
+
+      function safeHttpsUrl(url) {
+        if (typeof url !== "string") return null;
+        const trimmed = url.trim();
+        return trimmed.startsWith("https://") ? trimmed : null;
+      }
+
+      async function hashPin(pin, salt) {
+        const data = `${salt}:${pin}`;
+        if (window.crypto && window.crypto.subtle) {
+          const buf = await window.crypto.subtle.digest("SHA-256", new TextEncoder().encode(data));
+          return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, "0")).join("");
+        }
+        // Fallback deterministic mixing when subtle crypto is unavailable on plain HTTP
+        let h1 = 0x811c9dc5;
+        let h2 = 0x9e3779b9;
+        for (let i = 0; i < data.length; i++) {
+          const c = data.charCodeAt(i);
+          h1 = Math.imul(h1 ^ c, 0x01000193) >>> 0;
+          h2 = Math.imul(h2 ^ (c + i), 0x85ebca6b) >>> 0;
+        }
+        return `${h1.toString(16).padStart(8, "0")}${h2.toString(16).padStart(8, "0")}`;
+      }
+
+      function randomSalt() {
+        if (window.crypto && window.crypto.getRandomValues) {
+          const arr = new Uint8Array(8);
+          window.crypto.getRandomValues(arr);
+          return Array.from(arr).map((b) => b.toString(16).padStart(2, "0")).join("");
+        }
+        return String(Date.now());
+      }
+
+      function renderPinDots() {
+        const dots = $("pin-dots").querySelectorAll(".pin-dot");
+        dots.forEach((dot, idx) => dot.classList.toggle("filled", idx < enteredPin.length));
+      }
+
+      function initPinScreen() {
+        enteredPin = "";
+        firstSetupPin = "";
+        const saved = localStorage.getItem(PIN_KEY);
+        if (saved) {
+          pinMode = "verify";
+          $("pin-heading").textContent = "Unlock Mission Control";
+          $("pin-subtitle").textContent = "Enter your 4-digit PIN";
+        } else {
+          pinMode = "create";
+          $("pin-heading").textContent = "Create 4-Digit PIN";
+          $("pin-subtitle").textContent = "Stored locally on this phone only";
+        }
+        renderPinDots();
+      }
+
+      function unlockApp() {
+        $("pin-screen").classList.add("hidden");
+        $("app-shell").classList.remove("hidden");
+        updateTokenIndicator();
+        loadTelemetry();
+        syncLiveScheduleVariable();
+      }
+
+      function lockApp() {
+        $("app-shell").classList.add("hidden");
+        $("pin-screen").classList.remove("hidden");
+        initPinScreen();
+      }
+
+      function shakeDots(msg) {
+        const d = $("pin-dots");
+        d.classList.remove("shake");
+        void d.offsetWidth;
+        d.classList.add("shake");
+        $("pin-subtitle").textContent = msg;
+        enteredPin = "";
+        renderPinDots();
+      }
+
+      async function handlePinComplete() {
+        if (pinMode === "create") {
+          firstSetupPin = enteredPin;
+          enteredPin = "";
+          pinMode = "confirm";
+          $("pin-subtitle").textContent = "Confirm your 4-digit PIN";
+          renderPinDots();
+          return;
+        }
+        if (pinMode === "confirm") {
+          if (enteredPin !== firstSetupPin) {
+            firstSetupPin = "";
+            pinMode = "create";
+            shakeDots("PINs did not match. Enter new PIN");
+            return;
+          }
+          const salt = randomSalt();
+          const hash = await hashPin(enteredPin, salt);
+          localStorage.setItem(PIN_KEY, JSON.stringify({ salt, hash }));
+          enteredPin = "";
+          showToast("PIN saved locally");
+          unlockApp();
+          return;
+        }
+        try {
+          const rec = JSON.parse(localStorage.getItem(PIN_KEY) || "{}");
+          const candidate = await hashPin(enteredPin, rec.salt || "");
+          if (rec.hash && candidate === rec.hash) {
+            enteredPin = "";
+            unlockApp();
+          } else {
+            shakeDots("Wrong PIN. Try again");
+          }
+        } catch {
+          localStorage.removeItem(PIN_KEY);
+          initPinScreen();
+        }
+      }
+
+      $("pin-keypad").addEventListener("click", (e) => {
+        const btn = e.target.closest("button");
+        if (!btn) return;
+        const digit = btn.dataset.key;
+        const fn = btn.dataset.fn;
+        if (digit !== undefined) {
+          if (enteredPin.length < 4) {
+            enteredPin += digit;
+            renderPinDots();
+            if (enteredPin.length === 4) {
+              setTimeout(handlePinComplete, 90);
+            }
+          }
+        } else if (fn === "back") {
+          enteredPin = enteredPin.slice(0, -1);
+          renderPinDots();
+        } else if (fn === "clear") {
+          enteredPin = "";
+          renderPinDots();
+        }
+      });
+
+      $("pin-reset-btn").addEventListener("click", () => {
+        if (confirm("Reset local PIN and remove stored GitHub token from this phone?")) {
+          localStorage.removeItem(PIN_KEY);
+          localStorage.removeItem(PAT_KEY);
+          initPinScreen();
+          showToast("Local PIN & token cleared");
+        }
+      });
+
+      $("btn-lock").addEventListener("click", lockApp);
+      $("btn-refresh").addEventListener("click", () => {
+        loadTelemetry(true);
+        syncLiveScheduleVariable();
+      });
+
+      function getPat() {
+        return (localStorage.getItem(PAT_KEY) || "").trim();
+      }
+
+      function updateTokenIndicator() {
+        const has = getPat().length >= 10;
+        $("token-dot").classList.toggle("ok", has);
+      }
+
+      function openTokenModal() {
+        $("pat-input").value = getPat();
+        $("token-modal").classList.remove("hidden");
+      }
+
+      function closeTokenModal() {
+        $("token-modal").classList.add("hidden");
+      }
+
+      $("btn-token").addEventListener("click", openTokenModal);
+      $("btn-close-pat").addEventListener("click", closeTokenModal);
+      $("token-modal").addEventListener("click", (e) => {
+        if (e.target === $("token-modal")) closeTokenModal();
+      });
+
+      $("btn-save-pat").addEventListener("click", () => {
+        const val = $("pat-input").value.trim();
+        if (val.length < 10) {
+          showToast("Enter a valid GitHub token");
+          return;
+        }
+        localStorage.setItem(PAT_KEY, val);
+        updateTokenIndicator();
+        closeTokenModal();
+        showToast("GitHub token saved on this phone");
+        syncLiveScheduleVariable();
+      });
+
+      $("btn-clear-pat").addEventListener("click", () => {
+        localStorage.removeItem(PAT_KEY);
+        $("pat-input").value = "";
+        updateTokenIndicator();
+        closeTokenModal();
+        showToast("GitHub token wiped from browser");
+      });
+
+      async function ghApi(path, method = "GET", body = null) {
+        const pat = getPat();
+        if (!pat) {
+          openTokenModal();
+          throw new Error("NO_PAT");
+        }
+        const opts = {
+          method,
+          headers: {
+            "Authorization": `Bearer ${pat}`,
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+          },
+        };
+        if (body !== null) {
+          opts.headers["Content-Type"] = "application/json";
+          opts.body = JSON.stringify(body);
+        }
+        const res = await fetch(`https://api.github.com/repos/${REPO}${path}`, opts);
+        if (!res.ok) {
+          const text = await res.text().catch(() => "");
+          throw new Error(`GitHub API ${res.status}: ${text.slice(0, 100)}`);
+        }
+        if (res.status === 204) return null;
+        return res.json();
+      }
+
+      function renderSchedulePill(enabled) {
+        const pill = $("schedule-pill");
+        if (enabled === null || enabled === undefined) {
+          pill.className = "pill pill-muted";
+          pill.textContent = "Unknown";
+        } else if (enabled) {
+          pill.className = "pill pill-ok";
+          pill.textContent = "ACTIVE · Tap to Pause";
+        } else {
+          pill.className = "pill pill-warn";
+          pill.textContent = "PAUSED · Tap to Resume";
+        }
+      }
+
+      async function syncLiveScheduleVariable() {
+        if (!getPat()) return;
+        try {
+          const data = await ghApi("/actions/variables/VIRALCLIPS_CLOUD_SCHEDULE_ENABLED");
+          scheduleEnabledLive = String(data.value || "").toLowerCase() === "true";
+          renderSchedulePill(scheduleEnabledLive);
+        } catch {
+          // Keep cached value from status.json if variable read fails
+        }
+      }
+
+      document.querySelectorAll(".action-btn[data-workflow]").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const wf = btn.dataset.workflow;
+          const inputsMap = {
+            "headless-studio-render.yml": {
+              genre: "data_network",
+              backend: "blender",
+              voice: "C",
+              render_mode: "full",
+            },
+            "headless-shorts-editor.yml": {},
+            "autonomous-supervisor-agy.yml": {
+              allow_service_restart: "true",
+              check_buffer_queue: "true",
+            },
+            "deploy-dashboard.yml": {},
+          };
+          btn.disabled = true;
+          try {
+            await ghApi(`/actions/workflows/${wf}/dispatches`, "POST", {
+              ref: "main",
+              inputs: inputsMap[wf] || {},
+            });
+            showToast(`Dispatched ${wf}`);
+          } catch (err) {
+            if (err.message !== "NO_PAT") showToast(err.message);
+          } finally {
+            btn.disabled = false;
+          }
+        });
+      });
+
+      $("btn-toggle-schedule").addEventListener("click", async () => {
+        const pat = getPat();
+        if (!pat) {
+          openTokenModal();
+          return;
+        }
+        const current = scheduleEnabledLive !== null
+          ? scheduleEnabledLive
+          : Boolean(statusData && statusData.controls && statusData.controls.cloud_schedule_enabled);
+        const nextVal = current ? "false" : "true";
+        const btn = $("btn-toggle-schedule");
+        btn.disabled = true;
+        try {
+          await ghApi("/actions/variables/VIRALCLIPS_CLOUD_SCHEDULE_ENABLED", "PATCH", {
+            name: "VIRALCLIPS_CLOUD_SCHEDULE_ENABLED",
+            value: nextVal,
+          });
+          scheduleEnabledLive = !current;
+          renderSchedulePill(scheduleEnabledLive);
+          showToast(scheduleEnabledLive ? "Cloud schedule RESUMED" : "Cloud posting PAUSED");
+        } catch (err) {
+          showToast(err.message);
+        } finally {
+          btn.disabled = false;
+        }
+      });
+
+      function renderOracle(vm) {
+        const pill = $("oracle-pill");
+        const active = vm.active_unit_count || 0;
+        const total = vm.total_core_units || 5;
+        if (vm.reachable && active === total && vm.ram_within_ceiling) {
+          pill.className = "pill pill-ok";
+          pill.textContent = `ONLINE · ${active}/${total} Units`;
+        } else if (vm.reachable) {
+          pill.className = "pill pill-warn";
+          pill.textContent = `ATTENTION · ${active}/${total} Units`;
+        } else {
+          pill.className = "pill pill-muted";
+          pill.textContent = "CACHED SNAPSHOT";
+        }
+
+        const used = vm.ram_used_mib ?? 0;
+        const ceiling = vm.ram_ceiling_mib || 952;
+        const pct = Math.min(100, Math.round((used / ceiling) * 100));
+        $("ram-label").textContent = `RAM: ${used} / ${ceiling} MiB (${vm.ram_available_mib ?? 0} MiB avail)`;
+        $("ram-pct").textContent = `${pct}%`;
+        const fill = $("ram-fill");
+        fill.style.width = `${pct}%`;
+        fill.classList.toggle("warn", pct >= 85);
+
+        $("kv-swap").textContent = `${vm.swap_total_mib ?? 0} MiB`;
+        $("kv-disk").textContent = vm.disk && vm.disk.used_pct ? `${vm.disk.used}/${vm.disk.total} (${vm.disk.used_pct})` : "--";
+        $("kv-streak").textContent = String((vm.monitor_heartbeat && vm.monitor_heartbeat.failure_streak) ?? 0);
+
+        const list = $("oracle-units");
+        list.replaceChildren();
+        (vm.units || []).forEach((u) => {
+          const row = el("div", "unit-row");
+          row.appendChild(el("span", "unit-name", u.name));
+          const badge = el("span", `pill ${u.ok ? "pill-ok" : "pill-bad"}`, u.state || "unknown");
+          row.appendChild(badge);
+          list.appendChild(row);
+        });
+
+        const dormant = vm.dormant_ci_runner || {};
+        const rh = vm.release_health || {};
+        const diag = vm.latest_completed_diagnostic || {};
+        $("oracle-extra").textContent =
+          `Dormant CI runner: ${dormant.state || "inactive"} · Auth creators: ${rh.owner_claimed_authorized_creator_count ?? 0}` +
+          (diag.outcome ? ` · Last completed session: ${diag.outcome}` : "");
+      }
+
+      function renderSystems(systems, runs) {
+        const container = $("systems-list");
+        container.replaceChildren();
+        const badgeClass = (st) => {
+          if (st === "healthy") return "pill-ok";
+          if (st === "running") return "pill-info";
+          if (st === "attention") return "pill-bad";
+          return "pill-warn";
+        };
+        (systems || []).forEach((s) => {
+          const card = el("div", "sys-item");
+          const top = el("div", "sys-top");
+          top.appendChild(el("span", "sys-handle", s.handle));
+          top.appendChild(el("span", `pill ${badgeClass(s.status)}`, String(s.status || "ready").toUpperCase()));
+          card.appendChild(top);
+          card.appendChild(el("div", "sys-title", s.title));
+          card.appendChild(el("div", "sys-summary", s.summary));
+          card.appendChild(el("div", "sys-meta", `Host: ${s.media_host || s.host} · ${fmtTime(s.last_activity_utc)}`));
+          container.appendChild(card);
+        });
+        if (runs && runs.length) {
+          const latest = runs[0];
+          const foot = el("div", "sys-meta", `Latest GitHub run: ${latest.name} (${latest.conclusion || latest.status}) · ${fmtTime(latest.updated_at)}`);
+          container.appendChild(foot);
+        }
+      }
+
+      function renderQualityGate(entries) {
+        const list = $("qg-list");
+        list.replaceChildren();
+        const items = entries || [];
+        const passes = items.filter((i) => i.decision === "PASS").length;
+        const rejects = items.length - passes;
+        $("qg-summary-pill").textContent = `${passes} PASS · ${rejects} REJECT`;
+        $("qg-summary-pill").className = `pill ${passes > 0 ? "pill-ok" : "pill-warn"}`;
+
+        if (!items.length) {
+          list.appendChild(el("div", "sys-summary", "No Viral Quality Gate evaluations recorded yet."));
+          return;
+        }
+        items.forEach((item) => {
+          const card = el("div", "qg-item");
+          const top = el("div", "qg-top");
+          const left = el("div");
+          left.appendChild(el("div", "qg-title", item.title || "Quality Gate Audit"));
+          left.appendChild(el("div", "sys-meta", `${item.source_system || "pipeline"} · ${fmtTime(item.evaluated_at_utc)} · ${(item.models_used || []).join(", ")}`));
+          top.appendChild(left);
+          const isPass = item.decision === "PASS";
+          top.appendChild(el("span", `pill ${isPass ? "pill-ok" : "pill-bad"}`, item.decision || "REJECT"));
+          card.appendChild(top);
+
+          const scores = el("div", "scores-row");
+          [
+            ["Hook", item.hook_score],
+            ["Pacing", item.pacing_score],
+            ["Framing", item.framing_score],
+            ["Overall", item.overall_score],
+          ].forEach(([lbl, val]) => {
+            const box = el("div", "score-chip");
+            box.appendChild(el("span", "lbl", lbl));
+            box.appendChild(el("span", "val", val !== null && val !== undefined ? Number(val).toFixed(1) : "--"));
+            scores.appendChild(box);
+          });
+          card.appendChild(scores);
+
+          const ul = el("ul", "reason-list");
+          (item.reasons || []).forEach((r) => ul.appendChild(el("li", "", r)));
+          card.appendChild(ul);
+          list.appendChild(card);
+        });
+      }
+
+      function renderBuffer(buffer) {
+        const chGrid = $("buffer-channels");
+        chGrid.replaceChildren();
+        (buffer.channels || []).forEach((ch) => {
+          const c = el("div", "ch-card");
+          c.appendChild(el("div", "ch-handle", ch.handle || ch.name));
+          const stText = ch.connected ? "Connected" : "Disconnected";
+          c.appendChild(el("div", "ch-stats", `${stText} · ${ch.draft_count || 0} draft · ${ch.sent_count || 0} sent`));
+          chGrid.appendChild(c);
+        });
+
+        const postsEl = $("buffer-posts");
+        postsEl.replaceChildren();
+        const items = activeBufferTab === "queue" ? (buffer.queued_posts || []) : (buffer.published_posts || []);
+        if (!items.length) {
+          postsEl.appendChild(el("div", "sys-summary", activeBufferTab === "queue" ? "Queue is empty." : "No published posts found."));
+          return;
+        }
+        items.forEach((p) => {
+          const card = el("div", "post-item");
+          const top = el("div", "post-top");
+          top.appendChild(el("span", "sys-handle", `${p.channel_handle} (${p.service})`));
+          const stPillClass = p.status === "sent" ? "pill-ok" : (p.status === "error" ? "pill-bad" : "pill-info");
+          top.appendChild(el("span", `pill ${stPillClass}`, String(p.status || "draft").toUpperCase()));
+          card.appendChild(top);
+          card.appendChild(el("div", "post-text", p.text_preview || "Video asset"));
+
+          const foot = el("div", "post-foot");
+          const dur = p.duration_seconds ? `${p.duration_seconds}s · ` : "";
+          foot.appendChild(el("span", "", `${dur}${fmtTime(p.sent_at || p.due_at || p.created_at)}`));
+          const safeUrl = safeHttpsUrl(p.playback_url);
+          if (safeUrl) {
+            const a = el("a", "post-link", "Open Post");
+            a.href = safeUrl;
+            a.target = "_blank";
+            a.rel = "noopener noreferrer";
+            foot.appendChild(a);
+          }
+          card.appendChild(foot);
+          postsEl.appendChild(card);
+        });
+      }
+
+      $("tab-queue").addEventListener("click", () => {
+        activeBufferTab = "queue";
+        $("tab-queue").classList.add("active");
+        $("tab-published").classList.remove("active");
+        if (statusData && statusData.buffer) renderBuffer(statusData.buffer);
+      });
+      $("tab-published").addEventListener("click", () => {
+        activeBufferTab = "published";
+        $("tab-published").classList.add("active");
+        $("tab-queue").classList.remove("active");
+        if (statusData && statusData.buffer) renderBuffer(statusData.buffer);
+      });
+
+      async function loadTelemetry(manual = false) {
+        try {
+          const res = await fetch(`data/status.json?t=${Date.now()}`, { cache: "no-store" });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          statusData = await res.json();
+          $("sync-meta").textContent = `Updated ${fmtTime(statusData.generated_at_utc)}`;
+          if (statusData.controls) {
+            $("host-pill").textContent = `${statusData.controls.media_host_provider || "github_releases"}`;
+            if (scheduleEnabledLive === null) {
+              renderSchedulePill(Boolean(statusData.controls.cloud_schedule_enabled));
+            }
+          }
+          renderOracle(statusData.oracle_vm || {});
+          renderSystems(statusData.systems || [], statusData.recent_workflow_runs || []);
+          renderQualityGate(statusData.viral_quality_gate_log || []);
+          renderBuffer(statusData.buffer || {});
+          if (manual) showToast("Telemetry refreshed");
+        } catch (err) {
+          $("sync-meta").textContent = `Load error: ${err.message}`;
+          showToast(`Failed loading status.json: ${err.message}`);
+        }
+      }
+
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("sw.js").catch(() => {});
+        });
+      }
+
+      initPinScreen();
+    })();
+  </script>
+</body>
+</html>
