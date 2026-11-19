@@ -737,7 +737,7 @@
         <div class="card-hdr"><div class="card-title">Clip YouTube Link &amp; Schedule</div></div>
         <div style="display:grid;gap:8px">
           <input id="clip-yt-url" type="url" inputmode="url" placeholder="YouTube URL" style="padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-card);color:inherit">
-          <input id="clip-rights-uri" type="text" placeholder="Rights evidence URI (required)" style="padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-card);color:inherit">
+          <input id="clip-rights-uri" type="text" placeholder="Rights evidence URI (optional)" style="padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-card);color:inherit">
           <select id="clip-target" style="padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-card);color:inherit">
             <option value="tiktok">TikTok Only</option>
             <option value="both">YouTube + TikTok</option>
@@ -1284,7 +1284,6 @@
         const url = $("clip-yt-url").value.trim();
         const rights = $("clip-rights-uri").value.trim();
         if (!/^https:\/\/(www\.|m\.)?(youtube\.com|youtu\.be)\//.test(url)) { showToast("Enter a valid YouTube URL"); return; }
-        if (!rights) { showToast("Rights evidence URI required"); return; }
         const btn = $("btn-clip-yt");
         btn.disabled = true;
         try {
@@ -1292,7 +1291,7 @@
             ref: "main",
             inputs: {
               youtube_url: url,
-              rights_evidence_s3_uri: rights,
+              rights_evidence_s3_uri: rights || "",
               target_pages: $("clip-target").value,
               max_clips: String(Math.max(1, Math.min(10, parseInt($("clip-max").value, 10) || 3))),
             },

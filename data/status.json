@@ -1,6 +1,6 @@
 {
   "schema": "viralclips247-mission-control-status-v1",
-  "generated_at_utc": "2026-11-19T14:06:27Z",
+  "generated_at_utc": "2026-11-19T14:11:47Z",
   "repo": "BATMAN6167/youtube-auto-publisher",
   "controls": {
     "cloud_schedule_enabled": true,
@@ -12,13 +12,13 @@
   },
   "readiness": {
     "schema": "viralclips247-readiness-scorecard-v1",
-    "generated_at_utc": "2026-11-19T14:06:27Z",
+    "generated_at_utc": "2026-11-19T14:11:47Z",
     "target_unattended_cycles": 3,
     "overall_readiness_pct": 75,
     "systems_at_target_cycles": 0,
     "total_systems": 3,
-    "max_eta_to_3_cycles_hours": 39.6,
-    "overall_eta_summary": "~39.6h to 3 consecutive unattended cloud cycles across all 3 systems",
+    "max_eta_to_3_cycles_hours": 39.5,
+    "overall_eta_summary": "~39.5h to 3 consecutive unattended cloud cycles across all 3 systems",
     "systems": [
       {
         "id": "oracle-clipper",
@@ -45,9 +45,9 @@
           "0 documented Twitch creator reuse grants (metadata/review inbox only until creator permission added)",
           "Supervisor workflow cron/trigger fix awaiting first post-push cloud cycle"
         ],
-        "eta_to_3_cycles_hours": 16.2,
+        "eta_to_3_cycles_hours": 16.1,
         "eta_to_3_cycles_utc": "2026-11-20T06:17:00Z",
-        "eta_summary": "~16.2h (3x 6h cycles)",
+        "eta_summary": "~16.1h (3x 6h cycles)",
         "checks": [
           {
             "name": "Oracle VM reachable & <=952 MiB / 0 swap",
@@ -115,9 +115,9 @@
         "blockers": [
           "No CLOUD_STORAGE_BUCKET configured yet (daily cron runs Remotion CI verification until cloud S3/R2 source bucket is set)"
         ],
-        "eta_to_3_cycles_hours": 39.6,
+        "eta_to_3_cycles_hours": 39.5,
         "eta_to_3_cycles_utc": "2026-11-21T05:41:00Z",
-        "eta_summary": "~39.6h (2x 24h cycles)",
+        "eta_summary": "~39.5h (2x 24h cycles)",
         "checks": [
           {
             "name": "Cloud schedule armed (VIRALCLIPS_CLOUD_SCHEDULE_ENABLED)",
@@ -178,9 +178,9 @@
           "Cloud Studio render cycles: 1/3 (daily 04:23 UTC)"
         ],
         "blockers": [],
-        "eta_to_3_cycles_hours": 38.3,
+        "eta_to_3_cycles_hours": 38.2,
         "eta_to_3_cycles_utc": "2026-11-21T04:23:00Z",
-        "eta_summary": "~38.3h (2x 24h cycles)",
+        "eta_summary": "~38.2h (2x 24h cycles)",
         "checks": [
           {
             "name": "Cloud schedule armed (VIRALCLIPS_CLOUD_SCHEDULE_ENABLED)",
@@ -225,14 +225,14 @@
   "oracle_vm": {
     "reachable": true,
     "source": "oracle_ssh_live",
-    "captured_at_utc": "2026-11-19T14:06:25Z",
+    "captured_at_utc": "2026-11-19T14:11:45Z",
     "hostname": "viralclips247-server",
     "shape": "VM.Standard.E2.1.Micro (x86_64)",
-    "ram_used_mib": 330,
+    "ram_used_mib": 334,
     "ram_total_mib": 952,
-    "ram_available_mib": 621,
+    "ram_available_mib": 618,
     "ram_ceiling_mib": 952,
-    "ram_percent": 34.7,
+    "ram_percent": 35.1,
     "ram_within_ceiling": true,
     "swap_total_mib": 0,
     "disk": {
@@ -284,7 +284,7 @@
     },
     "native_sidecar": {
       "status": "monitoring_private_candidates",
-      "updated_utc": "2026-11-19T14:06:24.487718+00:00",
+      "updated_utc": "2026-11-19T14:11:40.165656+00:00",
       "processed": 0,
       "reauthorization_required": false
     },
@@ -299,14 +299,14 @@
     },
     "gta_scout": {
       "scout_release": "v1.2",
-      "as_of_utc": "2026-11-19T14:05:00.543831+00:00",
+      "as_of_utc": "2026-11-19T14:10:10.698155+00:00",
       "direct_incumbent_count": 5,
       "direct_incumbent_live_count": 1,
       "live_streams_observed": 764
     },
     "review_inbox": {
       "count": 20,
-      "generated_at_utc": "2026-11-19T14:03:30.398351+00:00",
+      "generated_at_utc": "2026-11-19T14:08:44.898944+00:00",
       "youtube_tiktok_publishing_authorized": false
     },
     "release_health": {
@@ -323,7 +323,7 @@
       "title": "System A1 · Oracle Live Clipper",
       "host": "Oracle E2.1.Micro (Coordinator Only)",
       "status": "healthy",
-      "summary": "5/5 systemd units active · 330/952 MiB RAM · streak 0",
+      "summary": "5/5 systemd units active · 334/952 MiB RAM · streak 0",
       "last_activity_utc": "2026-11-19T14:01:31.707839+00:00",
       "workflow_file": "autonomous-supervisor-agy.yml",
       "media_host": "n/a (metadata + native Twitch clips)"
@@ -353,7 +353,7 @@
   ],
   "analytics": {
     "schema": "viralclips247-dashboard-analytics-v1",
-    "generated_at_utc": "2026-11-19T14:06:21Z",
+    "generated_at_utc": "2026-11-19T14:11:41Z",
     "sample_size": {
       "total_posts_analyzed": 90,
       "top_20_count": 18,
@@ -1985,7 +1985,7 @@
                     "hour_est": "15:00 EST",
                     "window_label": "Friday Logout Surge",
                     "baseline_score": 0.92,
-                    "blended_score": 0.8746,
+                    "blended_score": 0.8745,
                     "sample_count": 0,
                     "avg_velocity_1h": null,
                     "avg_velocity_6h": null,
@@ -2396,8 +2396,8 @@
           "comments": 0,
           "shares": 0,
           "engagement_rate_pct": 4.78,
-          "view_velocity_per_hour": 0.904,
-          "composite_score": 0.5858,
+          "view_velocity_per_hour": 0.903,
+          "composite_score": 0.5856,
           "playback_url": "https://www.tiktok.com/@viralclips2476/video/7701723269698735378?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         },
         {
@@ -2994,14 +2994,25 @@
   },
   "recent_workflow_runs": [
     {
-      "id": 44540121008,
+      "id": 44541049222,
       "name": "Deploy Mobile Mission Control Dashboard",
       "path": ".github/workflows/deploy-dashboard.yml",
       "status": "in_progress",
       "conclusion": null,
       "event": "push",
+      "created_at": "2026-11-19T14:11:24Z",
+      "updated_at": "2026-11-19T14:11:27Z",
+      "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44541049222"
+    },
+    {
+      "id": 44540121008,
+      "name": "Deploy Mobile Mission Control Dashboard",
+      "path": ".github/workflows/deploy-dashboard.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push",
       "created_at": "2026-11-19T14:06:06Z",
-      "updated_at": "2026-11-19T14:06:09Z",
+      "updated_at": "2026-11-19T14:06:44Z",
       "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44540121008"
     },
     {
@@ -3091,17 +3102,6 @@
       "created_at": "2026-11-19T10:25:24Z",
       "updated_at": "2026-11-19T10:28:47Z",
       "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44505515613"
-    },
-    {
-      "id": 44502164615,
-      "name": ".github/workflows/headless-studio-render.yml",
-      "path": ".github/workflows/headless-studio-render.yml",
-      "status": "completed",
-      "conclusion": "failure",
-      "event": "push",
-      "created_at": "2026-11-19T10:04:06Z",
-      "updated_at": "2026-11-19T10:04:06Z",
-      "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44502164615"
     }
   ]
 }
