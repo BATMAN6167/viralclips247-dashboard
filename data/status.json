@@ -1,6 +1,6 @@
 {
   "schema": "viralclips247-mission-control-status-v1",
-  "generated_at_utc": "2026-11-19T13:58:40Z",
+  "generated_at_utc": "2026-11-19T14:00:53Z",
   "repo": "BATMAN6167/youtube-auto-publisher",
   "controls": {
     "cloud_schedule_enabled": true,
@@ -12,13 +12,13 @@
   },
   "readiness": {
     "schema": "viralclips247-readiness-scorecard-v1",
-    "generated_at_utc": "2026-11-19T13:58:40Z",
+    "generated_at_utc": "2026-11-19T14:00:53Z",
     "target_unattended_cycles": 3,
-    "overall_readiness_pct": 72,
+    "overall_readiness_pct": 75,
     "systems_at_target_cycles": 0,
     "total_systems": 3,
-    "max_eta_to_3_cycles_hours": 62.4,
-    "overall_eta_summary": "~62.4h to 3 consecutive unattended cloud cycles across all 3 systems",
+    "max_eta_to_3_cycles_hours": 39.7,
+    "overall_eta_summary": "~39.7h to 3 consecutive unattended cloud cycles across all 3 systems",
     "systems": [
       {
         "id": "oracle-clipper",
@@ -161,10 +161,10 @@
         "id": "cinematic-studio",
         "handle": "@cinematic-studio",
         "name": "System B · Original Cinematic Studio",
-        "readiness_pct": 70,
-        "stage": "STAGE_2_CLOUD_WIRED",
-        "stage_label": "Stage 2/4 · Cloud Wired & Warming",
-        "consecutive_cloud_cycles": 0,
+        "readiness_pct": 80,
+        "stage": "STAGE_3_CLOUD_SOAK",
+        "stage_label": "Stage 3/4 · Cloud Cycle Soak",
+        "consecutive_cloud_cycles": 1,
         "target_cloud_cycles": 3,
         "cadence_hours": 24,
         "live_components": [
@@ -175,12 +175,12 @@
           "Headless Blender 5.2.4 + Kokoro C/D pipeline wired"
         ],
         "warming_up_components": [
-          "Cloud Studio render cycles: 0/3 (daily 04:23 UTC)"
+          "Cloud Studio render cycles: 1/3 (daily 04:23 UTC)"
         ],
         "blockers": [],
-        "eta_to_3_cycles_hours": 62.4,
-        "eta_to_3_cycles_utc": "2026-11-22T04:23:00Z",
-        "eta_summary": "~62.4h (3x 24h cycles)",
+        "eta_to_3_cycles_hours": 38.4,
+        "eta_to_3_cycles_utc": "2026-11-21T04:23:00Z",
+        "eta_summary": "~38.4h (2x 24h cycles)",
         "checks": [
           {
             "name": "Cloud schedule armed (VIRALCLIPS_CLOUD_SCHEDULE_ENABLED)",
@@ -216,7 +216,7 @@
             "name": "Headless Studio Render 3 consecutive cloud runs",
             "weight": 30,
             "passed": false,
-            "earned": 0
+            "earned": 10
           }
         ]
       }
@@ -225,14 +225,14 @@
   "oracle_vm": {
     "reachable": true,
     "source": "oracle_ssh_live",
-    "captured_at_utc": "2026-11-19T13:58:39Z",
+    "captured_at_utc": "2026-11-19T14:00:52Z",
     "hostname": "viralclips247-server",
     "shape": "VM.Standard.E2.1.Micro (x86_64)",
-    "ram_used_mib": 346,
+    "ram_used_mib": 327,
     "ram_total_mib": 952,
-    "ram_available_mib": 605,
+    "ram_available_mib": 625,
     "ram_ceiling_mib": 952,
-    "ram_percent": 36.3,
+    "ram_percent": 34.3,
     "ram_within_ceiling": true,
     "swap_total_mib": 0,
     "disk": {
@@ -284,7 +284,7 @@
     },
     "native_sidecar": {
       "status": "monitoring_private_candidates",
-      "updated_utc": "2026-11-19T13:58:38.568106+00:00",
+      "updated_utc": "2026-11-19T14:00:48.827626+00:00",
       "processed": 0,
       "reauthorization_required": false
     },
@@ -299,7 +299,7 @@
     },
     "gta_scout": {
       "scout_release": "v1.2",
-      "as_of_utc": "2026-11-19T13:54:24.874597+00:00",
+      "as_of_utc": "2026-11-19T13:59:40.485505+00:00",
       "direct_incumbent_count": 5,
       "direct_incumbent_live_count": 1,
       "live_streams_observed": 758
@@ -323,7 +323,7 @@
       "title": "System A1 · Oracle Live Clipper",
       "host": "Oracle E2.1.Micro (Coordinator Only)",
       "status": "healthy",
-      "summary": "5/5 systemd units active · 346/952 MiB RAM · streak 0",
+      "summary": "5/5 systemd units active · 327/952 MiB RAM · streak 0",
       "last_activity_utc": "2026-11-19T13:41:23.062665+00:00",
       "workflow_file": "autonomous-supervisor-agy.yml",
       "media_host": "n/a (metadata + native Twitch clips)"
@@ -344,16 +344,16 @@
       "handle": "@cinematic-studio",
       "title": "System B · Original Cinematic Studio",
       "host": "GitHub Actions (Blender 5.2.4 EEVEE / VTK + Kokoro C/D)",
-      "status": "running",
-      "summary": "Latest run in_progress · Voices C=am_adam / D=af_heart",
-      "last_activity_utc": "2026-11-19T13:58:35Z",
+      "status": "healthy",
+      "summary": "Latest run success · Voices C=am_adam / D=af_heart",
+      "last_activity_utc": "2026-11-19T14:00:30Z",
       "workflow_file": "headless-studio-render.yml",
       "media_host": "github_releases -> BATMAN6167/viralclips247-media-staging"
     }
   ],
   "analytics": {
     "schema": "viralclips247-dashboard-analytics-v1",
-    "generated_at_utc": "2026-11-19T13:58:34Z",
+    "generated_at_utc": "2026-11-19T14:00:47Z",
     "sample_size": {
       "total_posts_analyzed": 90,
       "top_20_count": 18,
@@ -2360,8 +2360,8 @@
           "comments": 1,
           "shares": 0,
           "engagement_rate_pct": 4.37,
-          "view_velocity_per_hour": 1.177,
-          "composite_score": 0.6577,
+          "view_velocity_per_hour": 1.176,
+          "composite_score": 0.6575,
           "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700211863795059986?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         },
         {
@@ -2994,25 +2994,36 @@
   },
   "recent_workflow_runs": [
     {
+      "id": 44539142939,
+      "name": "Deploy Mobile Mission Control Dashboard",
+      "path": ".github/workflows/deploy-dashboard.yml",
+      "status": "in_progress",
+      "conclusion": null,
+      "event": "workflow_run",
+      "created_at": "2026-11-19T14:00:33Z",
+      "updated_at": "2026-11-19T14:00:36Z",
+      "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44539142939"
+    },
+    {
       "id": 44538805230,
       "name": "Headless Cinematic Studio Render (Zero-PC Cloud Pipeline)",
       "path": ".github/workflows/headless-studio-render.yml",
-      "status": "in_progress",
-      "conclusion": null,
+      "status": "completed",
+      "conclusion": "success",
       "event": "workflow_dispatch",
       "created_at": "2026-11-19T13:58:32Z",
-      "updated_at": "2026-11-19T13:58:35Z",
+      "updated_at": "2026-11-19T14:00:30Z",
       "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44538805230"
     },
     {
       "id": 44538754773,
       "name": "Deploy Mobile Mission Control Dashboard",
       "path": ".github/workflows/deploy-dashboard.yml",
-      "status": "in_progress",
-      "conclusion": null,
+      "status": "completed",
+      "conclusion": "success",
       "event": "push",
       "created_at": "2026-11-19T13:58:13Z",
-      "updated_at": "2026-11-19T13:58:16Z",
+      "updated_at": "2026-11-19T13:58:52Z",
       "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44538754773"
     },
     {
@@ -3091,17 +3102,6 @@
       "created_at": "2026-11-19T10:04:05Z",
       "updated_at": "2026-11-19T10:04:05Z",
       "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44502162890"
-    },
-    {
-      "id": 44501980987,
-      "name": ".github/workflows/headless-studio-render.yml",
-      "path": ".github/workflows/headless-studio-render.yml",
-      "status": "completed",
-      "conclusion": "failure",
-      "event": "push",
-      "created_at": "2026-11-19T10:02:56Z",
-      "updated_at": "2026-11-19T10:02:56Z",
-      "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44501980987"
     }
   ]
 }
