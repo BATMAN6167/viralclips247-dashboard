@@ -1,30 +1,31 @@
 {
   "schema": "viralclips247-mission-control-status-v1",
-  "generated_at_utc": "2026-11-19T14:19:40Z",
+  "generated_at_utc": "2026-11-19T14:31:15Z",
   "repo": "BATMAN6167/youtube-auto-publisher",
   "controls": {
     "cloud_schedule_enabled": true,
     "supervisor_enabled": true,
     "streamer_radar_enabled": true,
     "cloud_storage_configured": false,
+    "twitch_creator_clipping_enabled": true,
     "media_host_provider": "github_releases",
     "media_host_repo": "BATMAN6167/viralclips247-media-staging"
   },
   "readiness": {
     "schema": "viralclips247-readiness-scorecard-v1",
-    "generated_at_utc": "2026-11-19T14:19:40Z",
+    "generated_at_utc": "2026-11-19T14:31:15Z",
     "target_unattended_cycles": 3,
-    "overall_readiness_pct": 75,
+    "overall_readiness_pct": 82,
     "systems_at_target_cycles": 0,
     "total_systems": 3,
-    "max_eta_to_3_cycles_hours": 39.4,
-    "overall_eta_summary": "~39.4h to 3 consecutive unattended cloud cycles across all 3 systems",
+    "max_eta_to_3_cycles_hours": 39.2,
+    "overall_eta_summary": "~39.2h to 3 consecutive unattended cloud cycles across all 3 systems",
     "systems": [
       {
         "id": "oracle-clipper",
         "handle": "@oracle-clipper",
         "name": "System A1 · Oracle Clipper",
-        "readiness_pct": 80,
+        "readiness_pct": 85,
         "stage": "STAGE_3_CLOUD_SOAK",
         "stage_label": "Stage 3/4 · Cloud Cycle Soak",
         "consecutive_cloud_cycles": 0,
@@ -36,18 +37,18 @@
           "EventSub monitor completed cleanly (streak 0)",
           "Streamer Radar >=3 consecutive cloud runs",
           "Supervisor cron armed (VIRALCLIPS_SUPERVISOR_ENABLED)",
-          "Streamer Radar 20 consecutive cloud passes"
+          "Documented creator reuse grant (>=1)",
+          "Streamer Radar 19 consecutive cloud passes"
         ],
         "warming_up_components": [
           "Supervisor cycles: 0/3 (cron every 6h)"
         ],
         "blockers": [
-          "0 documented Twitch creator reuse grants (metadata/review inbox only until creator permission added)",
           "Supervisor workflow cron/trigger fix awaiting first post-push cloud cycle"
         ],
-        "eta_to_3_cycles_hours": 16.0,
+        "eta_to_3_cycles_hours": 15.8,
         "eta_to_3_cycles_utc": "2026-11-20T06:17:00Z",
-        "eta_summary": "~16.0h (3x 6h cycles)",
+        "eta_summary": "~15.8h (3x 6h cycles)",
         "checks": [
           {
             "name": "Oracle VM reachable & <=952 MiB / 0 swap",
@@ -88,8 +89,8 @@
           {
             "name": "Documented creator reuse grant (>=1)",
             "weight": 5,
-            "passed": false,
-            "earned": 0
+            "passed": true,
+            "earned": 5
           }
         ]
       },
@@ -97,7 +98,7 @@
         "id": "shorts-editor",
         "handle": "@shorts-editor",
         "name": "System A2 · Shorts Editor & Remotion",
-        "readiness_pct": 65,
+        "readiness_pct": 80,
         "stage": "STAGE_3_CLOUD_SOAK",
         "stage_label": "Stage 3/4 · Cloud Cycle Soak",
         "consecutive_cloud_cycles": 1,
@@ -107,17 +108,16 @@
           "Cloud schedule armed (VIRALCLIPS_CLOUD_SCHEDULE_ENABLED)",
           "24/7 GitHub Releases public staging active",
           "Buffer YouTube & TikTok connected + uploader disabled",
-          "Self-adjusting 80/20 dueAt upload scheduler wired"
+          "Self-adjusting 80/20 dueAt upload scheduler wired",
+          "Cloud S3/R2 source ingestion configured"
         ],
         "warming_up_components": [
           "Cloud Shorts/Remotion cycles: 1/3 (daily 05:41 UTC)"
         ],
-        "blockers": [
-          "No CLOUD_STORAGE_BUCKET configured yet (daily cron runs Remotion CI verification until cloud S3/R2 source bucket is set)"
-        ],
-        "eta_to_3_cycles_hours": 39.4,
+        "blockers": [],
+        "eta_to_3_cycles_hours": 39.2,
         "eta_to_3_cycles_utc": "2026-11-21T05:41:00Z",
-        "eta_summary": "~39.4h (2x 24h cycles)",
+        "eta_summary": "~39.2h (2x 24h cycles)",
         "checks": [
           {
             "name": "Cloud schedule armed (VIRALCLIPS_CLOUD_SCHEDULE_ENABLED)",
@@ -152,8 +152,8 @@
           {
             "name": "Cloud S3/R2 source ingestion configured",
             "weight": 15,
-            "passed": false,
-            "earned": 0
+            "passed": true,
+            "earned": 15
           }
         ]
       },
@@ -178,9 +178,9 @@
           "Cloud Studio render cycles: 1/3 (daily 04:23 UTC)"
         ],
         "blockers": [],
-        "eta_to_3_cycles_hours": 38.1,
+        "eta_to_3_cycles_hours": 37.9,
         "eta_to_3_cycles_utc": "2026-11-21T04:23:00Z",
-        "eta_summary": "~38.1h (2x 24h cycles)",
+        "eta_summary": "~37.9h (2x 24h cycles)",
         "checks": [
           {
             "name": "Cloud schedule armed (VIRALCLIPS_CLOUD_SCHEDULE_ENABLED)",
@@ -225,14 +225,14 @@
   "oracle_vm": {
     "reachable": true,
     "source": "oracle_ssh_live",
-    "captured_at_utc": "2026-11-19T14:19:39Z",
+    "captured_at_utc": "2026-11-19T14:31:13Z",
     "hostname": "viralclips247-server",
     "shape": "VM.Standard.E2.1.Micro (x86_64)",
-    "ram_used_mib": 331,
+    "ram_used_mib": 341,
     "ram_total_mib": 952,
-    "ram_available_mib": 620,
+    "ram_available_mib": 610,
     "ram_ceiling_mib": 952,
-    "ram_percent": 34.8,
+    "ram_percent": 35.8,
     "ram_within_ceiling": true,
     "swap_total_mib": 0,
     "disk": {
@@ -278,35 +278,35 @@
     },
     "monitor_heartbeat": {
       "status": "monitor_session_complete",
-      "updated_utc": "2026-11-19T14:01:31.707839+00:00",
+      "updated_utc": "2026-11-19T14:21:40.284845+00:00",
       "last_session_ok": true,
       "failure_streak": 0
     },
     "native_sidecar": {
       "status": "monitoring_private_candidates",
-      "updated_utc": "2026-11-19T14:19:36.094752+00:00",
-      "processed": 0,
+      "updated_utc": "2026-11-19T14:31:12.979569+00:00",
+      "processed": 1,
       "reauthorization_required": false
     },
     "latest_completed_diagnostic": {
-      "file": "20261119T134126Z-8b4b36934064.jsonl.diagnostics.json",
+      "file": "20261119T140134Z-8a178df8cfef.jsonl.diagnostics.json",
       "status": "completed_on_demand_session",
       "outcome": "valid_zero_candidates",
-      "elapsed_seconds": 1205.02,
+      "elapsed_seconds": 1205.01,
       "subscriptions_enabled": null,
       "live_snapshots": null,
       "scorer_evaluations": null
     },
     "gta_scout": {
       "scout_release": "v1.2",
-      "as_of_utc": "2026-11-19T14:15:30.556991+00:00",
+      "as_of_utc": "2026-11-19T14:26:00.527805+00:00",
       "direct_incumbent_count": 5,
       "direct_incumbent_live_count": 1,
-      "live_streams_observed": 776
+      "live_streams_observed": 780
     },
     "review_inbox": {
       "count": 20,
-      "generated_at_utc": "2026-11-19T14:19:10.014457+00:00",
+      "generated_at_utc": "2026-11-19T14:29:40.010434+00:00",
       "youtube_tiktok_publishing_authorized": false
     },
     "release_health": {
@@ -323,8 +323,8 @@
       "title": "System A1 · Oracle Live Clipper",
       "host": "Oracle E2.1.Micro (Coordinator Only)",
       "status": "healthy",
-      "summary": "5/5 systemd units active · 331/952 MiB RAM · streak 0",
-      "last_activity_utc": "2026-11-19T14:01:31.707839+00:00",
+      "summary": "5/5 systemd units active · 341/952 MiB RAM · streak 0",
+      "last_activity_utc": "2026-11-19T14:21:40.284845+00:00",
       "workflow_file": "autonomous-supervisor-agy.yml",
       "media_host": "n/a (metadata + native Twitch clips)"
     },
@@ -353,7 +353,7 @@
   ],
   "analytics": {
     "schema": "viralclips247-dashboard-analytics-v1",
-    "generated_at_utc": "2026-11-19T14:19:34Z",
+    "generated_at_utc": "2026-11-19T14:31:10Z",
     "sample_size": {
       "total_posts_analyzed": 90,
       "top_20_count": 18,
@@ -619,7 +619,7 @@
                 "sample_count": 1,
                 "avg_velocity_1h": null,
                 "avg_velocity_6h": null,
-                "avg_velocity_overall": 1.368,
+                "avg_velocity_overall": 1.367,
                 "avg_engagement_rate_pct": 0.58
               },
               {
@@ -629,7 +629,7 @@
                 "hour_est": "20:00 EST",
                 "window_label": "Adjacent Exploration Window",
                 "baseline_score": 0.3,
-                "blended_score": 0.2703,
+                "blended_score": 0.2704,
                 "sample_count": 1,
                 "avg_velocity_1h": null,
                 "avg_velocity_6h": null,
@@ -1436,7 +1436,7 @@
                 "sample_count": 1,
                 "avg_velocity_1h": null,
                 "avg_velocity_6h": null,
-                "avg_velocity_overall": 2.525,
+                "avg_velocity_overall": 2.524,
                 "avg_engagement_rate_pct": 1.72
               },
               {
@@ -1464,7 +1464,7 @@
                 "sample_count": 1,
                 "avg_velocity_1h": null,
                 "avg_velocity_6h": null,
-                "avg_velocity_overall": 0.967,
+                "avg_velocity_overall": 0.966,
                 "avg_engagement_rate_pct": 4.0
               },
               {
@@ -1895,7 +1895,7 @@
                     "sample_count": 1,
                     "avg_velocity_1h": null,
                     "avg_velocity_6h": null,
-                    "avg_velocity_overall": 0.967,
+                    "avg_velocity_overall": 0.966,
                     "avg_engagement_rate_pct": 4.0,
                     "slot_type": "exploit"
                   },
@@ -2107,7 +2107,7 @@
                     "hour_est": "14:00 EST",
                     "window_label": "Weekend Gaming Marathon",
                     "baseline_score": 0.93,
-                    "blended_score": 0.8209,
+                    "blended_score": 0.821,
                     "sample_count": 0,
                     "avg_velocity_1h": null,
                     "avg_velocity_6h": null,
@@ -2191,7 +2191,7 @@
                     "sample_count": 1,
                     "avg_velocity_1h": null,
                     "avg_velocity_6h": null,
-                    "avg_velocity_overall": 2.525,
+                    "avg_velocity_overall": 2.524,
                     "avg_engagement_rate_pct": 1.72,
                     "slot_type": "exploit"
                   },
@@ -2342,7 +2342,7 @@
           "comments": 0,
           "shares": 3,
           "engagement_rate_pct": 1.72,
-          "view_velocity_per_hour": 2.525,
+          "view_velocity_per_hour": 2.524,
           "composite_score": 0.803,
           "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700608084498025734?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         },
@@ -2360,8 +2360,8 @@
           "comments": 1,
           "shares": 0,
           "engagement_rate_pct": 4.37,
-          "view_velocity_per_hour": 1.176,
-          "composite_score": 0.6576,
+          "view_velocity_per_hour": 1.175,
+          "composite_score": 0.6575,
           "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700211863795059986?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         },
         {
@@ -2378,8 +2378,8 @@
           "comments": 0,
           "shares": 0,
           "engagement_rate_pct": 2.89,
-          "view_velocity_per_hour": 1.705,
-          "composite_score": 0.6497,
+          "view_velocity_per_hour": 1.704,
+          "composite_score": 0.6496,
           "playback_url": "https://www.tiktok.com/@viralclips2476/video/7699455050246032641?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         },
         {
@@ -2397,7 +2397,7 @@
           "shares": 0,
           "engagement_rate_pct": 4.78,
           "view_velocity_per_hour": 0.903,
-          "composite_score": 0.5856,
+          "composite_score": 0.5857,
           "playback_url": "https://www.tiktok.com/@viralclips2476/video/7701723269698735378?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         },
         {
@@ -2415,7 +2415,7 @@
           "shares": 0,
           "engagement_rate_pct": 4.88,
           "view_velocity_per_hour": 0.833,
-          "composite_score": 0.5789,
+          "composite_score": 0.579,
           "playback_url": "https://www.tiktok.com/@viralclips2476/video/7700624164016704776?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         }
       ],
@@ -2994,14 +2994,25 @@
   },
   "recent_workflow_runs": [
     {
-      "id": 44542463171,
+      "id": 44544570316,
       "name": "Deploy Mobile Mission Control Dashboard",
       "path": ".github/workflows/deploy-dashboard.yml",
       "status": "in_progress",
       "conclusion": null,
       "event": "push",
+      "created_at": "2026-11-19T14:30:56Z",
+      "updated_at": "2026-11-19T14:30:59Z",
+      "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44544570316"
+    },
+    {
+      "id": 44542463171,
+      "name": "Deploy Mobile Mission Control Dashboard",
+      "path": ".github/workflows/deploy-dashboard.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push",
       "created_at": "2026-11-19T14:19:21Z",
-      "updated_at": "2026-11-19T14:19:24Z",
+      "updated_at": "2026-11-19T14:19:52Z",
       "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44542463171"
     },
     {
@@ -3091,17 +3102,6 @@
       "created_at": "2026-11-19T12:47:07Z",
       "updated_at": "2026-11-19T12:47:35Z",
       "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44527112381"
-    },
-    {
-      "id": 44505759678,
-      "name": "Free-tier Private Streamer Radar (Metadata Only)",
-      "path": ".github/workflows/free-streamer-radar.yml",
-      "status": "completed",
-      "conclusion": "success",
-      "event": "schedule",
-      "created_at": "2026-11-19T10:26:59Z",
-      "updated_at": "2026-11-19T10:27:27Z",
-      "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44505759678"
     }
   ]
 }
