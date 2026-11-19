@@ -1,6 +1,6 @@
 {
   "schema": "viralclips247-mission-control-status-v1",
-  "generated_at_utc": "2026-11-19T22:07:12Z",
+  "generated_at_utc": "2026-11-19T22:09:32Z",
   "repo": "BATMAN6167/youtube-auto-publisher",
   "controls": {
     "cloud_schedule_enabled": true,
@@ -13,22 +13,22 @@
   },
   "readiness": {
     "schema": "viralclips247-readiness-scorecard-v1",
-    "generated_at_utc": "2026-11-19T22:07:12Z",
+    "generated_at_utc": "2026-11-19T22:09:32Z",
     "target_unattended_cycles": 3,
-    "overall_readiness_pct": 82,
+    "overall_readiness_pct": 83,
     "systems_at_target_cycles": 0,
     "total_systems": 3,
-    "max_eta_to_3_cycles_hours": 31.6,
-    "overall_eta_summary": "~31.6h to 3 consecutive unattended cloud cycles across all 3 systems",
+    "max_eta_to_3_cycles_hours": 31.5,
+    "overall_eta_summary": "~31.5h to 3 consecutive unattended cloud cycles across all 3 systems",
     "systems": [
       {
         "id": "oracle-clipper",
         "handle": "@oracle-clipper",
         "name": "System A1 · Oracle Clipper",
-        "readiness_pct": 85,
+        "readiness_pct": 90,
         "stage": "STAGE_3_CLOUD_SOAK",
         "stage_label": "Stage 3/4 · Cloud Cycle Soak",
-        "consecutive_cloud_cycles": 0,
+        "consecutive_cloud_cycles": 1,
         "target_cloud_cycles": 3,
         "cadence_hours": 6,
         "live_components": [
@@ -38,17 +38,15 @@
           "Streamer Radar >=3 consecutive cloud runs",
           "Supervisor cron armed (VIRALCLIPS_SUPERVISOR_ENABLED)",
           "Documented creator reuse grant (>=1)",
-          "Streamer Radar 18 consecutive cloud passes"
+          "Streamer Radar 16 consecutive cloud passes"
         ],
         "warming_up_components": [
-          "Supervisor cycles: 0/3 (cron every 6h)"
+          "Supervisor cycles: 1/3 (cron every 6h)"
         ],
-        "blockers": [
-          "Supervisor workflow cron/trigger fix awaiting first post-push cloud cycle"
-        ],
-        "eta_to_3_cycles_hours": 14.2,
-        "eta_to_3_cycles_utc": "2026-11-20T12:17:00Z",
-        "eta_summary": "~14.2h (3x 6h cycles)",
+        "blockers": [],
+        "eta_to_3_cycles_hours": 8.1,
+        "eta_to_3_cycles_utc": "2026-11-20T06:17:00Z",
+        "eta_summary": "~8.1h (2x 6h cycles)",
         "checks": [
           {
             "name": "Oracle VM reachable & <=952 MiB / 0 swap",
@@ -84,7 +82,7 @@
             "name": "Autonomous Supervisor 3 consecutive cloud runs",
             "weight": 15,
             "passed": false,
-            "earned": 0
+            "earned": 5
           },
           {
             "name": "Documented creator reuse grant (>=1)",
@@ -115,9 +113,9 @@
           "Cloud Shorts/Remotion cycles: 1/3 (daily 05:41 UTC)"
         ],
         "blockers": [],
-        "eta_to_3_cycles_hours": 31.6,
+        "eta_to_3_cycles_hours": 31.5,
         "eta_to_3_cycles_utc": "2026-11-21T05:41:00Z",
-        "eta_summary": "~31.6h (2x 24h cycles)",
+        "eta_summary": "~31.5h (2x 24h cycles)",
         "checks": [
           {
             "name": "Cloud schedule armed (VIRALCLIPS_CLOUD_SCHEDULE_ENABLED)",
@@ -178,9 +176,9 @@
           "Cloud Studio render cycles: 1/3 (daily 04:23 UTC)"
         ],
         "blockers": [],
-        "eta_to_3_cycles_hours": 30.3,
+        "eta_to_3_cycles_hours": 30.2,
         "eta_to_3_cycles_utc": "2026-11-21T04:23:00Z",
-        "eta_summary": "~30.3h (2x 24h cycles)",
+        "eta_summary": "~30.2h (2x 24h cycles)",
         "checks": [
           {
             "name": "Cloud schedule armed (VIRALCLIPS_CLOUD_SCHEDULE_ENABLED)",
@@ -225,14 +223,14 @@
   "oracle_vm": {
     "reachable": true,
     "source": "oracle_ssh_live",
-    "captured_at_utc": "2026-11-19T22:07:10Z",
+    "captured_at_utc": "2026-11-19T22:09:31Z",
     "hostname": "viralclips247-server",
     "shape": "VM.Standard.E2.1.Micro (x86_64)",
-    "ram_used_mib": 319,
+    "ram_used_mib": 327,
     "ram_total_mib": 952,
-    "ram_available_mib": 632,
+    "ram_available_mib": 625,
     "ram_ceiling_mib": 952,
-    "ram_percent": 33.5,
+    "ram_percent": 34.3,
     "ram_within_ceiling": true,
     "swap_total_mib": 0,
     "disk": {
@@ -284,7 +282,7 @@
     },
     "native_sidecar": {
       "status": "monitoring_private_candidates",
-      "updated_utc": "2026-11-19T22:07:06.557326+00:00",
+      "updated_utc": "2026-11-19T22:09:26.855979+00:00",
       "processed": 0,
       "reauthorization_required": false
     },
@@ -306,7 +304,7 @@
     },
     "review_inbox": {
       "count": 20,
-      "generated_at_utc": "2026-11-19T22:02:46.116958+00:00",
+      "generated_at_utc": "2026-11-19T22:07:47.385399+00:00",
       "youtube_tiktok_publishing_authorized": false
     },
     "release_health": {
@@ -323,7 +321,7 @@
       "title": "System A1 · Oracle Live Clipper",
       "host": "Oracle E2.1.Micro (Coordinator Only)",
       "status": "healthy",
-      "summary": "5/5 systemd units active · 319/952 MiB RAM · streak 0",
+      "summary": "5/5 systemd units active · 327/952 MiB RAM · streak 0",
       "last_activity_utc": "2026-11-19T22:06:27.445386+00:00",
       "workflow_file": "autonomous-supervisor-agy.yml",
       "media_host": "n/a (metadata + native Twitch clips)"
@@ -353,7 +351,7 @@
   ],
   "analytics": {
     "schema": "viralclips247-dashboard-analytics-v1",
-    "generated_at_utc": "2026-11-19T22:07:05Z",
+    "generated_at_utc": "2026-11-19T22:09:27Z",
     "sample_size": {
       "total_posts_analyzed": 90,
       "top_20_count": 18,
@@ -2279,7 +2277,7 @@
           "weekday": "thursday",
           "hour_utc": 23,
           "slot_type": "exploit",
-          "slot_sequence_index": 1,
+          "slot_sequence_index": 0,
           "exploit_ratio": 0.8,
           "explore_ratio": 0.2,
           "min_spacing_hours": 4.0,
@@ -2293,7 +2291,7 @@
           "weekday": "friday",
           "hour_utc": 0,
           "slot_type": "exploit",
-          "slot_sequence_index": 1,
+          "slot_sequence_index": 0,
           "exploit_ratio": 0.8,
           "explore_ratio": 0.2,
           "min_spacing_hours": 4.0,
@@ -2994,14 +2992,36 @@
   },
   "recent_workflow_runs": [
     {
-      "id": 44625445302,
+      "id": 44625784904,
       "name": "Deploy Mobile Mission Control Dashboard",
       "path": ".github/workflows/deploy-dashboard.yml",
       "status": "in_progress",
       "conclusion": null,
+      "event": "workflow_run",
+      "created_at": "2026-11-19T22:08:58Z",
+      "updated_at": "2026-11-19T22:09:01Z",
+      "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44625784904"
+    },
+    {
+      "id": 44625742253,
+      "name": "Autonomous Supervisor (Headless Antigravity CLI)",
+      "path": ".github/workflows/autonomous-supervisor-agy.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "event": "schedule",
+      "created_at": "2026-11-19T22:08:41Z",
+      "updated_at": "2026-11-19T22:08:54Z",
+      "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44625742253"
+    },
+    {
+      "id": 44625445302,
+      "name": "Deploy Mobile Mission Control Dashboard",
+      "path": ".github/workflows/deploy-dashboard.yml",
+      "status": "completed",
+      "conclusion": "success",
       "event": "schedule",
       "created_at": "2026-11-19T22:06:52Z",
-      "updated_at": "2026-11-19T22:06:55Z",
+      "updated_at": "2026-11-19T22:07:27Z",
       "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44625445302"
     },
     {
@@ -3080,28 +3100,6 @@
       "created_at": "2026-11-19T14:00:33Z",
       "updated_at": "2026-11-19T14:01:08Z",
       "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44539142939"
-    },
-    {
-      "id": 44538805230,
-      "name": "Headless Cinematic Studio Render (Zero-PC Cloud Pipeline)",
-      "path": ".github/workflows/headless-studio-render.yml",
-      "status": "completed",
-      "conclusion": "success",
-      "event": "workflow_dispatch",
-      "created_at": "2026-11-19T13:58:32Z",
-      "updated_at": "2026-11-19T14:00:30Z",
-      "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44538805230"
-    },
-    {
-      "id": 44538754773,
-      "name": "Deploy Mobile Mission Control Dashboard",
-      "path": ".github/workflows/deploy-dashboard.yml",
-      "status": "completed",
-      "conclusion": "success",
-      "event": "push",
-      "created_at": "2026-11-19T13:58:13Z",
-      "updated_at": "2026-11-19T13:58:52Z",
-      "html_url": "https://github.com/BATMAN6167/youtube-auto-publisher/actions/runs/44538754773"
     }
   ]
 }
