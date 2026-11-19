@@ -743,7 +743,7 @@
             <option value="both">YouTube + TikTok</option>
             <option value="youtube">YouTube Only</option>
           </select>
-          <input id="clip-max" type="number" min="1" max="10" value="3" placeholder="Max Clips" style="padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-card);color:inherit">
+          <input id="clip-max" type="number" min="0" max="12" value="0" title="0 = Auto by video length, or 1-12 manual cap" placeholder="Max Clips (0 = Auto, or 1-12 cap)" style="padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-card);color:inherit">
           <button type="button" id="btn-clip-yt" class="action-btn"><span class="action-label">Clip &amp; Schedule</span><span class="action-sub">headless-shorts-editor.yml</span></button>
         </div>
       </section>
@@ -1293,7 +1293,7 @@
               youtube_url: url,
               rights_evidence_s3_uri: rights || "",
               target_pages: $("clip-target").value,
-              max_clips: String(Math.max(1, Math.min(10, parseInt($("clip-max").value, 10) || 3))),
+              max_clips: String(Math.max(0, Math.min(12, parseInt($("clip-max").value, 10) || 0))),
             },
           });
           showToast("Dispatched clip job");
