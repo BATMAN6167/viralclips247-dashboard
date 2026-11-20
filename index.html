@@ -1326,6 +1326,8 @@
               rights_evidence_s3_uri: rights || "",
               target_pages: $("clip-target").value,
               max_clips: String(Math.max(0, Math.min(12, parseInt($("clip-max").value, 10) || 0))),
+              delivery_mode: $("clip-delivery-mode").value,
+              watermark_mode: $("clip-watermark-mode").value,
             },
           });
           showToast("Dispatched clip job");
@@ -1333,6 +1335,38 @@
           if (err.message !== "NO_PAT") showToast(err.message);
         } finally {
           btn.disabled = false;
+        }
+      });
+
+      // (b) Upload Watermark (PNG/JPG) to assets/watermarks/active_watermark.png via GitHub Contents API
+      $("watermark-file-input").addEventListener("change", async (e) => {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+        try {
+          showToast("Reading watermark...");
+          const reader = new FileReader();
+          reader.onload = async () => {
+            const base64Content = reader.result.split(",")[1];
+            try {
+              let sha = null;
+              try {
+                const existing = await ghApi("/contents/assets/watermarks/active_watermark.png", "GET");
+                if (existing && existing.sha) sha = existing.sha;
+              } catch (_) {}
+
+              await ghApi("/contents/assets/watermarks/active_watermark.png", "PUT", {
+                message: "Update active watermark via Mission Control",
+                content: base64Content,
+                sha: sha || undefined,
+              });
+              showToast("Watermark uploaded to assets/watermarks/active_watermark.png");
+            } catch (err) {
+              showToast(`Upload failed: ${err.message}`);
+            }
+          };
+          reader.readAsDataURL(file);
+        } catch (err) {
+          showToast(`Error: ${err.message}`);
         }
       });
 
@@ -1570,6 +1604,76 @@
         }
       }
 
+      function renderManualExports(items) {
+        const list = $("manual-exports-list");
+        const empty = $("manual-exports-empty");
+        const countPill = $("manual-exports-count-pill");
+        if (!list || !empty || !countPill) return;
+
+        const exports = Array.isArray(items) ? items : [];
+        countPill.textContent = `${exports.length} Staged`;
+
+        if (exports.length === 0) {
+          empty.style.display = "block";
+          list.innerHTML = "";
+          return;
+        }
+
+        empty.style.display = "none";
+        list.innerHTML = "";
+
+        exports.forEach((item) => {
+          const card = document.createElement("div");
+          card.style.cssText = "background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:12px;display:grid;gap:8px";
+
+          const qc = (item.quality_audit && item.quality_audit.scorecard) || {};
+          const badgesHtml = Object.keys(qc).map((k) => {
+            const b = qc[k];
+            const pClass = b.passed ? "pill-good" : "pill-warn";
+            return `<span class="pill ${pClass}" style="font-size:0.7rem">${b.label || k}</span>`;
+          }).join(" ");
+
+          const filename = item.clip_filename || "clip.mp4";
+          const dlUrl = `https://github.com/BATMAN6167/youtube-auto-publisher/releases/download/manual-exports/${encodeURIComponent(filename)}`;
+          const fullCopy = `${item.tiktok_seo_caption || ""} ${(item.tiktok_hashtags || []).join(" ")}`.trim();
+
+          card.innerHTML = `
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+              <span style="font-weight:700;font-size:0.85rem">${filename}</span>
+              <span class="pill pill-muted" style="font-size:0.7rem">${item.best_upload_time_aedt || "Optimal AEDT"}</span>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:4px">
+              ${badgesHtml || '<span class="pill pill-good" style="font-size:0.7rem">5-Point QC Pass</span>'}
+            </div>
+            <div style="background:rgba(0,0,0,0.3);border-radius:8px;padding:8px;font-size:0.75rem;line-height:1.4">
+              <div style="color:var(--text-dim);margin-bottom:2px"><strong>TikTok SEO Caption &amp; Tags:</strong></div>
+              <div style="user-select:all;color:#fff">${fullCopy}</div>
+            </div>
+            <div style="display:flex;gap:8px;margin-top:4px">
+              <a href="${dlUrl}" target="_blank" rel="noopener" class="action-btn" style="flex:1;text-decoration:none;text-align:center;padding:8px;font-size:0.75rem;margin:0">
+                <span class="action-label">&#11015; Download MP4</span>
+              </a>
+              <button type="button" class="action-btn copy-btn" style="flex:1;padding:8px;font-size:0.75rem;margin:0">
+                <span class="action-label">&#128203; Copy Caption &amp; Tags</span>
+              </button>
+            </div>
+          `;
+
+          const copyBtn = card.querySelector(".copy-btn");
+          if (copyBtn) {
+            copyBtn.addEventListener("click", () => {
+              navigator.clipboard.writeText(fullCopy).then(() => {
+                showToast("Caption & tags copied to clipboard!");
+              }).catch(() => {
+                showToast("Failed to copy clipboard");
+              });
+            });
+          }
+
+          list.appendChild(card);
+        });
+      }
+
       function renderQualityGate(entries) {
         const list = $("qg-list");
         list.replaceChildren();
@@ -1804,6 +1908,7 @@
           renderUploadSchedule(statusData.analytics || {});
           renderSystems(statusData.systems || [], statusData.recent_workflow_runs || []);
           renderQualityGate(statusData.viral_quality_gate_log || []);
+          renderManualExports(statusData.manual_exports || []);
           renderBuffer(statusData.buffer || {});
           if (manual) showToast("Telemetry refreshed");
         } catch (err) {
