@@ -912,6 +912,38 @@
         <div id="systems-list" class="sys-list"></div>
       </section>
 
+      <!-- Quality & Reference Benchmarks -->
+      <section class="card" aria-label="Quality & Reference Benchmarks">
+        <div class="card-hdr">
+          <div class="card-title">Quality &amp; Reference Benchmarks</div>
+          <span id="qa-auditor-status-pill" class="pill pill-ok">24/7 QA: OK</span>
+        </div>
+        <div class="ref-benchmarks-body" style="font-size:0.86rem; line-height:1.5;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:8px; border-bottom:1px solid var(--border); padding-bottom:6px;">
+            <span class="text-dim">Active Standards (2026):</span>
+            <span style="font-weight:600; color:var(--cyan);">Score &ge; 7.5 | -14.0 LUFS | 1080x1920</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+            <span class="text-dim">Strategy &amp; Reference Sync:</span>
+            <span id="ref-sync-timestamp" style="font-family:monospace; color:var(--text-main);">Sync Active</span>
+          </div>
+          <div style="margin-bottom:8px; background:rgba(30,41,59,0.5); padding:8px; border-radius:8px;">
+            <div style="color:var(--text-dim); font-size:0.75rem; text-transform:uppercase;">Top Reference Benchmark Winner</div>
+            <div id="top-ref-winner" style="font-weight:600; color:var(--accent); margin-top:2px;">GTA VI Vice City Night Drift High-Hook (Score: 8.9)</div>
+          </div>
+          <div style="margin-top:6px;">
+            <div style="color:var(--text-dim); font-size:0.75rem; text-transform:uppercase; margin-bottom:4px;">Recent Evaluated Clip Scores</div>
+            <div id="recent-clip-scores" style="display:flex; gap:6px; flex-wrap:wrap;">
+              <span class="pill pill-ok">8.4 (PASS)</span>
+              <span class="pill pill-ok">7.8 (PASS)</span>
+              <span class="pill pill-err">6.9 (REJ)</span>
+              <span class="pill pill-ok">8.1 (PASS)</span>
+              <span class="pill pill-ok">7.5 (PASS)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Viral Quality Gate Log -->
       <section class="card" aria-label="Viral Quality Gate Log">
         <div class="card-hdr">
